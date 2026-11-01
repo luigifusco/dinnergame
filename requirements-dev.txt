@@ -1,0 +1,3 @@
+-r requirements.txt
+pypdfium2>=4.30,<6
+ruff>=0.11,<1
