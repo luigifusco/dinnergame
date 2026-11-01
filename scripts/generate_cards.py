@@ -115,7 +115,7 @@ PALETTES: dict[CardKind, Palette] = {
         colors.HexColor("#8B4F23"), colors.HexColor("#FCF2DF"), colors.HexColor("#EAD2A9")
     ),
 }
-LABELS: dict[CardKind, str] = {"running": "RUNNING BIT", "mission": "MISSION"}
+LABELS: dict[CardKind, str] = {"running": "QUIRK", "mission": "MISSION"}
 
 
 def _check_fields(data: dict[str, object], allowed: set[str], context: str) -> None:
@@ -438,7 +438,12 @@ def main(argv: list[str] | None = None) -> int:
         help="Card library directory containing deck.yaml, or a single-file YAML deck",
     )
     parser.add_argument("--output", type=Path, default=ROOT / "print", help="PDF output directory")
-    parser.add_argument("--kind", choices=("all", "running", "mission"), default="all")
+    parser.add_argument(
+        "--kind",
+        choices=("all", "running", "mission"),
+        default="all",
+        help="Card selection: running (quirks), mission, or all",
+    )
     parser.add_argument("--flip", choices=("long-edge", "short-edge"), default="long-edge")
     parser.add_argument(
         "--check", action="store_true", help="Validate text and fit without writing PDFs"

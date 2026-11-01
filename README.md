@@ -2,7 +2,7 @@
 
 **Small talk. Secret plans.**
 
-A secret layer of playful missions and running jokes underneath an ordinary
+A secret layer of playful missions and quirks underneath an ordinary
 dinner or evening at a bar. Everyone knows a game is happening; nobody knows
 what the others are trying to do.
 
@@ -19,9 +19,9 @@ included deck:
 | `sideplot-fronts.pdf` | Front sheets only, for manual double-sided printing. |
 | `sideplot-backs.pdf` | Matching back sheets in the same sheet order as the fronts. |
 
-The library contains **68 cards: 22 running bits and 46 missions**, across eleven
+The library contains **68 cards: 22 quirks and 46 missions**, across eleven
 internal themes. The complete deck uses five A4 sheets, or 10 duplex PDF pages.
-For the three-card format, provide at least one running bit and two missions per
+For the three-card format, provide at least one quirk and two missions per
 player, plus spare missions for replacements.
 
 Some missions use paper, a pen, or napkins. Exchange a mission if its props
@@ -50,7 +50,7 @@ type label sharing a header row. Back artwork is inset 2 mm from the cut edge,
 allowing a small amount of printer registration drift without cutting into the
 design. Crop marks indicate the full 88 x 31.5 mm card, not the inset background.
 
-Running bits have **sage-green looping paths**; missions have **amber angular
+Quirks have **sage-green looping paths**; missions have **amber angular
 paths**. Each back has a darker central band and two lighter bands, without a
 badge, border, or text. The curved and angular patterns distinguish the types
 even when printed in grayscale.
@@ -86,7 +86,7 @@ and license are included in `assets\fonts\OFL.txt`.
 
 Do not laminate an uncut sheet and then cut flush to the card edges: that removes
 the sealed border. If rounding corners, preserve the clear seal around the card.
-Shuffle running bits and missions separately after cutting; the authoring themes
+Shuffle quirks and missions separately after cutting; the authoring themes
 are not intended to determine the hands people receive.
 
 For manual double-sided printing, use the separate front and back PDFs. Test one
@@ -98,9 +98,12 @@ the generator already aligns them.
 ## Edit the cards
 
 The [cards directory](cards) is the source of truth for the printable deck.
-Running bits and missions are separate, with smaller files grouped by what the
+Quirks and missions are separate, with smaller files grouped by what the
 card asks a player to do. Themes are internal authoring notes, not printed labels
 or additional game rules. [GAME_DESIGN.md](GAME_DESIGN.md) explains the families.
+
+For compatibility, quirks still use the stored type `running`; existing folder
+names, card IDs, and `--kind running` commands are unchanged.
 
 ```text
 cards\
@@ -143,7 +146,7 @@ cards:
 | Field | Meaning |
 |---|---|
 | `name` | Only in `deck.yaml`: single-line PDF metadata, never printed on cards. |
-| `type` | At the top of each card file: exactly `running` or `mission`, applying to every entry. |
+| `type` | At the top of each card file: `running` (Quirk) or `mission` (Mission), applying to every entry. |
 | `theme` | Optional file-level authoring note. Never printed or used to change the rules. |
 | `id` | Unique across the entire library, using lowercase letters, digits and single hyphens. |
 | `title` | Short title printed on the front. |
@@ -158,7 +161,7 @@ needed. Each new file gets its own `type`, optional `theme`, and non-empty `card
 list. Move entries rather than copying them: duplicate IDs are an error.
 
 Folder names are organizational; the file-level `type` determines the card back.
-Entries do not repeat or override `type`. Running bits print first, then missions.
+Entries do not repeat or override `type`. Quirks print first, then missions.
 Within each type, files sort by relative path, and entries retain their YAML list
 order. Theme labels never appear in the PDF, including on the backs.
 

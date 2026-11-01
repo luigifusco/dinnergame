@@ -2,7 +2,7 @@
 
 **Small talk. Secret plans.**
 
-Secret missions and running bits for a dinner or an evening at a bar.
+Secret missions and quirks for a dinner or an evening at a bar.
 
 ## Concept
 
@@ -19,7 +19,7 @@ through repetition, and is funny in retrospect.
 
 ## Card types
 
-**Running bits** describe recurring behaviors. Players keep them for a round or
+**Quirks** describe recurring behaviors. Players keep them for a round or
 the whole evening, creating a pattern that others may gradually notice.
 
 **Missions** describe achievable objectives with identifiable completion
@@ -38,10 +38,10 @@ theme labels never appear on their cards.
 
 | Type | Family | Main mechanism | Examples |
 |---|---|---|---|
-| Running | Language | Repeat a recognizable way of speaking. | Quiet Footnotes, Careful Conclusions |
-| Running | Perspectives | Look at ordinary things through a consistent, slightly unusual lens. | Future Museum, Soundtrack Consultant |
-| Running | Social habits | Use a recurring way of involving the group. | Bridge Maker, Quiet Fan Club |
-| Running | Callbacks and fiction | Let a tiny shared reference accumulate meaning over the evening. | A Useful Motto, Unofficial Mascot |
+| Quirk | Language | Repeat a recognizable way of speaking. | Quiet Footnotes, Careful Conclusions |
+| Quirk | Perspectives | Look at ordinary things through a consistent, slightly unusual lens. | Future Museum, Soundtrack Consultant |
+| Quirk | Social habits | Use a recurring way of involving the group. | Bridge Maker, Quiet Fan Club |
+| Quirk | Callbacks and fiction | Let a tiny shared reference accumulate meaning over the evening. | A Useful Motto, Unofficial Mascot |
 | Mission | Say something | Lead someone toward a particular word or phrase without supplying it. | Forecast, The Scenic Detour |
 | Mission | Stories and know-how | Draw out an anecdote, useful detail, or connection between guests. | Origin Story, The Useful Tip |
 | Mission | Shared decisions | Get people to compare ideas, agree, or coordinate an action. | Holiday Committee, Musical Chairs |
@@ -50,16 +50,17 @@ theme labels never appear on their cards.
 | Mission | Corrections and reactions | Set up a mistake, imitation, or curious question. | Close Enough, Inside Voice |
 | Mission | Props and surprises | Prepare an object for someone to discover, try, or play along with. | Under Wraps, Stop and Smell |
 
-The current library has **22 running bits and 46 missions** across four running
+The current library has **22 quirks and 46 missions** across four quirk
 families and seven mission families. Families need not contain equal numbers of
-cards. Editable definitions live under `cards\running` and
-`cards\mission`; a family can be divided into further files whenever useful.
+cards. Quirk definitions retain the `cards\running` storage folder; mission
+definitions live under `cards\mission`. A family can be divided into further
+files whenever useful.
 
 ### Keeping the families distinct
 
 "Say something" is about eliciting words you have not supplied. "Callbacks and
 adoption" is about someone taking up an idea you deliberately introduced. A
-running callback asks you to sustain a reference; a mission callback finishes
+callback quirk asks you to sustain a reference; a mission callback finishes
 when another person takes it up.
 
 "Small actions" catches something a player does during conversation. "Props and
@@ -79,7 +80,7 @@ Two-person missions may need more opportunity; some callbacks also require a
 topic change. These are pacing differences, not tested difficulty ratings.
 Do not force all missions to finish at the same speed.
 
-For running bits, aim for a recognizable behavior. For missions, pick an
+For quirks, aim for a recognizable behavior. For missions, pick an
 observable finish: a correction, a copied gesture, a question, or a discovered
 card. Give missions a concrete hook rather than a whole conversation to manage.
 Leave room for different approaches, with at most a small anti-cheat restriction.
@@ -144,7 +145,7 @@ families are not difficulty tiers, and difficulty labels are not printed.
 | Stretch | Delayed uptake, coordinated contributions, or getting another person to act on a recommendation. | Return Ticket; Your Example, Their Point; The Joint Story; The Recommendation Chain |
 
 For a first mission playtest, pair a starter candidate with a standard candidate
-alongside the running bit. Offer stretch missions later rather than giving
+alongside the quirk. Offer stretch missions later rather than giving
 someone two slow missions at the start. The named cards are examples, not fixed
 packs.
 
@@ -172,8 +173,8 @@ claims.
 
 | Format | Hand | Replacement |
 |---|---|---|
-| **One-card starter** | One running bit | Keep it for 45-60 minutes, then reveal. |
-| **Three-card version** | One running bit and two missions | Keep the running bit; quietly replace completed missions. |
+| **One-card starter** | One quirk | Keep it for 45-60 minutes, then reveal. |
+| **Three-card version** | One quirk and two missions | Keep the quirk; quietly replace completed missions. |
 | **Timed rounds** | One mission per person | Replace at a shared break, roughly every 20-30 minutes. |
 
 ### Recommended starting point
@@ -181,13 +182,13 @@ claims.
 Start with the one-card version. Introduce the hybrid three-card version if
 players want more activity.
 
-Three simultaneous running bits could be difficult to remember and might turn
+Three simultaneous quirks could be difficult to remember and might turn
 everyone into an exaggerated character. In the hybrid version, the two missions
 are opportunities to choose between, not obligations to pursue simultaneously.
 
 Avoid mandatory ten-minute changes initially: a conversation might only just be
 creating the right opportunity. An optional exchange at a natural break is less
-disruptive. For a longer session, running bits can stay in play for the evening.
+disruptive. For a longer session, quirks can stay in play for the evening.
 
 ## Basic play
 
@@ -199,7 +200,7 @@ disruptive. For a longer session, running bits can stay in play for the evening.
 3. Use an honor system for mission completion. Keep completed cards face down for
    the reveal rather than announcing success.
 4. In the three-card version, quietly draw a replacement mission after completing
-   one, maintaining one running bit and two active missions.
+   one, maintaining one quirk and two active missions.
 5. At a natural break, pause for guessing and a reveal.
 
 Players may discreetly exchange a card.
@@ -211,7 +212,7 @@ Paper, a pen, and napkins cover most prop missions. Exchange a mission if its
 props aren't available. Retrieve any hidden card after it's found, or when the
 game ends.
 
-## Example running-bit cards
+## Example quirk cards
 
 Keep these for the round or evening. Aim for a few separated moments, not
 constant performance.

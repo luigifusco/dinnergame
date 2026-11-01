@@ -157,7 +157,7 @@ class CardGeneratorTests(unittest.TestCase):
             for document in (fronts, backs):
                 self.assertNotIn("INTERNAL AUTHORING THEME", page_text(document, 0))
             for slot, card in enumerate(deck.cards):
-                label = "RUNNING BIT" if card.kind == "running" else "MISSION"
+                label = "QUIRK" if card.kind == "running" else "MISSION"
                 self.assertEqual(
                     text_in_slot(fronts, 0, *slot_origin(slot)),
                     f"{label} {card.title} {card.text}",
@@ -293,7 +293,7 @@ class CardGeneratorTests(unittest.TestCase):
         ):
             self.assertEqual((len(fronts), len(backs), len(duplex)), (1, 1, 2))
             for slot, item in enumerate(prepared.cards):
-                label = "RUNNING BIT" if item.card.kind == "running" else "MISSION"
+                label = "QUIRK" if item.card.kind == "running" else "MISSION"
                 self.assertEqual(
                     text_in_slot(fronts, 0, *slot_origin(slot)),
                     f"{label} {item.card.title} {item.card.text}",
@@ -351,7 +351,7 @@ class CardGeneratorTests(unittest.TestCase):
                     for index, card in enumerate(cards):
                         sheet, slot = divmod(index, CARDS_PER_SHEET)
                         front_text = text_in_slot(fronts, sheet, *slot_origin(slot))
-                        label = "RUNNING BIT" if card.kind == "running" else "MISSION"
+                        label = "QUIRK" if card.kind == "running" else "MISSION"
                         self.assertEqual(front_text, f"{label} {card.title} {card.text}")
                         origin = slot_origin(slot, "back", flip)
                         for document, page_number in ((backs, sheet), (duplex, 2 * sheet + 1)):
