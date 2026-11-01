@@ -22,6 +22,7 @@ from scripts.generate_cards import (
     PAGE_WIDTH,
     ROOT,
     Card,
+    CardKind,
     Deck,
     DeckError,
     load_deck,
@@ -39,6 +40,57 @@ def text_in_slot(document: pdfium.PdfDocument, page_number: int, x: float, y: fl
 def page_text(document: pdfium.PdfDocument, page_number: int) -> str:
     with closing(document[page_number]) as page, closing(page.get_textpage()) as text:
         return text.get_text_range()
+
+
+def path_bounds(obj: pdfium.PdfObject) -> tuple[float, float, float, float]:
+    # The bounds helper has different names in pypdfium2 4 and 5.
+    left, bottom, right, top = c_float(), c_float(), c_float(), c_float()
+    if not pdfium_c.FPDFPageObj_GetBounds(
+        obj.raw, byref(left), byref(bottom), byref(right), byref(top)
+    ):
+        raise AssertionError("Cannot read PDF path bounds")
+    return left.value, bottom.value, right.value, top.value
+
+
+def back_kind_in_slot(
+    document: pdfium.PdfDocument, page_number: int, x: float, y: float
+) -> CardKind | None:
+    segment_types = set()
+    with closing(document[page_number]) as page:
+        for obj in page.get_objects(filter=[pdfium_c.FPDF_PAGEOBJ_PATH]):
+            left, bottom, right, top = path_bounds(obj)
+            if not (
+                x < (left + right) / 2 < x + CARD_WIDTH and y < (bottom + top) / 2 < y + CARD_HEIGHT
+            ):
+                continue
+            fill, stroke = c_int(), c_int()
+            if not pdfium_c.FPDFPath_GetDrawMode(obj.raw, byref(fill), byref(stroke)):
+                raise AssertionError("Cannot read PDF path drawing mode")
+            if not stroke.value:
+                continue
+            if not (
+                x + 2 * mm <= left <= right <= x + CARD_WIDTH - 2 * mm
+                and y + 2 * mm <= bottom <= top <= y + CARD_HEIGHT - 2 * mm
+            ):
+                raise AssertionError("Back artwork extends outside its inset")
+            count = pdfium_c.FPDFPath_CountSegments(obj.raw)
+            if count < 0:
+                raise AssertionError("Cannot count PDF path segments")
+            for index in range(count):
+                segment = pdfium_c.FPDFPath_GetPathSegment(obj.raw, index)
+                if not segment:
+                    raise AssertionError("Cannot read PDF path segment")
+                segment_type = pdfium_c.FPDFPathSegment_GetType(segment)
+                if segment_type < 0:
+                    raise AssertionError("Cannot identify PDF path segment")
+                segment_types.add(segment_type)
+    if pdfium_c.FPDF_SEGMENT_BEZIERTO in segment_types:
+        return "running"
+    if pdfium_c.FPDF_SEGMENT_LINETO in segment_types:
+        return "mission"
+    if segment_types:
+        raise AssertionError("Unrecognized back geometry")
+    return None
 
 
 class CardGeneratorTests(unittest.TestCase):
@@ -110,7 +162,9 @@ class CardGeneratorTests(unittest.TestCase):
                     text_in_slot(fronts, 0, *slot_origin(slot)),
                     f"{label} {card.title} {card.text}",
                 )
-                self.assertEqual(text_in_slot(backs, 0, *slot_origin(slot, "back")), label)
+                origin = slot_origin(slot, "back")
+                self.assertEqual(text_in_slot(backs, 0, *origin), "")
+                self.assertEqual(back_kind_in_slot(backs, 0, *origin), card.kind)
 
     def test_duplicate_ids_across_files_report_both_sources(self) -> None:
         root = self.write_collection(
@@ -245,42 +299,26 @@ class CardGeneratorTests(unittest.TestCase):
                     f"{label} {item.card.title} {item.card.text}",
                 )
                 self.assertGreaterEqual(item.text.style.fontSize, 9)
+                origin = slot_origin(slot, "back")
+                self.assertEqual(text_in_slot(backs, 0, *origin), "")
+                self.assertEqual(back_kind_in_slot(backs, 0, *origin), item.card.kind)
 
-            backgrounds, medallions = [], []
+            backgrounds = []
             with closing(backs[0]) as page:
                 for obj in page.get_objects(filter=[pdfium_c.FPDF_PAGEOBJ_PATH]):
                     fill, stroke = c_int(), c_int()
                     self.assertTrue(
                         pdfium_c.FPDFPath_GetDrawMode(obj.raw, byref(fill), byref(stroke))
                     )
-                    if not fill.value:
-                        continue
-                    # The bounds helper has different names in pypdfium2 4 and 5.
-                    left, bottom, right, top = c_float(), c_float(), c_float(), c_float()
-                    self.assertTrue(
-                        pdfium_c.FPDFPageObj_GetBounds(
-                            obj.raw, byref(left), byref(bottom), byref(right), byref(top)
-                        )
-                    )
-                    bounds = (left.value, bottom.value, right.value, top.value)
-                    if stroke.value:
-                        medallions.append(bounds)
-                    else:
-                        backgrounds.append(bounds)
+                    if fill.value and not stroke.value:
+                        backgrounds.append(path_bounds(obj))
             self.assertEqual(len(backgrounds), 16)
-            self.assertEqual(len(medallions), 16)
-            for slot, (background, medallion) in enumerate(
-                zip(backgrounds, medallions, strict=True)
-            ):
+            for slot, background in enumerate(backgrounds):
                 with self.subTest(slot=slot):
                     x, y = slot_origin(slot, "back")
                     expected = (x + 2 * mm, y + 2 * mm, x + 86 * mm, y + 29.5 * mm)
                     for actual, target in zip(background, expected, strict=True):
                         self.assertAlmostEqual(actual, target, places=3)
-                    self.assertGreaterEqual(medallion[0], background[0])
-                    self.assertGreaterEqual(medallion[1], background[1])
-                    self.assertLessEqual(medallion[2], background[2])
-                    self.assertLessEqual(medallion[3], background[3])
 
     def test_mixed_types_partial_sheets_and_duplex_page_order(self) -> None:
         cards = tuple(
@@ -313,15 +351,20 @@ class CardGeneratorTests(unittest.TestCase):
                     for index, card in enumerate(cards):
                         sheet, slot = divmod(index, CARDS_PER_SHEET)
                         front_text = text_in_slot(fronts, sheet, *slot_origin(slot))
-                        back_text = text_in_slot(backs, sheet, *slot_origin(slot, "back", flip))
                         label = "RUNNING BIT" if card.kind == "running" else "MISSION"
                         self.assertEqual(front_text, f"{label} {card.title} {card.text}")
-                        self.assertEqual(back_text, label)
+                        origin = slot_origin(slot, "back", flip)
+                        for document, page_number in ((backs, sheet), (duplex, 2 * sheet + 1)):
+                            self.assertEqual(text_in_slot(document, page_number, *origin), "")
+                            self.assertEqual(
+                                back_kind_in_slot(document, page_number, *origin), card.kind
+                            )
                     for slot in range(1, CARDS_PER_SHEET):
                         self.assertEqual(text_in_slot(fronts, 1, *slot_origin(slot)), "")
-                        self.assertEqual(
-                            text_in_slot(backs, 1, *slot_origin(slot, "back", flip)), ""
-                        )
+                        origin = slot_origin(slot, "back", flip)
+                        for document, page_number in ((backs, 1), (duplex, 3)):
+                            self.assertEqual(text_in_slot(document, page_number, *origin), "")
+                            self.assertIsNone(back_kind_in_slot(document, page_number, *origin))
 
     def test_generated_pdfs_are_reproducible(self) -> None:
         prepared = prepare_deck(
@@ -339,9 +382,12 @@ class CardGeneratorTests(unittest.TestCase):
         for path in write_pdfs(prepared, self.directory / "fonts"):
             with self.subTest(pdf=path.name):
                 data = path.read_bytes()
-                self.assertIn(b"+BalsamiqSans-Regular", data)
-                self.assertIn(b"+BalsamiqSans-Bold", data)
-                self.assertGreaterEqual(data.count(b"/FontFile2"), 2)
+                fonts = [b"+BalsamiqSans-Regular"]
+                if path.name != FILENAMES[1]:
+                    fonts.append(b"+BalsamiqSans-Bold")
+                for font in fonts:
+                    self.assertIn(font, data)
+                self.assertGreaterEqual(data.count(b"/FontFile2"), len(fonts))
 
     def test_filter_rejects_an_empty_selection(self) -> None:
         deck = load_deck(self.write_deck([self.entry()]))

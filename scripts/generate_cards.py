@@ -320,16 +320,6 @@ def slot_origin(
     return x, y
 
 
-def _diamond(canvas: Canvas, x: float, y: float, rx: float, ry: float, fill: int = 0) -> None:
-    path = canvas.beginPath()
-    path.moveTo(x, y + ry)
-    path.lineTo(x + rx, y)
-    path.lineTo(x, y - ry)
-    path.lineTo(x - rx, y)
-    path.close()
-    canvas.drawPath(path, stroke=1, fill=fill)
-
-
 def _draw_front(canvas: Canvas, item: PreparedCard) -> None:
     palette = PALETTES[item.card.kind]
     canvas.setFillColor(palette.ink)
@@ -347,34 +337,25 @@ def _draw_back(canvas: Canvas, kind: CardKind) -> None:
     inset = 2 * mm
     canvas.setFillColor(palette.paper)
     canvas.rect(inset, inset, CARD_WIDTH - 2 * inset, CARD_HEIGHT - 2 * inset, stroke=0, fill=1)
-    canvas.saveState()
-    clip = canvas.beginPath()
-    clip.rect(inset, inset, CARD_WIDTH - 2 * inset, CARD_HEIGHT - 2 * inset)
-    canvas.clipPath(clip, stroke=0)
-    canvas.setStrokeColor(palette.pattern)
-    canvas.setLineWidth(0.55)
-    step = 18 * mm
-    for row in range(-1, int(CARD_HEIGHT // step) + 2):
-        for column in range(-1, int(CARD_WIDTH // step) + 2):
-            x = column * step + (row % 2) * step / 2
-            y = row * step
-            if kind == "running":
-                canvas.circle(x, y, 5 * mm)
-            else:
-                _diamond(canvas, x, y, 5 * mm, 5 * mm)
-    canvas.restoreState()
-    canvas.setStrokeColor(palette.ink)
-    canvas.setFillColor(palette.paper)
-    canvas.setLineWidth(0.7)
-    canvas.rect(inset, inset, CARD_WIDTH - 2 * inset, CARD_HEIGHT - 2 * inset)
-    cx, cy = CARD_WIDTH / 2, CARD_HEIGHT / 2
-    if kind == "running":
-        canvas.circle(cx, cy, 12.5 * mm, fill=1)
-    else:
-        _diamond(canvas, cx, cy, 25 * mm, 12.5 * mm, fill=1)
-    canvas.setFillColor(palette.ink)
-    canvas.setFont(FONT_BOLD, 10)
-    canvas.drawCentredString(cx, cy - 1.2 * mm, LABELS[kind])
+    start = 4 * mm
+    step = (CARD_WIDTH - 2 * start) / 6
+    for offset in (-8 * mm, 0, 8 * mm):
+        y = CARD_HEIGHT / 2 + offset
+        canvas.setStrokeColor(palette.ink if offset == 0 else palette.pattern)
+        canvas.setLineWidth(1 if offset == 0 else 0.65)
+        for direction in (-1, 1):
+            path = canvas.beginPath()
+            path.moveTo(start, y)
+            for column in range(6):
+                x = start + column * step
+                sign = direction if column % 2 == 0 else -direction
+                if kind == "running":
+                    bend = y + sign * 4 * mm
+                    path.curveTo(x + step / 3, bend, x + 2 * step / 3, bend, x + step, y)
+                else:
+                    path.lineTo(x + step / 2, y + sign * 3 * mm)
+                    path.lineTo(x + step, y)
+            canvas.drawPath(path, stroke=1, fill=0)
 
 
 def _draw_crop_marks(canvas: Canvas) -> None:
