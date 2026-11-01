@@ -113,12 +113,10 @@ class CardGeneratorTests(unittest.TestCase):
         with self.assertRaisesRegex(DeckError, "non-empty list"):
             load_deck(path)
 
-    def test_deck_name_must_fit_on_one_line(self) -> None:
-        for name in ("Side\nplot", "A" * 200):
-            with self.subTest(name=name):
-                path = self.write_deck([self.entry()], name)
-                with self.assertRaisesRegex(DeckError, "name"):
-                    prepare_deck(load_deck(path))
+    def test_deck_name_must_be_single_line(self) -> None:
+        path = self.write_deck([self.entry()], "Side\nplot")
+        with self.assertRaisesRegex(DeckError, "name"):
+            load_deck(path)
 
     def test_back_slots_reflect_in_the_physical_sheet(self) -> None:
         for slot in range(CARDS_PER_SHEET):
@@ -164,12 +162,9 @@ class CardGeneratorTests(unittest.TestCase):
                         sheet, slot = divmod(index, CARDS_PER_SHEET)
                         front_text = text_in_slot(fronts, sheet, *slot_origin(slot))
                         back_text = text_in_slot(backs, sheet, *slot_origin(slot, "back", flip))
-                        self.assertIn(card.title, front_text)
-                        self.assertIn(
-                            "RUNNING BIT" if card.kind == "running" else "MISSION",
-                            back_text,
-                        )
-                        self.assertNotIn(card.title, back_text)
+                        label = "RUNNING BIT" if card.kind == "running" else "MISSION"
+                        self.assertEqual(front_text, f"{label} {card.title} {card.text}")
+                        self.assertEqual(back_text, label)
                     for slot in range(1, CARDS_PER_SHEET):
                         self.assertEqual(text_in_slot(fronts, 1, *slot_origin(slot)), "")
                         self.assertEqual(
@@ -184,6 +179,17 @@ class CardGeneratorTests(unittest.TestCase):
         second = write_pdfs(prepared, self.directory / "second")
         for original, regenerated in zip(first, second, strict=True):
             self.assertEqual(original.read_bytes(), regenerated.read_bytes())
+
+    def test_playful_fonts_are_embedded_for_portable_printing(self) -> None:
+        prepared = prepare_deck(
+            Deck("Sideplot", (Card("test", "mission", "A task", "Ask about soup."),))
+        )
+        for path in write_pdfs(prepared, self.directory / "fonts"):
+            with self.subTest(pdf=path.name):
+                data = path.read_bytes()
+                self.assertIn(b"+BalsamiqSans-Regular", data)
+                self.assertIn(b"+BalsamiqSans-Bold", data)
+                self.assertGreaterEqual(data.count(b"/FontFile2"), 2)
 
     def test_filter_rejects_an_empty_selection(self) -> None:
         deck = load_deck(self.write_deck([self.entry()]))

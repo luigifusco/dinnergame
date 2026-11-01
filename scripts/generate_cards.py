@@ -15,11 +15,14 @@ from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
-from reportlab.pdfbase.pdfmetrics import stringWidth
+from reportlab.pdfbase.pdfmetrics import getRegisteredFontNames, registerFont
+from reportlab.pdfbase.ttfonts import TTFError, TTFont
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.platypus import Paragraph
 
 ROOT = Path(__file__).resolve().parents[1]
+FONT_REGULAR = "BalsamiqSans"
+FONT_BOLD = "BalsamiqSans-Bold"
 PAGE_WIDTH, PAGE_HEIGHT = A4
 CARD_WIDTH, CARD_HEIGHT = 88 * mm, 63 * mm
 GUTTER = 5 * mm
@@ -27,7 +30,7 @@ COLUMNS, ROWS = 2, 4
 CARDS_PER_SHEET = COLUMNS * ROWS
 CONTENT_WIDTH = CARD_WIDTH - 10 * mm
 CONTENT_TOP = CARD_HEIGHT - 13 * mm
-CONTENT_BOTTOM = 11 * mm
+CONTENT_BOTTOM = 5 * mm
 TEXT_GAP = 3 * mm
 FILENAMES = ("sideplot-fronts.pdf", "sideplot-backs.pdf", "sideplot-duplex.pdf")
 
@@ -93,8 +96,6 @@ class PreparedCard:
 class PreparedDeck:
     name: str
     cards: tuple[PreparedCard, ...]
-    header_font_size: float
-    back_font_size: float
 
 
 @dataclass(frozen=True)
@@ -106,10 +107,10 @@ class Palette:
 
 PALETTES: dict[CardKind, Palette] = {
     "running": Palette(
-        colors.HexColor("#20584B"), colors.HexColor("#EEF4EC"), colors.HexColor("#A9C6B3")
+        colors.HexColor("#20584B"), colors.HexColor("#EEF4EC"), colors.HexColor("#C3D7C6")
     ),
     "mission": Palette(
-        colors.HexColor("#8B4F23"), colors.HexColor("#FCF2DF"), colors.HexColor("#E2C18C")
+        colors.HexColor("#8B4F23"), colors.HexColor("#FCF2DF"), colors.HexColor("#EAD2A9")
     ),
 }
 LABELS: dict[CardKind, str] = {"running": "RUNNING BIT", "mission": "MISSION"}
@@ -190,22 +191,26 @@ def load_deck(path: Path) -> Deck:
     return Deck(name, tuple(cards))
 
 
-def _fit_label(text: str, font: str, width: float, maximum: float, minimum: float) -> float:
-    size = maximum
-    while size >= minimum:
-        if stringWidth(text, font, size) <= width:
-            return size
-        size -= 0.5
-    raise DeckError("Deck name is too long to fit on the cards; shorten 'name'")
+def _register_fonts() -> None:
+    for name, filename in (
+        (FONT_REGULAR, "BalsamiqSans-Regular.ttf"),
+        (FONT_BOLD, "BalsamiqSans-Bold.ttf"),
+    ):
+        if name not in getRegisteredFontNames():
+            path = ROOT / "assets" / "fonts" / filename
+            try:
+                registerFont(TTFont(name, str(path)))
+            except (OSError, TTFError) as exc:
+                raise DeckError(f"Cannot load bundled font {path}: {exc}") from exc
 
 
 def _fit_card(card: Card) -> PreparedCard:
-    for title_size, text_size in ((18, 11), (17, 10.5), (16, 10), (15, 9.5), (14, 9)):
+    for title_size, text_size in ((20, 11), (19, 10.5), (18, 10), (17, 9.5), (16, 9)):
         title = Paragraph(
             escape(card.title).replace("\n", "<br/>"),
             ParagraphStyle(
                 "card-title",
-                fontName="Times-Bold",
+                fontName=FONT_BOLD,
                 fontSize=title_size,
                 leading=title_size * 1.1,
                 textColor=colors.HexColor("#22342F"),
@@ -215,7 +220,7 @@ def _fit_card(card: Card) -> PreparedCard:
             escape(card.text).replace("\n", "<br/>"),
             ParagraphStyle(
                 "card-text",
-                fontName="Helvetica",
+                fontName=FONT_REGULAR,
                 fontSize=text_size,
                 leading=text_size * 1.32,
                 textColor=colors.HexColor("#303936"),
@@ -232,6 +237,7 @@ def _fit_card(card: Card) -> PreparedCard:
 
 
 def prepare_deck(deck: Deck, kind: CardKind | None = None) -> PreparedDeck:
+    _register_fonts()
     cards = []
     for card in deck.cards:
         if kind is None or card.kind == kind:
@@ -239,12 +245,7 @@ def prepare_deck(deck: Deck, kind: CardKind | None = None) -> PreparedDeck:
             cards.extend([prepared] * card.copies)
     if not cards:
         raise DeckError(f"No cards match type '{kind}'")
-    return PreparedDeck(
-        deck.name,
-        tuple(cards),
-        _fit_label(deck.name.upper(), "Helvetica-Bold", 33 * mm, 8, 6),
-        _fit_label(deck.name.upper(), "Times-Bold", 31 * mm, 20, 10),
-    )
+    return PreparedDeck(deck.name, tuple(cards))
 
 
 def slot_origin(
@@ -274,37 +275,17 @@ def _diamond(canvas: Canvas, x: float, y: float, rx: float, ry: float, fill: int
     canvas.drawPath(path, stroke=1, fill=fill)
 
 
-def _draw_front(canvas: Canvas, item: PreparedCard, deck: PreparedDeck, number: int) -> None:
+def _draw_front(canvas: Canvas, item: PreparedCard) -> None:
     palette = PALETTES[item.card.kind]
-    canvas.setLineWidth(0.5)
-    canvas.setStrokeColor(palette.pattern)
-    canvas.roundRect(2 * mm, 2 * mm, CARD_WIDTH - 4 * mm, CARD_HEIGHT - 4 * mm, 2 * mm)
-    canvas.line(5 * mm, CARD_HEIGHT - 10 * mm, CARD_WIDTH - 5 * mm, CARD_HEIGHT - 10 * mm)
-    canvas.setStrokeColor(palette.ink)
-    if item.card.kind == "running":
-        canvas.circle(6.5 * mm, CARD_HEIGHT - 6 * mm, 1.5 * mm)
-        canvas.circle(6.5 * mm, CARD_HEIGHT - 6 * mm, 0.7 * mm)
-    else:
-        _diamond(canvas, 6.5 * mm, CARD_HEIGHT - 6 * mm, 1.5 * mm, 1.5 * mm)
     canvas.setFillColor(palette.ink)
-    canvas.setFont("Helvetica-Bold", 7.5)
-    canvas.drawString(10 * mm, CARD_HEIGHT - 7 * mm, LABELS[item.card.kind])
-    canvas.setFont("Helvetica-Bold", deck.header_font_size)
-    canvas.drawRightString(CARD_WIDTH - 5 * mm, CARD_HEIGHT - 7 * mm, deck.name.upper())
+    canvas.setFont(FONT_BOLD, 8.5)
+    canvas.drawString(5 * mm, CARD_HEIGHT - 8 * mm, LABELS[item.card.kind])
     title_y = CONTENT_TOP - item.title_height
     item.title.drawOn(canvas, 5 * mm, title_y)
     item.text.drawOn(canvas, 5 * mm, title_y - TEXT_GAP - item.text_height)
-    canvas.setStrokeColor(palette.pattern)
-    canvas.line(5 * mm, 8 * mm, CARD_WIDTH - 5 * mm, 8 * mm)
-    canvas.setFillColor(palette.ink)
-    canvas.setFont("Helvetica", 6.5)
-    instruction = "KEEP YOUR CARD" if item.card.kind == "running" else "COMPLETE & REPLACE"
-    canvas.drawString(5 * mm, 5 * mm, instruction)
-    prefix = "R" if item.card.kind == "running" else "M"
-    canvas.drawRightString(CARD_WIDTH - 5 * mm, 5 * mm, f"{prefix} / {number:02d}")
 
 
-def _draw_back(canvas: Canvas, kind: CardKind, deck: PreparedDeck) -> None:
+def _draw_back(canvas: Canvas, kind: CardKind) -> None:
     palette = PALETTES[kind]
     inset = 2 * mm
     canvas.setFillColor(palette.paper)
@@ -315,17 +296,15 @@ def _draw_back(canvas: Canvas, kind: CardKind, deck: PreparedDeck) -> None:
     canvas.clipPath(clip, stroke=0)
     canvas.setStrokeColor(palette.pattern)
     canvas.setLineWidth(0.55)
-    step = (14 if kind == "running" else 12) * mm
-    for row in range(-1, 7):
-        for column in range(-1, 9):
+    step = 18 * mm
+    for row in range(-1, int(CARD_HEIGHT // step) + 2):
+        for column in range(-1, int(CARD_WIDTH // step) + 2):
             x = column * step + (row % 2) * step / 2
             y = row * step
             if kind == "running":
-                canvas.circle(x, y, 7 * mm)
-                canvas.circle(x, y, 4 * mm)
+                canvas.circle(x, y, 5 * mm)
             else:
-                _diamond(canvas, x, y, 6 * mm, 6 * mm)
-                _diamond(canvas, x, y, 3 * mm, 3 * mm)
+                _diamond(canvas, x, y, 5 * mm, 5 * mm)
     canvas.restoreState()
     canvas.setStrokeColor(palette.ink)
     canvas.setFillColor(palette.paper)
@@ -333,25 +312,12 @@ def _draw_back(canvas: Canvas, kind: CardKind, deck: PreparedDeck) -> None:
     canvas.rect(inset, inset, CARD_WIDTH - 2 * inset, CARD_HEIGHT - 2 * inset)
     cx, cy = CARD_WIDTH / 2, CARD_HEIGHT / 2
     if kind == "running":
-        canvas.circle(cx, cy, 22 * mm)
         canvas.circle(cx, cy, 20 * mm, fill=1)
-        canvas.setFillColor(palette.ink)
-        for dx, dy in ((22, 0), (-22, 0), (0, 22), (0, -22)):
-            canvas.circle(cx + dx * mm, cy + dy * mm, 0.8 * mm, stroke=0, fill=1)
     else:
-        _diamond(canvas, cx, cy, 32 * mm, 22 * mm)
-        _diamond(canvas, cx, cy, 29.5 * mm, 19.5 * mm, fill=1)
-        canvas.setFillColor(palette.ink)
-        for dx, dy in ((32, 0), (-32, 0), (0, 22), (0, -22)):
-            _diamond(canvas, cx + dx * mm, cy + dy * mm, 0.8 * mm, 0.8 * mm, fill=1)
+        _diamond(canvas, cx, cy, 29 * mm, 20 * mm, fill=1)
     canvas.setFillColor(palette.ink)
-    canvas.setFont("Helvetica", 6)
-    canvas.drawCentredString(cx, cy + 11 * mm, "SMALL TALK")
-    canvas.drawCentredString(cx, cy - 12 * mm, "SECRET PLANS")
-    canvas.setFont("Times-Bold", deck.back_font_size)
-    canvas.drawCentredString(cx, cy + 1 * mm, deck.name.upper())
-    canvas.setFont("Helvetica-Bold", 8)
-    canvas.drawCentredString(cx, cy - 5 * mm, LABELS[kind])
+    canvas.setFont(FONT_BOLD, 14)
+    canvas.drawCentredString(cx, cy - 1.7 * mm, LABELS[kind])
 
 
 def _draw_crop_marks(canvas: Canvas) -> None:
@@ -366,7 +332,6 @@ def _draw_crop_marks(canvas: Canvas) -> None:
 
 def _draw_sheet(
     canvas: Canvas,
-    deck: PreparedDeck,
     sheet: tuple[PreparedCard, ...],
     sheet_number: int,
     sheet_count: int,
@@ -377,18 +342,18 @@ def _draw_sheet(
         canvas.saveState()
         canvas.translate(*slot_origin(slot, face, flip))
         if face == "front":
-            _draw_front(canvas, item, deck, (sheet_number - 1) * CARDS_PER_SHEET + slot + 1)
+            _draw_front(canvas, item)
         else:
-            _draw_back(canvas, item.card.kind, deck)
+            _draw_back(canvas, item.card.kind)
         _draw_crop_marks(canvas)
         canvas.restoreState()
     canvas.setFillColor(colors.HexColor("#52625A"))
     canvas.setStrokeColor(colors.HexColor("#52625A"))
-    canvas.setFont("Helvetica", 6)
+    canvas.setFont(FONT_REGULAR, 6)
     canvas.drawString(
         14.5 * mm,
         7 * mm,
-        f"{deck.name} | {face.upper()} | Sheet {sheet_number}/{sheet_count} | {flip} duplex",
+        f"{face.upper()} | Sheet {sheet_number}/{sheet_count} | {flip} duplex",
     )
     scale_x = PAGE_WIDTH - 64.5 * mm
     canvas.setLineWidth(0.4)
@@ -418,7 +383,7 @@ def write_pdfs(deck: PreparedDeck, output: Path, flip: FlipMode = "long-edge") -
             canvas.setCreator("Sideplot card generator")
             for number, sheet in enumerate(sheets, start=1):
                 for face in faces:
-                    _draw_sheet(canvas, deck, sheet, number, len(sheets), face, flip)
+                    _draw_sheet(canvas, sheet, number, len(sheets), face, flip)
             canvas.save()
             staged.append(path)
         for source, destination in zip(staged, destinations, strict=True):
