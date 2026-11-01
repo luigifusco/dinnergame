@@ -16,7 +16,7 @@ from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
-from reportlab.pdfbase.pdfmetrics import getRegisteredFontNames, registerFont
+from reportlab.pdfbase.pdfmetrics import getRegisteredFontNames, registerFont, stringWidth
 from reportlab.pdfbase.ttfonts import TTFError, TTFont
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.platypus import Paragraph
@@ -25,14 +25,15 @@ ROOT = Path(__file__).resolve().parents[1]
 FONT_REGULAR = "BalsamiqSans"
 FONT_BOLD = "BalsamiqSans-Bold"
 PAGE_WIDTH, PAGE_HEIGHT = A4
-CARD_WIDTH, CARD_HEIGHT = 88 * mm, 63 * mm
-GUTTER = 5 * mm
-COLUMNS, ROWS = 2, 4
+CARD_WIDTH, CARD_HEIGHT = 88 * mm, 31.5 * mm
+COLUMN_GUTTER, ROW_GUTTER = 5 * mm, 2.5 * mm
+COLUMNS, ROWS = 2, 8
 CARDS_PER_SHEET = COLUMNS * ROWS
 CONTENT_WIDTH = CARD_WIDTH - 10 * mm
-CONTENT_TOP = CARD_HEIGHT - 13 * mm
-CONTENT_BOTTOM = 5 * mm
-TEXT_GAP = 3 * mm
+CONTENT_TOP = CARD_HEIGHT - 2.5 * mm
+CONTENT_BOTTOM = 2.5 * mm
+TEXT_GAP = 1 * mm
+FRONT_LABEL_SIZE = 7
 FILENAMES = ("sideplot-fronts.pdf", "sideplot-backs.pdf", "sideplot-duplex.pdf")
 
 CardKind = Literal["running", "mission"]
@@ -256,7 +257,10 @@ def _register_fonts() -> None:
 
 
 def _fit_card(card: Card) -> PreparedCard:
-    for title_size, text_size in ((20, 11), (19, 10.5), (18, 10), (17, 9.5), (16, 9)):
+    title_width = (
+        CONTENT_WIDTH - stringWidth(LABELS[card.kind], FONT_BOLD, FRONT_LABEL_SIZE) - 3 * mm
+    )
+    for title_size, text_size in ((14, 11), (13.5, 10.5), (13, 10), (12.5, 9.5), (12, 9)):
         title = Paragraph(
             escape(card.title).replace("\n", "<br/>"),
             ParagraphStyle(
@@ -273,11 +277,11 @@ def _fit_card(card: Card) -> PreparedCard:
                 "card-text",
                 fontName=FONT_REGULAR,
                 fontSize=text_size,
-                leading=text_size * 1.32,
+                leading=text_size * 1.25,
                 textColor=colors.HexColor("#303936"),
             ),
         )
-        _, title_height = title.wrap(CONTENT_WIDTH, PAGE_HEIGHT)
+        _, title_height = title.wrap(title_width, PAGE_HEIGHT)
         _, text_height = text.wrap(CONTENT_WIDTH, PAGE_HEIGHT)
         if title_height + TEXT_GAP + text_height <= CONTENT_TOP - CONTENT_BOTTOM:
             return PreparedCard(card, title, text, title_height, text_height)
@@ -308,11 +312,11 @@ def slot_origin(
             column = COLUMNS - 1 - column
         else:
             row = ROWS - 1 - row
-    grid_width = COLUMNS * CARD_WIDTH + (COLUMNS - 1) * GUTTER
-    grid_height = ROWS * CARD_HEIGHT + (ROWS - 1) * GUTTER
+    grid_width = COLUMNS * CARD_WIDTH + (COLUMNS - 1) * COLUMN_GUTTER
+    grid_height = ROWS * CARD_HEIGHT + (ROWS - 1) * ROW_GUTTER
     # Reflect slots in the full sheet, never in the shortened last batch.
-    x = (PAGE_WIDTH - grid_width) / 2 + column * (CARD_WIDTH + GUTTER)
-    y = (PAGE_HEIGHT - grid_height) / 2 + (ROWS - 1 - row) * (CARD_HEIGHT + GUTTER)
+    x = (PAGE_WIDTH - grid_width) / 2 + column * (CARD_WIDTH + COLUMN_GUTTER)
+    y = (PAGE_HEIGHT - grid_height) / 2 + (ROWS - 1 - row) * (CARD_HEIGHT + ROW_GUTTER)
     return x, y
 
 
@@ -329,8 +333,10 @@ def _diamond(canvas: Canvas, x: float, y: float, rx: float, ry: float, fill: int
 def _draw_front(canvas: Canvas, item: PreparedCard) -> None:
     palette = PALETTES[item.card.kind]
     canvas.setFillColor(palette.ink)
-    canvas.setFont(FONT_BOLD, 8.5)
-    canvas.drawString(5 * mm, CARD_HEIGHT - 8 * mm, LABELS[item.card.kind])
+    canvas.setFont(FONT_BOLD, FRONT_LABEL_SIZE)
+    canvas.drawRightString(
+        CARD_WIDTH - 5 * mm, CONTENT_TOP - FRONT_LABEL_SIZE, LABELS[item.card.kind]
+    )
     title_y = CONTENT_TOP - item.title_height
     item.title.drawOn(canvas, 5 * mm, title_y)
     item.text.drawOn(canvas, 5 * mm, title_y - TEXT_GAP - item.text_height)
@@ -363,12 +369,12 @@ def _draw_back(canvas: Canvas, kind: CardKind) -> None:
     canvas.rect(inset, inset, CARD_WIDTH - 2 * inset, CARD_HEIGHT - 2 * inset)
     cx, cy = CARD_WIDTH / 2, CARD_HEIGHT / 2
     if kind == "running":
-        canvas.circle(cx, cy, 20 * mm, fill=1)
+        canvas.circle(cx, cy, 12.5 * mm, fill=1)
     else:
-        _diamond(canvas, cx, cy, 29 * mm, 20 * mm, fill=1)
+        _diamond(canvas, cx, cy, 25 * mm, 12.5 * mm, fill=1)
     canvas.setFillColor(palette.ink)
-    canvas.setFont(FONT_BOLD, 14)
-    canvas.drawCentredString(cx, cy - 1.7 * mm, LABELS[kind])
+    canvas.setFont(FONT_BOLD, 10)
+    canvas.drawCentredString(cx, cy - 1.2 * mm, LABELS[kind])
 
 
 def _draw_crop_marks(canvas: Canvas) -> None:

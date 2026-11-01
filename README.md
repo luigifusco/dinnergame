@@ -20,7 +20,7 @@ included deck:
 | `sideplot-backs.pdf` | Matching back sheets in the same sheet order as the fronts. |
 
 The library contains **80 cards: 24 running bits and 56 missions**, across eleven
-internal themes. The complete deck fills ten A4 sheets, or 20 duplex PDF pages.
+internal themes. The complete deck fills five A4 sheets, or 10 duplex PDF pages.
 For the three-card format, provide at least one running bit and two missions per
 player, plus spare missions for replacements.
 
@@ -33,15 +33,16 @@ mission if its props aren't available.
 |---|---|
 | Paper | A4, portrait |
 | Card orientation | Landscape |
-| Trimmed card size | 88 x 63 mm, before lamination |
-| Layout | Two columns by four rows: eight cards per sheet |
-| Gutters | 5 mm |
+| Trimmed card size | 88 x 31.5 mm, before lamination |
+| Layout | Two columns by eight rows: sixteen cards per sheet |
+| Gutters | 5 mm between columns; 2.5 mm between rows |
 | Duplex setting | Flip on the long edge |
 | Scaling | Actual size / 100%, not "fit to page" |
 
-Fronts have a 5 mm text inset. Back artwork is inset 2 mm from the cut edge,
+Fronts have 5 mm horizontal and 2.5 mm vertical text insets, with the title and
+type label sharing a header row. Back artwork is inset 2 mm from the cut edge,
 allowing a small amount of printer registration drift without cutting into the
-design. Crop marks indicate the full 88 x 63 mm card, not the inner artwork frame.
+design. Crop marks indicate the full 88 x 31.5 mm card, not the inner artwork frame.
 
 Running bits have **sparse sage-green circles and a round medallion**.
 Missions have **sparse amber diamonds and a diamond medallion**. Their
@@ -73,7 +74,7 @@ and license are included in `assets\fonts\OFL.txt`.
    card for a sealed border. Follow the pouch and laminator instructions.
 6. Laminate, then cut out each card again, leaving the manufacturer's recommended
    clear sealed border, typically 2-3 mm on every side. The finished laminated
-   cards will therefore be larger than 88 x 63 mm.
+   cards will therefore be larger than 88 x 31.5 mm.
 
 Do not laminate an uncut sheet and then cut flush to the card edges: that removes
 the sealed border. If rounding corners, preserve the clear seal around the card.

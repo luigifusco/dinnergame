@@ -5,10 +5,13 @@ import sys
 import tempfile
 import unittest
 from contextlib import closing
+from ctypes import byref, c_float, c_int
 from pathlib import Path
 
 import pypdfium2 as pdfium
+import pypdfium2.raw as pdfium_c
 import yaml
+from reportlab.lib.units import mm
 
 from scripts.generate_cards import (
     CARD_HEIGHT,
@@ -215,6 +218,69 @@ class CardGeneratorTests(unittest.TestCase):
                 back_x, back_y = slot_origin(slot, "back", "short-edge")
                 self.assertAlmostEqual(front_x, back_x)
                 self.assertAlmostEqual(front_y + back_y + CARD_HEIGHT, PAGE_HEIGHT)
+
+    def test_sixteen_compact_cards_fit_with_readable_text_and_contained_artwork(self) -> None:
+        cards = tuple(
+            Card(
+                f"compact-{index}",
+                "running" if index % 2 == 0 else "mission",
+                f"An unusually long task title {index}",
+                "Get another player to explain a hobby, then ask a second player to add "
+                "an example without changing the subject.",
+            )
+            for index in range(16)
+        )
+        prepared = prepare_deck(Deck("Sideplot", cards))
+        paths = write_pdfs(prepared, self.directory / "compact")
+        with (
+            pdfium.PdfDocument(paths[0]) as fronts,
+            pdfium.PdfDocument(paths[1]) as backs,
+            pdfium.PdfDocument(paths[2]) as duplex,
+        ):
+            self.assertEqual((len(fronts), len(backs), len(duplex)), (1, 1, 2))
+            for slot, item in enumerate(prepared.cards):
+                label = "RUNNING BIT" if item.card.kind == "running" else "MISSION"
+                self.assertEqual(
+                    text_in_slot(fronts, 0, *slot_origin(slot)),
+                    f"{label} {item.card.title} {item.card.text}",
+                )
+                self.assertGreaterEqual(item.text.style.fontSize, 9)
+
+            backgrounds, medallions = [], []
+            with closing(backs[0]) as page:
+                for obj in page.get_objects(filter=[pdfium_c.FPDF_PAGEOBJ_PATH]):
+                    fill, stroke = c_int(), c_int()
+                    self.assertTrue(
+                        pdfium_c.FPDFPath_GetDrawMode(obj.raw, byref(fill), byref(stroke))
+                    )
+                    if not fill.value:
+                        continue
+                    # The bounds helper has different names in pypdfium2 4 and 5.
+                    left, bottom, right, top = c_float(), c_float(), c_float(), c_float()
+                    self.assertTrue(
+                        pdfium_c.FPDFPageObj_GetBounds(
+                            obj.raw, byref(left), byref(bottom), byref(right), byref(top)
+                        )
+                    )
+                    bounds = (left.value, bottom.value, right.value, top.value)
+                    if stroke.value:
+                        medallions.append(bounds)
+                    else:
+                        backgrounds.append(bounds)
+            self.assertEqual(len(backgrounds), 16)
+            self.assertEqual(len(medallions), 16)
+            for slot, (background, medallion) in enumerate(
+                zip(backgrounds, medallions, strict=True)
+            ):
+                with self.subTest(slot=slot):
+                    x, y = slot_origin(slot, "back")
+                    expected = (x + 2 * mm, y + 2 * mm, x + 86 * mm, y + 29.5 * mm)
+                    for actual, target in zip(background, expected, strict=True):
+                        self.assertAlmostEqual(actual, target, places=3)
+                    self.assertGreaterEqual(medallion[0], background[0])
+                    self.assertGreaterEqual(medallion[1], background[1])
+                    self.assertLessEqual(medallion[2], background[2])
+                    self.assertLessEqual(medallion[3], background[3])
 
     def test_mixed_types_partial_sheets_and_duplex_page_order(self) -> None:
         cards = tuple(
