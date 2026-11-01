@@ -19,12 +19,12 @@ included deck:
 | `sideplot-fronts.pdf` | Front sheets only, for manual double-sided printing. |
 | `sideplot-backs.pdf` | Matching back sheets in the same sheet order as the fronts. |
 
-The library contains **80 cards: 24 running bits and 56 missions**, across eleven
-internal themes. The complete deck fills five A4 sheets, or 10 duplex PDF pages.
+The library contains **77 cards: 21 running bits and 56 missions**, across eleven
+internal themes. The complete deck uses five A4 sheets, or 10 duplex PDF pages.
 For the three-card format, provide at least one running bit and two missions per
 player, plus spare missions for replacements.
 
-Some missions use paper, a pen, spare clean napkins, or a coaster. Exchange a
+Some missions use paper, a pen, napkins, or a coaster. Exchange a
 mission if its props aren't available.
 
 ## Print specification

@@ -10,7 +10,7 @@ cards:
   - id: mission-nickname
     title: It Has a Name
     text: >-
-      Give a shared object or idea a nickname that someone else later uses
+      Give an object or idea a nickname that someone else later uses
       without prompting.
 
   - id: mission-return

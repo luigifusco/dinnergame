@@ -15,8 +15,7 @@ The intended payoff is **delayed recognition**:
 > "Wait - is that why you kept bringing up trains?"
 
 A good card produces behavior that seems plausible once, becomes suspicious
-through repetition, and is funny in retrospect. The goal is shared comedy, not
-maximum disruption.
+through repetition, and is funny in retrospect.
 
 ## Card types
 
@@ -39,21 +38,21 @@ theme labels never appear on their cards.
 
 | Type | Family | Main mechanism | Examples |
 |---|---|---|---|
-| Running | Language | Repeat a recognizable way of speaking without dominating the conversation. | Quiet Footnotes, Careful Conclusions |
+| Running | Language | Repeat a recognizable way of speaking. | Quiet Footnotes, Careful Conclusions |
 | Running | Perspectives | Look at ordinary things through a consistent, slightly unusual lens. | Future Museum, Soundtrack Consultant |
-| Running | Social habits | Give attention, praise, or credit in a distinctive way. | Collective Credit, Quiet Fan Club |
-| Running | Callbacks and fiction | Let a tiny shared reference accumulate meaning over the evening. | The Imaginary Shop, Unofficial Mascot |
+| Running | Social habits | Give attention or praise, or connect other people's remarks. | Bridge Maker, Quiet Fan Club |
+| Running | Callbacks and fiction | Let a tiny shared reference accumulate meaning over the evening. | A Useful Motto, Unofficial Mascot |
 | Mission | Say something | Lead someone toward a particular word or phrase without supplying it. | Forecast, The Scenic Detour |
 | Mission | Stories and know-how | Draw out an anecdote, useful detail, or connection between guests. | Origin Story, The Useful Tip |
-| Mission | Shared decisions | Get people to invent, compare, or agree on something low-stakes. | Opening Night, The Perfect Bench |
+| Mission | Shared decisions | Get people to invent, compare, or agree on something. | Opening Night, The Perfect Bench |
 | Mission | Small actions | Elicit a natural gesture or conversational action rather than a dare. | Counting On It, The Sound Effect |
 | Mission | Callbacks and adoption | Get a phrase, idea, or recommendation to travel beyond its originator. | Return Ticket, It Has a Name |
 | Mission | Corrections and reactions | Set up a mistake, imitation, or curious question. | Close Enough, Inside Voice |
 | Mission | Props and surprises | Prepare an object for someone to discover, try, or play along with. | Under Wraps, Stop and Smell |
 
-The current library has six cards in each running family and eight in each
-mission family: **24 running bits and 56 missions**. The original twelve cards
-are retained among them. Editable definitions live under `cards\running` and
+The current library has **21 running bits and 56 missions**: five or six cards
+per running family and eight per mission family. The original twelve cards are
+retained among them. Editable definitions live under `cards\running` and
 `cards\mission`; a family can be divided into further files whenever useful.
 
 ### Keeping the families distinct
@@ -85,10 +84,8 @@ observable finish: a correction, a copied gesture, a question, or a discovered
 card. Give missions a concrete hook rather than a whole conversation to manage.
 Leave room for different approaches, with at most a small anti-cheat restriction.
 State the task directly, without advice about keeping it brief, natural, or
-playful. Keep task-specific restrictions; general etiquette belongs in the
-shared rules.
-Spread attention across the group rather than always targeting the same neighbor.
-The group can still exchange unsuitable cards without explanation.
+playful. Keep conditions that define the challenge; leave out general etiquette
+and tone restrictions.
 
 ## Formats
 
@@ -124,10 +121,9 @@ disruptive. For a longer session, running bits can stay in play for the evening.
    one, maintaining one running bit and two active missions.
 5. At a natural break, pause for guessing and a reveal.
 
-Players may discreetly exchange an uncomfortable or unsuitable card without
-giving an explanation.
+Players may discreetly exchange a card.
 
-Paper, a pen, and spare clean napkins cover most prop missions. Exchange a mission
+Paper, a pen, and napkins cover most prop missions. Exchange a mission
 if its props aren't available. Retrieve any hidden card after it's found, or when
 the game ends.
 
@@ -141,12 +137,9 @@ constant performance.
 | **The Logistics Department** | When plans come up, focus intently on one small detail: seating, snacks, luggage, opening hours. |
 | **Borrowed Wisdom** | Treat someone's earlier throwaway remark as wise advice for a different situation. |
 | **Infrastructure Enthusiast** | Work the word "infrastructure" into unrelated conversations, no more than once per topic. |
-| **Tiny Triumphs** | Find tiny reasons for a toast or celebration. Raising a glass is enough; no drinking required. |
-| **The Unappointed Critic** | Give detailed, positive reviews of things nobody reviews: a spoon, the lighting, the bread arrangement. |
+| **Tiny Triumphs** | Find tiny reasons for a toast or celebration. |
+| **The Unappointed Critic** | Give detailed reviews of things nobody reviews: a spoon, the lighting, the bread arrangement. |
 | **Future Tradition** | Suggest making ordinary things that happen tonight into annual traditions. |
-
-These cards create recognizable patterns without requiring someone to hijack the
-conversation.
 
 ## Example mission cards
 
@@ -166,7 +159,7 @@ require public proof or an interruption.
 | **Under Wraps** | Hide this card inside a folded napkin. Get another player to unfold it and find the card. |
 | **Stop and Smell** | Fold a paper flower and get another player to smell it. |
 
-For a gentler deck, allow direct conversational questions. For a harder deck, add
+For an easier deck, allow direct conversational questions. For a harder deck, add
 restrictions selectively. "Get someone talking about holidays" is approachable;
 "without mentioning travel yourself" changes the challenge substantially.
 
@@ -191,19 +184,6 @@ Initially, assess whether the cards produce natural conversations, amusing
 patterns, and satisfying reveals. Competitive scoring can be considered later if
 the group wants it.
 
-## Comfort and participation
-
-Everyone should know that secret tasks are in play; only the tasks themselves
-are secret. The joke should be shared, not aimed at an unsuspecting guest.
-
-Exclude cards requiring alcohol, private disclosures, humiliation, or bothering
-staff. Players can decline involvement or exchange cards without explaining why.
-Ordinary conversation and the comfort of the group take priority over completion.
-
-Use only shared table items or your own props. Keep cards out of food and drinks;
-don't hide them on another player or in their belongings. No hitting, grabbing,
-or fake health scares.
-
 ## Interactions between cards
 
 The most promising cards interact without depending on each other.
@@ -212,9 +192,9 @@ For example, someone playing **Holiday Committee** starts planning an imaginary
 holiday. **The Logistics Department** becomes deeply concerned about luggage.
 **Tiny Triumphs** proposes a toast to the excellent planning.
 
-Likewise, **The Imaginary Shop** can feed an **Opening Night** mission, while
-**A Useful Motto** can become someone else's **The Echo**. The cards do not need
-to name or depend on one another for these interactions to emerge.
+Likewise, a nickname introduced for **It Has a Name** might become a recurring
+reference for **Unofficial Mascot**. The cards do not need to name or depend on
+one another for these interactions to emerge.
 
 Each person thinks they are quietly recruiting the others into their joke, and
 they all are.

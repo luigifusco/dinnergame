@@ -1,11 +1,10 @@
 type: running
-theme: Giving attention, encouragement, and credit
+theme: Attention, enthusiasm, and connections
 cards:
   - id: running-triumphs
     title: Tiny Triumphs
     text: >-
-      Find tiny reasons for a toast or celebration. Raising a glass is enough;
-      no drinking required.
+      Find tiny reasons for a toast or celebration.
 
   - id: running-tradition
     title: Future Tradition
@@ -15,23 +14,15 @@ cards:
   - id: running-compliments
     title: The Specific Compliment
     text: >-
-      Give oddly specific, sincere compliments about people's everyday choices,
-      not their appearance or private lives.
+      Give people oddly specific compliments.
 
   - id: running-fan-club
     title: Quiet Fan Club
     text: >-
-      Show oddly specific enthusiasm for a preference someone mentions, without
-      inventing a shared experience.
+      Show oddly specific enthusiasm for a preference someone mentions.
 
   - id: running-bridge
     title: Bridge Maker
     text: >-
       Connect two different people's remarks as if their ideas obviously belong
       together.
-
-  - id: running-credit
-    title: Collective Credit
-    text: >-
-      Credit little successes to the group's teamwork, even when nobody had to
-      coordinate.

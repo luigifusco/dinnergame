@@ -24,10 +24,10 @@ cards:
       Present everyday opinions as cautious conclusions: "My current theory is..."
       or "The early signs are promising."
 
-  - id: running-understatement
-    title: Delightfully Underwhelmed
+  - id: running-overstatement
+    title: Easily Impressed
     text: >-
-      Praise things you genuinely like as if they're only mildly impressive.
+      Praise ordinary things as if they're extraordinary.
 
   - id: running-metaphors
     title: Domestic Metaphors

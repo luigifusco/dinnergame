@@ -10,7 +10,7 @@ cards:
   - id: running-critic
     title: The Unappointed Critic
     text: >-
-      Give detailed, positive reviews of things nobody reviews: a spoon, the
+      Give detailed reviews of things nobody reviews: a spoon, the
       lighting, the bread arrangement.
 
   - id: running-museum
@@ -22,15 +22,9 @@ cards:
   - id: running-soundtrack
     title: Soundtrack Consultant
     text: >-
-      Suggest a soundtrack for situations people describe, without playing music
-      or asking anyone to sing.
+      Suggest a soundtrack for situations people describe.
 
   - id: running-design
     title: Everything Is a Design Choice
     text: >-
       Guess why everyday objects or habits are the way they are.
-
-  - id: running-guide
-    title: Local Guide
-    text: >-
-      Describe details of the table or room as beloved local landmarks.
