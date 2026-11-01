@@ -31,6 +31,54 @@ These two types benefit from different replacement rules.
 Editable card definitions, print-ready PDFs, and printing instructions are
 available in [README.md](README.md).
 
+## Internal card families
+
+Organize cards by the interaction they create, rather than a fictional setting.
+These families help us write a varied deck; players do not receive a theme, and
+theme labels never appear on their cards.
+
+| Type | Family | Main mechanism | Examples |
+|---|---|---|---|
+| Running | Language | Repeat a recognizable way of speaking without dominating the conversation. | Quiet Footnotes, Careful Conclusions |
+| Running | Perspectives | Look at ordinary things through a consistent, slightly unusual lens. | Future Museum, Soundtrack Consultant |
+| Running | Social habits | Give attention, praise, or credit in a distinctive way. | Collective Credit, Quiet Fan Club |
+| Running | Callbacks and fiction | Let a tiny shared reference accumulate meaning over the evening. | The Imaginary Shop, Unofficial Mascot |
+| Mission | Say something | Lead someone toward a particular word or phrase without supplying it. | Forecast, The Scenic Detour |
+| Mission | Stories and know-how | Draw out an anecdote, useful detail, or connection between guests. | Origin Story, The Useful Tip |
+| Mission | Shared decisions | Get people to invent, compare, or agree on something low-stakes. | Opening Night, The Perfect Bench |
+| Mission | Small actions | Elicit a natural gesture or conversational action rather than a dare. | Counting On It, The Sound Effect |
+| Mission | Callbacks and adoption | Get a phrase, idea, or recommendation to travel beyond its originator. | Return Ticket, It Has a Name |
+
+The current library has six cards in each running family and eight in each
+mission family: **24 running bits and 40 missions**. The original twelve cards
+are retained among them. Editable definitions live under `cards\running` and
+`cards\mission`; a family can be divided into further files whenever useful.
+
+### Keeping the families distinct
+
+"Say something" is about eliciting words you have not supplied. "Callbacks and
+adoption" is about someone taking up an idea you deliberately introduced. A
+running callback asks you to sustain a reference; a mission callback finishes
+when another person takes it up.
+
+Some cards overlap. File a card under its main payoff rather than duplicating it
+in multiple families. Themes are authoring aids, not extra win conditions.
+
+### Variety and pacing
+
+Mix families rather than dealing a whole table only word-elicitation tasks.
+Otherwise normal conversation can turn into an obvious guessing game.
+
+Single-word or gesture missions can resolve in one conversational moment.
+Two-person discussions need more opportunity, while callbacks need time for a
+topic to change. These are pacing differences, not tested difficulty ratings.
+Do not force all missions to finish at the same speed.
+
+For new cards, aim for a recognizable behavior or observable finish, more than
+one natural route to success, and at most a small anti-cheat restriction.
+Spread attention across the group rather than always targeting the same neighbor.
+The group can still exchange unsuitable cards without explanation.
+
 ## Formats
 
 | Format | Hand | Replacement |
@@ -139,6 +187,10 @@ The most promising cards interact without depending on each other.
 For example, someone playing **Holiday Committee** starts planning an imaginary
 holiday. **The Logistics Department** becomes deeply concerned about luggage.
 **Tiny Triumphs** proposes a toast to the excellent planning.
+
+Likewise, **The Imaginary Shop** can feed an **Opening Night** mission, while
+**A Useful Motto** can become someone else's **The Echo**. The cards do not need
+to name or depend on one another for these interactions to emerge.
 
 Each person thinks they are quietly recruiting the others into their joke, and
 they all are.

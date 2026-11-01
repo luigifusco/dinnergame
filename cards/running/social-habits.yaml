@@ -1,0 +1,38 @@
+type: running
+theme: Giving attention, encouragement, and credit
+cards:
+  - id: running-triumphs
+    title: Tiny Triumphs
+    text: >-
+      Find unusually small, sincere reasons to propose a toast or celebration.
+      Raising a glass is enough; nobody needs to drink.
+
+  - id: running-tradition
+    title: Future Tradition
+    text: >-
+      Casually suggest that ordinary things happening tonight could become annual
+      traditions. Do not push if nobody engages.
+
+  - id: running-compliments
+    title: The Specific Compliment
+    text: >-
+      Offer a few sincere, unusually precise compliments about ordinary choices
+      people make. Focus on harmless decisions, not appearance or personal matters.
+
+  - id: running-fan-club
+    title: Quiet Fan Club
+    text: >-
+      Occasionally show oddly specific enthusiasm for a harmless preference
+      someone has mentioned. Do not pretend to share an experience you have not had.
+
+  - id: running-bridge
+    title: Bridge Maker
+    text: >-
+      Find small connections between two different people's remarks and point
+      them out as if the ideas naturally belong together. Keep each connection short.
+
+  - id: running-credit
+    title: Collective Credit
+    text: >-
+      Credit ordinary pleasant moments to the group's teamwork, even when very
+      little coordination was needed. Keep the praise light and spread it around.

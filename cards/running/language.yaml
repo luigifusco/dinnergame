@@ -1,0 +1,38 @@
+type: running
+theme: Language and verbal habits
+cards:
+  - id: running-wisdom
+    title: Borrowed Wisdom
+    text: >-
+      Refer back to someone's earlier, ordinary remark as though it were valuable
+      advice for a different situation.
+
+  - id: running-infrastructure
+    title: Infrastructure Enthusiast
+    text: >-
+      Naturally work the word "infrastructure" into unrelated conversations.
+      Never use it twice within the same topic.
+
+  - id: running-footnotes
+    title: Quiet Footnotes
+    text: >-
+      Occasionally add a brief, unnecessary clarification to a perfectly clear
+      statement of your own. Keep it relevant and move on without explaining why.
+
+  - id: running-conclusions
+    title: Careful Conclusions
+    text: >-
+      Give a few harmless opinions as cautious conclusions: "My current theory
+      is..." or "The early signs are promising." Keep them short and conversational.
+
+  - id: running-understatement
+    title: Delightfully Underwhelmed
+    text: >-
+      Describe a few genuinely good, small things with very restrained praise.
+      Let your tone stay warm rather than dismissive.
+
+  - id: running-metaphors
+    title: Domestic Metaphors
+    text: >-
+      Use ordinary household tasks as brief analogies for unrelated situations.
+      Choose a different task each time and do not explain the analogy at length.

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import tempfile
 from dataclasses import dataclass
@@ -139,56 +140,106 @@ def _read_text(data: dict[str, object], field: str, context: str) -> str:
     return value
 
 
-def load_deck(path: Path) -> Deck:
+def _read_yaml(path: Path) -> dict[str, object]:
     try:
         data = yaml.load(path.read_text(encoding="utf-8-sig"), Loader=UniqueKeyLoader)
     except (OSError, UnicodeError, yaml.YAMLError) as exc:
         raise DeckError(f"Cannot read {path}: {exc}") from exc
     if not isinstance(data, dict):
-        raise DeckError("The deck must be a YAML mapping with 'name' and 'cards'")
-    _check_fields(data, {"name", "cards"}, "Deck")
-    name = _read_text(data, "name", "Deck")
+        raise DeckError(f"{path}: expected a YAML mapping")
+    return data
+
+
+def _read_name(data: dict[str, object], path: Path) -> str:
+    name = _read_text(data, "name", str(path))
     if "\n" in name:
-        raise DeckError("Deck: 'name' must be a single line")
-    entries = data.get("cards")
+        raise DeckError(f"{path}: 'name' must be a single line")
+    return name
+
+
+def _read_kind(value: object, context: str) -> CardKind:
+    if value == "running":
+        return "running"
+    if value == "mission":
+        return "mission"
+    raise DeckError(f"{context}: 'type' must be 'running' or 'mission'")
+
+
+def _read_cards(
+    entries: object,
+    source: Path,
+    seen: dict[str, Path],
+    kind: CardKind | None = None,
+) -> list[Card]:
     if not isinstance(entries, list) or not entries:
-        raise DeckError("Deck: 'cards' must be a non-empty list")
+        raise DeckError(f"{source}: 'cards' must be a non-empty list")
     cards: list[Card] = []
-    seen: set[str] = set()
+    fields = {"id", "title", "text", "copies"}
+    if kind is None:
+        fields.add("type")
     for index, entry in enumerate(entries, start=1):
-        context = f"Card {index}"
+        context = f"{source}: card {index}"
         if not isinstance(entry, dict):
             raise DeckError(f"{context}: expected a mapping")
-        _check_fields(entry, {"id", "type", "title", "text", "copies"}, context)
+        _check_fields(entry, fields, context)
         identifier = _read_text(entry, "id", context)
-        context = f"Card '{identifier}'"
+        context = f"{source}: card '{identifier}'"
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", identifier):
             raise DeckError(
                 f"{context}: use lowercase letters, digits and single hyphens for the id"
             )
         if identifier in seen:
-            raise DeckError(f"{context}: duplicate card id")
-        seen.add(identifier)
-        kind: CardKind
-        if entry.get("type") == "running":
-            kind = "running"
-        elif entry.get("type") == "mission":
-            kind = "mission"
-        else:
-            raise DeckError(f"{context}: 'type' must be 'running' or 'mission'")
+            raise DeckError(f"{context}: duplicate card id (also defined in {seen[identifier]})")
+        seen[identifier] = source
+        card_kind = kind if kind is not None else _read_kind(entry.get("type"), context)
         copies = entry.get("copies", 1)
         if type(copies) is not int or copies < 1:
             raise DeckError(f"{context}: 'copies' must be a positive integer")
         cards.append(
             Card(
                 identifier,
-                kind,
+                card_kind,
                 _read_text(entry, "title", context),
                 _read_text(entry, "text", context),
                 copies,
             )
         )
-    return Deck(name, tuple(cards))
+    return cards
+
+
+def _directory_error(error: OSError) -> None:
+    raise DeckError(f"Cannot discover card files: {error}") from error
+
+
+def load_deck(path: Path) -> Deck:
+    seen: dict[str, Path] = {}
+    if not path.is_dir():
+        data = _read_yaml(path)
+        _check_fields(data, {"name", "cards"}, str(path))
+        return Deck(_read_name(data, path), tuple(_read_cards(data.get("cards"), path, seen)))
+
+    metadata_path = path / "deck.yaml"
+    metadata = _read_yaml(metadata_path)
+    _check_fields(metadata, {"name"}, str(metadata_path))
+    name = _read_name(metadata, metadata_path)
+    sources = []
+    for directory, _, filenames in os.walk(path, onerror=_directory_error):
+        for filename in filenames:
+            source = Path(directory) / filename
+            if source != metadata_path and source.suffix.lower() in {".yaml", ".yml"}:
+                sources.append(source)
+    if not sources:
+        raise DeckError(f"{path}: no card files (.yaml or .yml) were found")
+
+    by_kind: dict[CardKind, list[Card]] = {"running": [], "mission": []}
+    for source in sorted(sources, key=lambda item: item.relative_to(path).parts):
+        group = _read_yaml(source)
+        _check_fields(group, {"type", "theme", "cards"}, str(source))
+        kind = _read_kind(group.get("type"), str(source))
+        if "theme" in group:
+            _read_text(group, "theme", str(source))
+        by_kind[kind].extend(_read_cards(group.get("cards"), source, seen, kind))
+    return Deck(name, tuple(by_kind["running"] + by_kind["mission"]))
 
 
 def _register_fonts() -> None:
@@ -393,7 +444,12 @@ def write_pdfs(deck: PreparedDeck, output: Path, flip: FlipMode = "long-edge") -
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--cards", type=Path, default=ROOT / "cards.yaml", help="YAML deck file")
+    parser.add_argument(
+        "--cards",
+        type=Path,
+        default=ROOT / "cards",
+        help="Card library directory containing deck.yaml, or a single-file YAML deck",
+    )
     parser.add_argument("--output", type=Path, default=ROOT / "print", help="PDF output directory")
     parser.add_argument("--kind", choices=("all", "running", "mission"), default="all")
     parser.add_argument("--flip", choices=("long-edge", "short-edge"), default="long-edge")

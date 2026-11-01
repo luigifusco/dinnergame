@@ -1,0 +1,38 @@
+type: running
+theme: Looking at ordinary things through a particular lens
+cards:
+  - id: running-logistics
+    title: The Logistics Department
+    text: >-
+      Whenever plans come up, take an unusually thoughtful interest in a small
+      practical detail: seating, snacks, luggage, opening hours.
+
+  - id: running-critic
+    title: The Unappointed Critic
+    text: >-
+      Offer occasional precise, positive reviews of things nobody normally reviews:
+      a spoon, the lighting, the arrangement of bread.
+
+  - id: running-museum
+    title: Future Museum
+    text: >-
+      Occasionally wonder how someone decades from now would interpret an
+      ordinary object or custom mentioned tonight. Offer a brief, playful theory.
+
+  - id: running-soundtrack
+    title: Soundtrack Consultant
+    text: >-
+      Occasionally suggest what sort of music would suit an ordinary situation
+      being described. Do not play music or ask anyone to sing.
+
+  - id: running-design
+    title: Everything Is a Design Choice
+    text: >-
+      Speculate gently about why ordinary objects or habits were designed that
+      way. Present your explanations as guesses, not facts, and keep them brief.
+
+  - id: running-guide
+    title: Local Guide
+    text: >-
+      Occasionally describe a familiar detail of the table or room as though it
+      were a modest local landmark. Be fond, not sarcastic, and leave staff out of it.

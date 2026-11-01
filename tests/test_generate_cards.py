@@ -61,6 +61,92 @@ class CardGeneratorTests(unittest.TestCase):
             **overrides,
         }
 
+    def group(self, kind: str, *identifiers: str) -> dict[str, object]:
+        return {
+            "type": kind,
+            "theme": "INTERNAL AUTHORING THEME",
+            "cards": [
+                {"id": identifier, "title": f"Task {identifier}", "text": "Keep this task secret."}
+                for identifier in identifiers
+            ],
+        }
+
+    def write_collection(self, groups: dict[Path, dict[str, object]]) -> Path:
+        root = self.directory / "library"
+        root.mkdir(exist_ok=True)
+        (root / "deck.yaml").write_text("name: Sideplot\n", encoding="utf-8")
+        for relative, group in groups.items():
+            path = root / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(yaml.safe_dump(group), encoding="utf-8")
+        return root
+
+    def test_nested_groups_inherit_type_sort_stably_and_do_not_print_themes(self) -> None:
+        first = self.group("running", "first")
+        first.pop("theme")
+        root = self.write_collection(
+            {
+                Path("mission") / "words.yml": self.group("mission", "third"),
+                Path("running") / "nested" / "b.yaml": self.group("running", "second"),
+                Path("running") / "a.yaml": first,
+            }
+        )
+        (root / "notes.txt").write_text("Not a card file.", encoding="utf-8")
+        deck = load_deck(root)
+        self.assertEqual(
+            [(card.id, card.kind) for card in deck.cards],
+            [("first", "running"), ("second", "running"), ("third", "mission")],
+        )
+        paths = write_pdfs(prepare_deck(deck), self.directory / "nested-pdfs")
+        with pdfium.PdfDocument(paths[0]) as fronts, pdfium.PdfDocument(paths[1]) as backs:
+            for document in (fronts, backs):
+                self.assertNotIn("INTERNAL AUTHORING THEME", page_text(document, 0))
+            for slot, card in enumerate(deck.cards):
+                label = "RUNNING BIT" if card.kind == "running" else "MISSION"
+                self.assertEqual(
+                    text_in_slot(fronts, 0, *slot_origin(slot)),
+                    f"{label} {card.title} {card.text}",
+                )
+                self.assertEqual(text_in_slot(backs, 0, *slot_origin(slot, "back")), label)
+
+    def test_duplicate_ids_across_files_report_both_sources(self) -> None:
+        root = self.write_collection(
+            {
+                Path("first.yaml"): self.group("running", "duplicate"),
+                Path("nested") / "second.yaml": self.group("mission", "duplicate"),
+            }
+        )
+        with self.assertRaisesRegex(DeckError, "duplicate card id") as error:
+            load_deck(root)
+        self.assertIn("first.yaml", str(error.exception))
+        self.assertIn("second.yaml", str(error.exception))
+
+    def test_invalid_group_headers_and_card_type_overrides_are_rejected(self) -> None:
+        cases = (
+            ({"type": "missions"}, "'type'"),
+            ({"theme": ""}, "'theme'"),
+            ({"themes": "Misspelled field"}, "unknown field"),
+            ({"cards": []}, "non-empty list"),
+            ({"cards": [self.entry()]}, "unknown field"),
+        )
+        for overrides, message in cases:
+            with self.subTest(overrides=overrides):
+                group = self.group("running", "first")
+                group.update(overrides)
+                root = self.write_collection({Path("running.yaml"): group})
+                with self.assertRaisesRegex(DeckError, message) as error:
+                    load_deck(root)
+                self.assertIn("running.yaml", str(error.exception))
+
+    def test_collection_requires_metadata_and_at_least_one_card_file(self) -> None:
+        root = self.directory / "empty"
+        root.mkdir()
+        with self.assertRaisesRegex(DeckError, "deck.yaml"):
+            load_deck(root)
+        (root / "deck.yaml").write_text("name: Sideplot\n", encoding="utf-8")
+        with self.assertRaisesRegex(DeckError, "no card files"):
+            load_deck(root)
+
     def test_editable_text_and_copies_survive_loading(self) -> None:
         path = self.directory / "cards.yaml"
         path.write_text(

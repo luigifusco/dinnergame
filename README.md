@@ -19,10 +19,10 @@ included deck:
 | `sideplot-fronts.pdf` | Front sheets only, for manual double-sided printing. |
 | `sideplot-backs.pdf` | Matching back sheets in the same sheet order as the fronts. |
 
-The starter deck contains six running bits and six missions. For the three-card
-format, provide at least one running bit and two missions per player, plus spare
-missions for replacements. Add cards or explicitly increase their copy counts
-before printing for a larger group.
+The library contains **64 cards: 24 running bits and 40 missions**, across nine
+internal themes. The complete deck fills eight A4 sheets, or 16 duplex PDF pages.
+For the three-card format, provide at least one running bit and two missions per
+player, plus spare missions for replacements.
 
 ## Print specification
 
@@ -74,6 +74,8 @@ and license are included in `assets\fonts\OFL.txt`.
 
 Do not laminate an uncut sheet and then cut flush to the card edges: that removes
 the sealed border. If rounding corners, preserve the clear seal around the card.
+Shuffle running bits and missions separately after cutting; the authoring themes
+are not intended to determine the hands people receive.
 
 For manual double-sided printing, use the separate front and back PDFs. Test one
 sheet first to establish your printer's refeed orientation. Both PDFs use the
@@ -83,33 +85,72 @@ the generator already aligns them.
 
 ## Edit the cards
 
-[cards.yaml](cards.yaml) is the source of truth for the printable deck. It is
-plain, editable YAML; no Python changes are needed to add or change a card.
+The [cards directory](cards) is the source of truth for the printable deck.
+Running bits and missions are separate, with smaller files grouped by what the
+card asks a player to do. Themes are internal authoring notes, not printed labels
+or additional game rules. [GAME_DESIGN.md](GAME_DESIGN.md) explains the families.
+
+```text
+cards\
+  deck.yaml
+  running\
+    callbacks-and-fiction.yaml
+    language.yaml
+    perspectives.yaml
+    social-habits.yaml
+  mission\
+    callbacks-and-adoption.yaml
+    say-something.yaml
+    shared-decisions.yaml
+    small-actions.yaml
+    stories-and-know-how.yaml
+```
+
+`cards\deck.yaml` contains only the deck name used in PDF metadata:
 
 ```yaml
 name: Sideplot
+```
+
+Every other YAML file contains one card type and an optional internal theme:
+
+```yaml
+type: mission
+theme: Getting someone else to say a particular word
 cards:
-  - id: mission-example
-    type: mission
-    title: An Unexpected Expert
+  - id: mission-shortcut
+    title: The Scenic Detour
     text: >-
-      Get someone to explain a surprisingly specific skill.
-      Do not directly ask them what their special skill is.
+      Get another player to say "shortcut" while discussing an ordinary task or
+      journey. You cannot say the word, request it, or start a guessing game.
     copies: 1
 ```
 
 | Field | Meaning |
 |---|---|
-| `name` | Single-line deck name for PDF metadata only; never printed on cards. |
-| `id` | Unique lowercase identifier, using letters, digits and single hyphens. |
-| `type` | Exactly `running` or `mission`; selects the matching back design. |
+| `name` | Only in `deck.yaml`: single-line PDF metadata, never printed on cards. |
+| `type` | At the top of each card file: exactly `running` or `mission`, applying to every entry. |
+| `theme` | Optional file-level authoring note. Never printed or used to change the rules. |
+| `id` | Unique across the entire library, using lowercase letters, digits and single hyphens. |
 | `title` | Short title printed on the front. |
 | `text` | Plain-text task. Use `>-` to fold wrapped YAML lines into a paragraph, or `|-` to preserve line breaks. |
 | `copies` | Optional positive integer; defaults to one. Copies stay together in file order. |
 
-Card order follows the YAML list. Remove an entry to omit it, or use `--kind` to
-print just one type. Put punctuation-rich text under `>-` as shown rather than
-trying to escape it on a single YAML line.
+All `.yaml` and `.yml` files beneath the library directory are discovered
+recursively, except its root `deck.yaml`. Add a file or split a theme into nested
+files such as `cards\mission\say-something\words.yaml` and
+`cards\mission\say-something\phrases.yaml`; no Python changes or file list are
+needed. Each new file gets its own `type`, optional `theme`, and non-empty `cards`
+list. Move entries rather than copying them: duplicate IDs are an error.
+
+Folder names are organizational; the file-level `type` determines the card back.
+Entries do not repeat or override `type`. Running bits print first, then missions.
+Within each type, files sort by relative path, and entries retain their YAML list
+order. Theme labels never appear in the PDF, including on the backs.
+
+Remove an entry or file to omit it, or use `--kind` to print just one type.
+Non-YAML files are ignored. Put punctuation-rich text under `>-` as shown rather
+than trying to escape it on a single YAML line.
 
 Text is treated literally, not as HTML or Markdown. The deck accepts English and
 Western European characters, including accented Italian text. Unsupported
@@ -118,8 +159,9 @@ an explicit error instead of missing-glyph boxes.
 
 Titles and body text wrap automatically. The generator reduces body text only as
 far as 9 pt; if a card still does not fit, it reports that card's ID and asks you
-to shorten it. Unknown fields, duplicate IDs, duplicate YAML keys, and invalid
-copy counts are also errors.
+to shorten it. Unknown fields, duplicate IDs across files, duplicate YAML keys,
+empty card files, and invalid copy counts are errors. Input errors identify the
+source file.
 
 ## Generate the PDFs
 
@@ -133,7 +175,7 @@ python -m venv .venv
 
 This regenerates all three PDFs in `print`. Generated PDFs are tracked in Git so
 the deck can be downloaded and printed without setting up Python. Regenerate
-them whenever you change `cards.yaml` or the rendering code.
+them whenever you change anything under `cards` or the rendering code.
 
 Useful options:
 
@@ -144,12 +186,19 @@ Useful options:
 # Print only missions into a separate directory.
 .\.venv\Scripts\python.exe scripts\generate_cards.py --kind mission --output print\missions
 
-# Read a different deck.
+# Read a different library directory (which must contain deck.yaml).
+.\.venv\Scripts\python.exe scripts\generate_cards.py --cards my-card-library
+
+# Read a legacy single-file deck.
 .\.venv\Scripts\python.exe scripts\generate_cards.py --cards my-cards.yaml
 
 # For a printer configured to flip on the short edge.
 .\.venv\Scripts\python.exe scripts\generate_cards.py --flip short-edge --output print\short-edge
 ```
+
+A legacy single-file deck still uses `name` and `cards` at the top level, with
+`type` on each card. This is distinct from the theme-file format above; pass the
+library directory, not an individual theme file, when using the split format.
 
 Long-edge backs mirror the columns; short-edge backs mirror the rows. Text itself
 is never mirrored. Empty positions on a partial final sheet remain correctly
@@ -171,6 +220,7 @@ The renderer and vector back designs are in `scripts\generate_cards.py`.
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-The tests inspect real PDFs for uncluttered card text, embedded fonts,
-type-specific backs, duplex page order, partial-sheet alignment, literal text
-handling, and reproducible output.
+The tests cover recursive discovery, shared file types, internal-only themes,
+cross-file validation, and legacy decks. They also inspect real PDFs for
+uncluttered card text, embedded fonts, type-specific backs, duplex page order,
+partial-sheet alignment, literal text handling, and reproducible output.

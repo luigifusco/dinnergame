@@ -1,0 +1,51 @@
+type: mission
+theme: Getting people to invent, compare, or decide together
+cards:
+  - id: mission-holiday
+    title: Holiday Committee
+    text: >-
+      Get two other people contributing concrete suggestions to an imaginary
+      group holiday. You cannot propose the destination yourself.
+
+  - id: mission-principle
+    title: A Matter of Principle
+    text: >-
+      Get two other people discussing the merits of a trivial choice: bowls
+      versus plates, window versus aisle, sweet versus salty breakfast.
+      Both must offer a reason, not just state a preference.
+
+  - id: mission-opening-night
+    title: Opening Night
+    text: >-
+      Get two other people to help choose what an imaginary tiny cafe should
+      serve. Each must contribute an idea, and the cafe must be clearly hypothetical.
+
+  - id: mission-bench
+    title: The Perfect Bench
+    text: >-
+      Get two other people to agree on the best place for an imaginary park
+      bench. Both must give a reason; you cannot propose the location yourself.
+
+  - id: mission-luxury
+    title: One Luxury
+    text: >-
+      Get two other people to agree on one unnecessary comfort for a hypothetical
+      short trip. You cannot make the final choice or ask for a vote.
+
+  - id: mission-better-name
+    title: The Better Name
+    text: >-
+      Get someone to invent a name for an imaginary restaurant, band, or boat,
+      and another player to say they like it. You cannot supply the chosen name.
+
+  - id: mission-redesign
+    title: Gentle Redesign
+    text: >-
+      Get two other people to suggest different improvements to an ordinary
+      object that comes up in conversation. Do not criticize the venue or anyone's belongings.
+
+  - id: mission-ranking
+    title: Unnecessary Ranking
+    text: >-
+      Get two other people to agree on a top choice in a trivial category, such as
+      most useful pasta shape. Both must explain why. Do not ask for a formal vote.
