@@ -76,6 +76,9 @@ Do not force all missions to finish at the same speed.
 
 For new cards, aim for a recognizable behavior or observable finish, more than
 one natural route to success, and at most a small anti-cheat restriction.
+State the task directly, without advice about keeping it brief, natural, or
+playful. Keep task-specific restrictions; general etiquette belongs in the
+shared rules.
 Spread attention across the group rather than always targeting the same neighbor.
 The group can still exchange unsuitable cards without explanation.
 
@@ -122,12 +125,12 @@ constant performance.
 
 | Card | Secret instruction |
 |---|---|
-| **The Logistics Department** | Whenever plans come up, take an unusually thoughtful interest in a small practical detail: seating, snacks, luggage, opening hours. |
-| **Borrowed Wisdom** | Refer back to someone's earlier, ordinary remark as though it were valuable advice for a different situation. |
-| **Infrastructure Enthusiast** | Naturally work the word "infrastructure" into unrelated conversations. Never use it twice within the same topic. |
-| **Tiny Triumphs** | Find unusually small, sincere reasons to propose a toast or celebration. Raising a glass is enough; nobody needs to drink. |
-| **The Unappointed Critic** | Offer occasional precise, positive reviews of things nobody normally reviews: a spoon, the lighting, the arrangement of bread. |
-| **Future Tradition** | Casually suggest that ordinary things happening tonight could become annual traditions. Do not push if nobody engages. |
+| **The Logistics Department** | When plans come up, focus intently on one small detail: seating, snacks, luggage, opening hours. |
+| **Borrowed Wisdom** | Treat someone's earlier throwaway remark as wise advice for a different situation. |
+| **Infrastructure Enthusiast** | Work the word "infrastructure" into unrelated conversations, no more than once per topic. |
+| **Tiny Triumphs** | Find tiny reasons for a toast or celebration. Raising a glass is enough; no drinking required. |
+| **The Unappointed Critic** | Give detailed, positive reviews of things nobody reviews: a spoon, the lighting, the bread arrangement. |
+| **Future Tradition** | Suggest making ordinary things that happen tonight into annual traditions. |
 
 These cards create recognizable patterns without requiring someone to hijack the
 conversation.
@@ -139,12 +142,12 @@ require public proof or an interruption.
 
 | Card | Secret instruction |
 |---|---|
-| **Forecast** | Get another player to say "umbrella." You cannot say it yourself, request the word, or introduce a word-guessing game. |
-| **The Echo** | Introduce an expression that another player later uses in a different context. Asking them to repeat it does not count. |
-| **Resident Expert** | Get the person on your right explaining a niche interest, then get a different person to ask them a follow-up question. |
-| **Holiday Committee** | Get two other people contributing concrete suggestions to an imaginary group holiday. You cannot propose the destination yourself. |
-| **Human Diagram** | Get someone to use an object on the table to explain something. You cannot suggest using props. |
-| **A Matter of Principle** | Get two other people discussing the merits of a trivial choice: bowls versus plates, window versus aisle, sweet versus salty breakfast. Both must offer a reason, not just state a preference. |
+| **Forecast** | Get another player to say "umbrella" without saying it yourself, asking for the word, or starting a guessing game. |
+| **The Echo** | Introduce an expression that another player later uses in a different context, without asking them to repeat it. |
+| **Resident Expert** | Get the person on your right to explain a niche interest, then get someone else to ask them a follow-up question. |
+| **Holiday Committee** | Get two other people to suggest details for an imaginary group holiday, without proposing the destination yourself. |
+| **Human Diagram** | Get someone to explain something using an object on the table, without suggesting props. |
+| **A Matter of Principle** | Get two other people to discuss a trivial choice, like bowls versus plates or window versus aisle. Both must give a reason. |
 
 For a gentler deck, allow direct conversational questions. For a harder deck, add
 restrictions selectively. "Get someone talking about holidays" is approachable;

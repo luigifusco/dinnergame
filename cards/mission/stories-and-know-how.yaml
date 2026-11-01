@@ -4,47 +4,47 @@ cards:
   - id: mission-expert
     title: Resident Expert
     text: >-
-      Get the person on your right explaining a niche interest, then get a
-      different person to ask them a follow-up question.
+      Get the person on your right to explain a niche interest, then get someone
+      else to ask them a follow-up question.
 
   - id: mission-origin
     title: Origin Story
     text: >-
-      Get someone to tell how they first learned an everyday skill. Let it grow
-      out of the conversation; do not directly ask how they learned the skill.
+      Get someone to tell how they first learned an everyday skill, without
+      directly asking how.
 
   - id: mission-connection
     title: Unexpected Connection
     text: >-
-      Get two other people to discover a shared niche interest and exchange a
-      detail about it. Do not invent an experience to create the connection.
+      Get two other people to discover a shared niche interest and swap a detail
+      about it. Don't invent any experiences.
 
   - id: mission-useful-tip
     title: The Useful Tip
     text: >-
-      Get someone to share a practical tip that another guest says they would
-      like to try. Do not ask anyone to endorse the tip.
+      Get someone to share a practical tip that another guest says they'd like to
+      try, without asking anyone to endorse it.
 
   - id: mission-small-victory
     title: Small Victory
     text: >-
-      Get someone to tell a story about solving a minor household or hobby
-      problem, including what finally worked. Do not ask for an embarrassing story.
+      Get someone to tell how they solved a small household or hobby problem,
+      including what finally worked.
 
   - id: mission-two-versions
     title: Two Versions
     text: >-
-      Get two other people to compare how they do the same everyday task and
-      notice one difference. Do not announce a comparison challenge.
+      Get two other people to compare how they do the same everyday task and spot
+      a difference, without announcing a comparison challenge.
 
   - id: mission-first-attempt
     title: First Attempt
     text: >-
-      Get someone to volunteer a lighthearted story about first trying a hobby
-      or recipe, including something they changed next time. Do not press for mistakes.
+      Get someone to volunteer a story about their first try at a hobby or
+      recipe, including what they changed next time.
 
   - id: mission-recommendations
     title: The Recommendation Chain
     text: >-
-      Get someone to recommend a book, show, song, or recipe, then have a different
-      person add a related recommendation. Do not ask for a round-the-table list.
+      Get one person to recommend a book, show, song, or recipe and another to add
+      a related suggestion. No round-the-table lists.

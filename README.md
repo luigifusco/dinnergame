@@ -121,8 +121,8 @@ cards:
   - id: mission-shortcut
     title: The Scenic Detour
     text: >-
-      Get another player to say "shortcut" while discussing an ordinary task or
-      journey. You cannot say the word, request it, or start a guessing game.
+      Get another player to say "shortcut" while discussing a task or journey.
+      Don't say it yourself, ask for the word, or start a guessing game.
     copies: 1
 ```
 

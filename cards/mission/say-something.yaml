@@ -4,47 +4,47 @@ cards:
   - id: mission-forecast
     title: Forecast
     text: >-
-      Get another player to say "umbrella." You cannot say it yourself, request
-      the word, or introduce a word-guessing game.
+      Get another player to say "umbrella" without saying it yourself, asking for
+      the word, or starting a guessing game.
 
   - id: mission-shortcut
     title: The Scenic Detour
     text: >-
-      Get another player to say "shortcut" while discussing an ordinary task or
-      journey. You cannot say the word, request it, or start a guessing game.
+      Get another player to say "shortcut" while discussing a task or journey.
+      Don't say it yourself, ask for the word, or start a guessing game.
 
   - id: mission-nostalgia
     title: A Familiar Feeling
     text: >-
-      Get someone to say "nostalgia" or "nostalgic" about a food, song, or object.
-      You cannot say either word or ask them for a particular word.
+      Get someone to say "nostalgia" or "nostalgic" about a food, song, or object,
+      without using or asking for either word.
 
   - id: mission-underrated
     title: More Credit, Please
     text: >-
-      Get someone to describe a food, object, or activity as "underrated."
-      You cannot say the word yourself or offer it as a suggested answer.
+      Get someone to call a food, object, or activity "underrated," without saying
+      or suggesting the word yourself.
 
   - id: mission-depends
     title: The Exception
     text: >-
-      Get another player to say "it depends" in a genuine conversation.
-      You cannot say the phrase first or ask them to complete a sentence.
+      Get another player to say "it depends" in conversation, without saying it
+      first or asking them to finish a sentence.
 
   - id: mission-good-question
     title: Worth Asking
     text: >-
-      Get someone to say "that's a good question" about a harmless question you
-      ask. You cannot request a judgment of your question or say the phrase first.
+      Ask a question that gets a "that's a good question" from someone. Don't say
+      the phrase first or ask them to rate your question.
 
   - id: mission-never-thought
     title: A New Angle
     text: >-
-      Get someone to say "I never thought of that" in a low-stakes discussion.
-      You cannot suggest the phrase or ask them to repeat your words.
+      Get someone to say "I never thought of that" without suggesting the phrase
+      or asking them to repeat you.
 
   - id: mission-plot-twist
     title: An Unexpected Turn
     text: >-
-      Get another player to say "plot twist" in response to a story or clearly
-      hypothetical situation. You cannot say the phrase or ask for a guessing game.
+      Get another player to say "plot twist" about a story or hypothetical
+      situation, without saying it yourself or starting a guessing game.

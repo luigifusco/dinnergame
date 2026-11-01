@@ -4,47 +4,47 @@ cards:
   - id: mission-diagram
     title: Human Diagram
     text: >-
-      Get someone to use an object on the table to explain something.
-      You cannot suggest using props.
+      Get someone to explain something using an object on the table, without
+      suggesting props.
 
   - id: mission-shape
     title: The Shape of It
     text: >-
-      Get someone to trace a shape in the air while explaining an ordinary object,
-      route, or idea. You cannot request a gesture or perform it for them.
+      Get someone to trace a shape in the air while explaining an object, route,
+      or idea, without requesting or demonstrating the gesture.
 
   - id: mission-counting
     title: Counting On It
     text: >-
       Get another player to count at least three items on their fingers while
-      making a point. You cannot ask them to count or suggest using their hands.
+      making a point, without asking them to count or use their hands.
 
   - id: mission-toast
     title: A Small Toast
     text: >-
-      Get at least two others to join a brief toast to a minor, positive event
-      from tonight. Raising any glass is enough; nobody needs to drink.
+      Get at least two others to raise a glass to a small, happy moment from
+      tonight. No drinking required.
 
   - id: mission-sound
     title: The Sound Effect
     text: >-
-      Get someone to include a short sound effect while telling a story.
-      Do not ask for a noise, an impression, or a performance.
+      Get someone to add a short sound effect to a story, without asking for a
+      noise, impression, or performance.
 
   - id: mission-look-again
     title: Look Again
     text: >-
-      Get another player to point out a positive, ordinary detail of the table
-      or room. You cannot identify the detail first or ask them to search for something.
+      Get another player to point out a nice detail of the table or room, without
+      mentioning it first or asking them to look for one.
 
   - id: mission-follow-up
     title: Passing the Question
     text: >-
-      Get someone to ask a different guest a follow-up question about a harmless
-      detail you brought into the conversation. You cannot ask them to pass the question on.
+      Get someone to ask another guest a follow-up question about a detail you
+      mentioned, without asking them to pass the question on.
 
   - id: mission-joint-example
     title: The Joint Example
     text: >-
-      Get one guest to start an example and a second to add a detail before you
-      speak again. Do not ask either person to complete the other's story.
+      Get one guest to start an example and another to add a detail before you
+      speak again. Don't ask either to finish the other's story.

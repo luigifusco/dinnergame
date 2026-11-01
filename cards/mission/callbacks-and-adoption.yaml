@@ -5,46 +5,46 @@ cards:
     title: The Echo
     text: >-
       Introduce an expression that another player later uses in a different
-      context. Asking them to repeat it does not count.
+      context, without asking them to repeat it.
 
   - id: mission-nickname
     title: It Has a Name
     text: >-
-      Give an ordinary shared object or harmless idea a nickname. Get another
-      player to use that name later, without prompting the repetition.
+      Give a shared object or idea a nickname that someone else later uses
+      without prompting.
 
   - id: mission-return
     title: Return Ticket
     text: >-
       Get another player to bring back a topic you introduced after the
-      conversation has moved on. You cannot remind them of it or ask to return.
+      conversation has moved on, without reminding or asking them.
 
   - id: mission-reference
     title: A Shared Reference
     text: >-
-      Compare something harmless tonight to a familiar fictional character.
-      Get another player to use that comparison later without asking them to.
+      Compare something tonight to a familiar fictional character and get
+      someone else to reuse the comparison later, without prompting.
 
   - id: mission-next-time
     title: Next Time
     text: >-
-      Get someone else to suggest repeating a small part of this evening at a
-      future gathering. You cannot propose making it a tradition.
+      Get someone to suggest repeating a small part of tonight at a future
+      gathering, without proposing a tradition yourself.
 
   - id: mission-borrowed-example
     title: Your Example, Their Point
     text: >-
-      Introduce a hypothetical example in a natural discussion. Get another
-      guest to refer back to it while making a different point. Do not ask them to use it.
+      Introduce a hypothetical example that someone else later uses to make a
+      different point, without asking them to use it.
 
   - id: mission-callback
     title: The Callback
     text: >-
-      Get another player to bring back a harmless detail from a story you told
-      as a joke after the topic has changed. Do not request a joke or repeat the punchline.
+      Get another player to joke about a detail from your story after the topic
+      changes, without asking for a joke or repeating the punchline.
 
   - id: mission-borrowed-recommendation
     title: Borrowed Recommendation
     text: >-
-      Get someone to pass a recommendation you introduced to a different guest.
-      They must describe it in their own words; do not ask them to relay it.
+      Get someone to pass your recommendation to another guest in their own
+      words, without asking them to relay it.

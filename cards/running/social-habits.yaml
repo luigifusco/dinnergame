@@ -4,35 +4,34 @@ cards:
   - id: running-triumphs
     title: Tiny Triumphs
     text: >-
-      Find unusually small, sincere reasons to propose a toast or celebration.
-      Raising a glass is enough; nobody needs to drink.
+      Find tiny reasons for a toast or celebration. Raising a glass is enough;
+      no drinking required.
 
   - id: running-tradition
     title: Future Tradition
     text: >-
-      Casually suggest that ordinary things happening tonight could become annual
-      traditions. Do not push if nobody engages.
+      Suggest making ordinary things that happen tonight into annual traditions.
 
   - id: running-compliments
     title: The Specific Compliment
     text: >-
-      Offer a few sincere, unusually precise compliments about ordinary choices
-      people make. Focus on harmless decisions, not appearance or personal matters.
+      Give oddly specific, sincere compliments about people's everyday choices,
+      not their appearance or private lives.
 
   - id: running-fan-club
     title: Quiet Fan Club
     text: >-
-      Occasionally show oddly specific enthusiasm for a harmless preference
-      someone has mentioned. Do not pretend to share an experience you have not had.
+      Show oddly specific enthusiasm for a preference someone mentions, without
+      inventing a shared experience.
 
   - id: running-bridge
     title: Bridge Maker
     text: >-
-      Find small connections between two different people's remarks and point
-      them out as if the ideas naturally belong together. Keep each connection short.
+      Connect two different people's remarks as if their ideas obviously belong
+      together.
 
   - id: running-credit
     title: Collective Credit
     text: >-
-      Credit ordinary pleasant moments to the group's teamwork, even when very
-      little coordination was needed. Keep the praise light and spread it around.
+      Credit little successes to the group's teamwork, even when nobody had to
+      coordinate.

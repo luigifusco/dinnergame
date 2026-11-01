@@ -4,35 +4,32 @@ cards:
   - id: running-previously
     title: Previously, at This Table
     text: >-
-      Occasionally recap a small earlier event as if it were the relevant
-      background to what is happening now. Do not narrate continuously.
+      Recap small events from earlier as background to what's happening now.
 
   - id: running-shop
     title: The Imaginary Shop
     text: >-
-      Imagine selling one ordinary item or idea mentioned tonight. Refer back
-      to this tiny business when a natural connection appears; never pretend it is real.
+      Invent an imaginary business selling something mentioned tonight and refer
+      back to it when it fits.
 
   - id: running-headline
     title: Tomorrow's Headline
     text: >-
-      From time to time, give a minor event a short, friendly headline.
-      Deliver it conversationally, not as a performance.
+      Give minor events short, friendly headlines.
 
   - id: running-committee
     title: The Committee
     text: >-
-      Refer occasionally to an imaginary committee interested in trivial
-      decisions. Its opinions should be gentle and obviously fictional.
+      Mention an imaginary committee's opinions on trivial decisions.
 
   - id: running-motto
     title: A Useful Motto
     text: >-
-      Introduce a short, harmless motto of your own and bring it back when it fits
-      a later topic. Do not ask anyone to repeat it.
+      Invent a short motto and reuse it in later conversations, without asking
+      anyone to repeat it.
 
   - id: running-mascot
     title: Unofficial Mascot
     text: >-
-      Choose an ordinary object already on the table and occasionally give it a
-      small role in your comments. Do not move or touch anyone else's belongings.
+      Give an object on the table a recurring role in your comments, without
+      handling anyone else's belongings.
