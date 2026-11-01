@@ -48,9 +48,11 @@ theme labels never appear on their cards.
 | Mission | Shared decisions | Get people to invent, compare, or agree on something low-stakes. | Opening Night, The Perfect Bench |
 | Mission | Small actions | Elicit a natural gesture or conversational action rather than a dare. | Counting On It, The Sound Effect |
 | Mission | Callbacks and adoption | Get a phrase, idea, or recommendation to travel beyond its originator. | Return Ticket, It Has a Name |
+| Mission | Corrections and reactions | Set up a mistake, imitation, or curious question. | Close Enough, Inside Voice |
+| Mission | Props and surprises | Prepare an object for someone to discover, try, or play along with. | Under Wraps, Stop and Smell |
 
 The current library has six cards in each running family and eight in each
-mission family: **24 running bits and 40 missions**. The original twelve cards
+mission family: **24 running bits and 56 missions**. The original twelve cards
 are retained among them. Editable definitions live under `cards\running` and
 `cards\mission`; a family can be divided into further files whenever useful.
 
@@ -60,6 +62,10 @@ are retained among them. Editable definitions live under `cards\running` and
 adoption" is about someone taking up an idea you deliberately introduced. A
 running callback asks you to sustain a reference; a mission callback finishes
 when another person takes it up.
+
+"Small actions" catches something a player does during conversation. "Props and
+surprises" starts with an object you prepare or plant; "corrections and reactions"
+starts with something you say or do to prompt a response.
 
 Some cards overlap. File a card under its main payoff rather than duplicating it
 in multiple families. Themes are authoring aids, not extra win conditions.
@@ -74,8 +80,10 @@ Two-person discussions need more opportunity, while callbacks need time for a
 topic to change. These are pacing differences, not tested difficulty ratings.
 Do not force all missions to finish at the same speed.
 
-For new cards, aim for a recognizable behavior or observable finish, more than
-one natural route to success, and at most a small anti-cheat restriction.
+For running bits, aim for a recognizable behavior. For missions, pick an
+observable finish: a correction, a copied gesture, a question, or a discovered
+card. Give missions a concrete hook rather than a whole conversation to manage.
+Leave room for different approaches, with at most a small anti-cheat restriction.
 State the task directly, without advice about keeping it brief, natural, or
 playful. Keep task-specific restrictions; general etiquette belongs in the
 shared rules.
@@ -106,7 +114,8 @@ disruptive. For a longer session, running bits can stay in play for the evening.
 ## Basic play
 
 1. Explain that secret tasks will be in play, then deal the chosen hand to each
-   player. Keep card contents private.
+   player. Keep card contents private unless a task calls for another player to
+   find the card.
 2. Continue the gathering normally. There are no turns, and nobody needs to
    perform continuously.
 3. Use an honor system for mission completion. Keep completed cards face down for
@@ -117,6 +126,10 @@ disruptive. For a longer session, running bits can stay in play for the evening.
 
 Players may discreetly exchange an uncomfortable or unsuitable card without
 giving an explanation.
+
+Paper, a pen, and spare clean napkins cover most prop missions. Exchange a mission
+if its props aren't available. Retrieve any hidden card after it's found, or when
+the game ends.
 
 ## Example running-bit cards
 
@@ -148,6 +161,10 @@ require public proof or an interruption.
 | **Holiday Committee** | Get two other people to suggest details for an imaginary group holiday, without proposing the destination yourself. |
 | **Human Diagram** | Get someone to explain something using an object on the table, without suggesting props. |
 | **A Matter of Principle** | Get two other people to discuss a trivial choice, like bowls versus plates or window versus aisle. Both must give a reason. |
+| **Close Enough** | Misquote a familiar saying and get another player to correct it. |
+| **Inside Voice** | Whisper a question and get another player to whisper their answer. |
+| **Under Wraps** | Hide this card inside a folded napkin. Get another player to unfold it and find the card. |
+| **Stop and Smell** | Fold a paper flower and get another player to smell it. |
 
 For a gentler deck, allow direct conversational questions. For a harder deck, add
 restrictions selectively. "Get someone talking about holidays" is approachable;
@@ -158,8 +175,8 @@ restrictions selectively. "Get someone talking about holidays" is approachable;
 Save formal guessing for a short reveal at a natural break, rather than allowing
 continuous accusations or interrogation.
 
-Before any cards are shown, each player makes one prediction about another
-player's task. Then everyone reveals their cards and shares a memorable attempt,
+At the shared reveal, each player first predicts another player's still-hidden
+task. Then everyone shows their cards and shares a memorable attempt,
 success, or missed opportunity.
 
 Being suspected does not mean immediate failure. The dawning realization is part
@@ -182,6 +199,10 @@ are secret. The joke should be shared, not aimed at an unsuspecting guest.
 Exclude cards requiring alcohol, private disclosures, humiliation, or bothering
 staff. Players can decline involvement or exchange cards without explaining why.
 Ordinary conversation and the comfort of the group take priority over completion.
+
+Use only shared table items or your own props. Keep cards out of food and drinks;
+don't hide them on another player or in their belongings. No hitting, grabbing,
+or fake health scares.
 
 ## Interactions between cards
 

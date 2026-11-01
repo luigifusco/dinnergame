@@ -1,0 +1,43 @@
+type: mission
+theme: Setting up discoveries and small tricks with everyday objects
+cards:
+  - id: mission-napkin-reveal
+    title: Under Wraps
+    text: >-
+      Hide this card inside a folded napkin. Get another player to unfold it and
+      find the card.
+
+  - id: mission-paper-flower
+    title: Stop and Smell
+    text: >-
+      Fold a paper flower and get another player to smell it.
+
+  - id: mission-paper-crown
+    title: Your Majesty
+    text: >-
+      Make a paper crown and get another player to wear it.
+
+  - id: mission-paper-key
+    title: Master Key
+    text: >-
+      Draw a key and get another player to pretend to unlock something with it.
+
+  - id: mission-table-map
+    title: You Are Here
+    text: >-
+      Draw a map of the table and get another player to mark where they're sitting.
+
+  - id: mission-coaster-inspection
+    title: Other Side
+    text: >-
+      Get another player to turn over a coaster to check a detail that isn't there.
+
+  - id: mission-pen-balance
+    title: Steady Hand
+    text: >-
+      Balance a pen on one finger and get another player to try it.
+
+  - id: mission-price-tag
+    title: Open to Offers
+    text: >-
+      Put a pretend price tag on your pen and get another player to haggle.

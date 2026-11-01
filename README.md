@@ -19,10 +19,13 @@ included deck:
 | `sideplot-fronts.pdf` | Front sheets only, for manual double-sided printing. |
 | `sideplot-backs.pdf` | Matching back sheets in the same sheet order as the fronts. |
 
-The library contains **64 cards: 24 running bits and 40 missions**, across nine
-internal themes. The complete deck fills eight A4 sheets, or 16 duplex PDF pages.
+The library contains **80 cards: 24 running bits and 56 missions**, across eleven
+internal themes. The complete deck fills ten A4 sheets, or 20 duplex PDF pages.
 For the three-card format, provide at least one running bit and two missions per
 player, plus spare missions for replacements.
+
+Some missions use paper, a pen, spare clean napkins, or a coaster. Exchange a
+mission if its props aren't available.
 
 ## Print specification
 
@@ -100,6 +103,8 @@ cards\
     social-habits.yaml
   mission\
     callbacks-and-adoption.yaml
+    corrections-and-reactions.yaml
+    props-and-surprises.yaml
     say-something.yaml
     shared-decisions.yaml
     small-actions.yaml

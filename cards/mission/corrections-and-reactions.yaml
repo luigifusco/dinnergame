@@ -1,0 +1,42 @@
+type: mission
+theme: Prompting corrections, imitation, and curious questions
+cards:
+  - id: mission-wrong-proverb
+    title: Close Enough
+    text: >-
+      Misquote a familiar saying and get another player to correct it.
+
+  - id: mission-bad-arithmetic
+    title: Doesn't Add Up
+    text: >-
+      Make a small arithmetic mistake and get another player to correct your answer.
+
+  - id: mission-whisper
+    title: Inside Voice
+    text: >-
+      Whisper a question and get another player to whisper their answer.
+
+  - id: mission-looking-up
+    title: Made You Look
+    text: >-
+      Get another player to look at the ceiling just by looking up yourself.
+
+  - id: mission-second-hello
+    title: Second Hello
+    text: >-
+      Get a handshake and a fist bump from the same player, in separate conversations.
+
+  - id: mission-made-up-proverb
+    title: Who Said That?
+    text: >-
+      Quote a made-up proverb and get another player to ask where it comes from.
+
+  - id: mission-mirror-face
+    title: Mirror Image
+    text: >-
+      Get another player to copy a facial expression you make, without asking them to.
+
+  - id: mission-imaginary-gadget
+    title: Not in Shops
+    text: >-
+      Describe an imaginary gadget and get another player to ask where they can buy one.
