@@ -19,13 +19,19 @@ included deck:
 | `sideplot-fronts.pdf` | Front sheets only, for manual double-sided printing. |
 | `sideplot-backs.pdf` | Matching back sheets in the same sheet order as the fronts. |
 
-The library contains **77 cards: 21 running bits and 56 missions**, across eleven
+The library contains **68 cards: 22 running bits and 46 missions**, across eleven
 internal themes. The complete deck uses five A4 sheets, or 10 duplex PDF pages.
 For the three-card format, provide at least one running bit and two missions per
 player, plus spare missions for replacements.
 
-Some missions use paper, a pen, napkins, or a coaster. Exchange a
-mission if its props aren't available.
+Some missions use paper, a pen, or napkins. Exchange a mission if its props
+aren't available.
+
+Questions, hints, and demonstrations can help complete missions when they have a
+conversational pretext; simply requesting the listed action does not count.
+See the [difficulty guide](GAME_DESIGN.md#mission-difficulty) for examples and
+playtest guidelines. Difficulty bands are provisional authoring notes, not
+extra YAML fields or printed labels.
 
 ## Print specification
 

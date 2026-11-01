@@ -1,5 +1,5 @@
 type: running
-theme: Attention, enthusiasm, and connections
+theme: Conversation habits and recurring rituals
 cards:
   - id: running-triumphs
     title: Tiny Triumphs
@@ -26,3 +26,9 @@ cards:
     text: >-
       Connect two different people's remarks as if their ideas obviously belong
       together.
+
+  - id: running-fuck-marry-kill
+    title: Fuck, Marry, Kill
+    text: >-
+      Keep proposing rounds of "fuck, marry, kill" using things mentioned in
+      conversation.

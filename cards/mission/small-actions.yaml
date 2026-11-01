@@ -4,47 +4,31 @@ cards:
   - id: mission-diagram
     title: Human Diagram
     text: >-
-      Get someone to explain something using an object on the table, without
-      suggesting props.
+      Get someone to explain something using an object on the table.
 
   - id: mission-shape
     title: The Shape of It
     text: >-
-      Get someone to trace a shape in the air while explaining an object, route,
-      or idea, without requesting or demonstrating the gesture.
+      Get another player to draw a shape in the air while explaining something.
 
   - id: mission-counting
     title: Counting On It
     text: >-
-      Get another player to count at least three items on their fingers while
-      making a point, without asking them to count or use their hands.
-
-  - id: mission-toast
-    title: A Small Toast
-    text: >-
-      Get at least two others to raise a glass to a small, happy moment from
-      tonight.
+      Get another player to count at least three things on their fingers.
 
   - id: mission-sound
     title: The Sound Effect
     text: >-
-      Get someone to add a short sound effect to a story, without asking for a
-      noise, impression, or performance.
+      Get another player to add a sound effect while telling a story.
 
   - id: mission-look-again
     title: Look Again
     text: >-
-      Get another player to point out a nice detail of the table or room, without
-      mentioning it first or asking them to look for one.
-
-  - id: mission-follow-up
-    title: Passing the Question
-    text: >-
-      Get someone to ask another guest a follow-up question about a detail you
-      mentioned, without asking them to pass the question on.
+      Get another player to point out a nice detail of the table or room you
+      haven't mentioned.
 
   - id: mission-joint-example
-    title: The Joint Example
+    title: The Joint Story
     text: >-
-      Get one guest to start an example and another to add a detail before you
-      speak again. Don't ask either to finish the other's story.
+      Get one player to start telling a story and another to add a detail before
+      you speak again.

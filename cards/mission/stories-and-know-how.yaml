@@ -4,26 +4,25 @@ cards:
   - id: mission-expert
     title: Resident Expert
     text: >-
-      Get the person on your right to explain a niche interest, then get someone
-      else to ask them a follow-up question.
+      Get another player to give you a step-by-step explanation of a skill they
+      have.
 
   - id: mission-origin
     title: Origin Story
     text: >-
-      Get someone to tell how they first learned an everyday skill, without
-      directly asking how.
+      Get someone to tell how they first learned an everyday skill.
 
   - id: mission-connection
     title: Unexpected Connection
     text: >-
-      Get two other people to discover a shared niche interest and swap a detail
-      about it.
+      Find something you and another player have both done. Get them to compare
+      their experience with yours.
 
   - id: mission-useful-tip
     title: The Useful Tip
     text: >-
       Get someone to share a practical tip that another guest says they'd like to
-      try, without asking anyone to endorse it.
+      try.
 
   - id: mission-small-victory
     title: Small Victory
@@ -31,20 +30,14 @@ cards:
       Get someone to tell how they solved a small household or hobby problem,
       including what finally worked.
 
-  - id: mission-two-versions
-    title: Two Versions
-    text: >-
-      Get two other people to compare how they do the same everyday task and spot
-      a difference, without announcing a comparison challenge.
-
   - id: mission-first-attempt
     title: First Attempt
     text: >-
-      Get someone to volunteer a story about their first try at a hobby or
+      Get someone to tell a story about their first try at a hobby or
       recipe, including what they changed next time.
 
   - id: mission-recommendations
     title: The Recommendation Chain
     text: >-
-      Get one person to recommend a book, show, song, or recipe and another to add
-      a related suggestion. No round-the-table lists.
+      Get one player to recommend a book, show, song, or recipe and another to
+      write it down or save it to a list.

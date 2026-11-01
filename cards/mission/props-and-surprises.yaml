@@ -17,27 +17,19 @@ cards:
     text: >-
       Make a paper crown and get another player to wear it.
 
-  - id: mission-paper-key
-    title: Master Key
+  - id: mission-hidden-message
+    title: Invisible Ink
     text: >-
-      Draw a key and get another player to pretend to unlock something with it.
-
-  - id: mission-table-map
-    title: You Are Here
-    text: >-
-      Draw a map of the table and get another player to mark where they're sitting.
-
-  - id: mission-coaster-inspection
-    title: Other Side
-    text: >-
-      Get another player to turn over a coaster to check a detail that isn't there.
+      Claim a blank napkin has a hidden message. Get another player to hold it
+      up to the light.
 
   - id: mission-pen-balance
     title: Steady Hand
     text: >-
       Balance a pen on one finger and get another player to try it.
 
-  - id: mission-price-tag
+  - id: mission-haggle
     title: Open to Offers
     text: >-
-      Put a pretend price tag on a pen and get another player to haggle.
+      Name a price for an object on the table. Get another player to offer you
+      less.

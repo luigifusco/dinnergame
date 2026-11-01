@@ -31,20 +31,20 @@ cards:
       Get another player to say "it depends" in conversation, without saying it
       first or asking them to finish a sentence.
 
-  - id: mission-good-question
-    title: Worth Asking
+  - id: mission-leftovers
+    title: Tomorrow's Lunch
     text: >-
-      Ask a question that gets a "that's a good question" from someone. Don't say
-      the phrase first or ask them to rate your question.
+      Get another player to say "leftovers" without saying it yourself or
+      asking for the word.
 
-  - id: mission-never-thought
-    title: A New Angle
+  - id: mission-superstition
+    title: Lucky Charms
     text: >-
-      Get someone to say "I never thought of that" without suggesting the phrase
-      or asking them to repeat you.
+      Get someone to say "superstition" or "superstitious" without using or
+      asking for either word.
 
-  - id: mission-plot-twist
-    title: An Unexpected Turn
+  - id: mission-coincidence
+    title: What Are the Odds?
     text: >-
-      Get another player to say "plot twist" about a story or hypothetical
-      situation, without saying it yourself or starting a guessing game.
+      Get another player to say "coincidence" without saying it yourself or
+      asking for the word.

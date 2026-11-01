@@ -40,19 +40,19 @@ theme labels never appear on their cards.
 |---|---|---|---|
 | Running | Language | Repeat a recognizable way of speaking. | Quiet Footnotes, Careful Conclusions |
 | Running | Perspectives | Look at ordinary things through a consistent, slightly unusual lens. | Future Museum, Soundtrack Consultant |
-| Running | Social habits | Give attention or praise, or connect other people's remarks. | Bridge Maker, Quiet Fan Club |
+| Running | Social habits | Use a recurring way of involving the group. | Bridge Maker, Quiet Fan Club |
 | Running | Callbacks and fiction | Let a tiny shared reference accumulate meaning over the evening. | A Useful Motto, Unofficial Mascot |
 | Mission | Say something | Lead someone toward a particular word or phrase without supplying it. | Forecast, The Scenic Detour |
 | Mission | Stories and know-how | Draw out an anecdote, useful detail, or connection between guests. | Origin Story, The Useful Tip |
-| Mission | Shared decisions | Get people to invent, compare, or agree on something. | Opening Night, The Perfect Bench |
+| Mission | Shared decisions | Get people to compare ideas, agree, or coordinate an action. | Holiday Committee, Musical Chairs |
 | Mission | Small actions | Elicit a natural gesture or conversational action rather than a dare. | Counting On It, The Sound Effect |
 | Mission | Callbacks and adoption | Get a phrase, idea, or recommendation to travel beyond its originator. | Return Ticket, It Has a Name |
 | Mission | Corrections and reactions | Set up a mistake, imitation, or curious question. | Close Enough, Inside Voice |
 | Mission | Props and surprises | Prepare an object for someone to discover, try, or play along with. | Under Wraps, Stop and Smell |
 
-The current library has **21 running bits and 56 missions**: five or six cards
-per running family and eight per mission family. The original twelve cards are
-retained among them. Editable definitions live under `cards\running` and
+The current library has **22 running bits and 46 missions** across four running
+families and seven mission families. Families need not contain equal numbers of
+cards. Editable definitions live under `cards\running` and
 `cards\mission`; a family can be divided into further files whenever useful.
 
 ### Keeping the families distinct
@@ -75,8 +75,8 @@ Mix families rather than dealing a whole table only word-elicitation tasks.
 Otherwise normal conversation can turn into an obvious guessing game.
 
 Single-word or gesture missions can resolve in one conversational moment.
-Two-person discussions need more opportunity, while callbacks need time for a
-topic to change. These are pacing differences, not tested difficulty ratings.
+Two-person missions may need more opportunity; some callbacks also require a
+topic change. These are pacing differences, not tested difficulty ratings.
 Do not force all missions to finish at the same speed.
 
 For running bits, aim for a recognizable behavior. For missions, pick an
@@ -86,6 +86,87 @@ Leave room for different approaches, with at most a small anti-cheat restriction
 State the task directly, without advice about keeping it brief, natural, or
 playful. Keep conditions that define the challenge; leave out general etiquette
 and tone restrictions.
+
+## Mission difficulty
+
+Difficulty should come from finding a good approach, not deciphering the card
+or waiting for a very specific accident. A quick win and a more demanding
+mission can coexist in the same hand.
+
+### Prompting baseline
+
+**Conversational questions, hints, and demonstrations are allowed. A bare request
+to perform the listed action does not count.** The conversational reason can be
+a pretext: "What did the engine sound like?" can prompt a sound effect; "Make a
+noise for me" on its own cannot.
+
+For word-elicitation missions, do not supply the target word, request it, or turn
+the exchange into a guessing game. Adoption missions are different: introducing
+the phrase or nickname is part of the task.
+
+A specific condition on a card still applies. For example, **Return Ticket**
+requires a topic to come back without a reminder; that is its central challenge,
+not a blanket rule for all conversations.
+
+### What to tune
+
+| Lever | What changes the challenge | Example in this revision |
+|---|---|---|
+| Player control | A usable cue versus a wholly unsolicited response. | **Counting On It** now permits contextual questions and demonstrations. |
+| Target precision | A word with several conversational entry points versus a particular person's exact phrasing. | **Tomorrow's Lunch** targets "leftovers" rather than waiting for "that's a good question." |
+| Participants | One response versus a chain of people who all need to contribute. | **Resident Expert** needs one player to teach, not a third person to ask a follow-up. |
+| Timing | Uptake in the current conversation versus an independent return later. | **The Echo** no longer requires a new context; **Return Ticket** keeps the delayed challenge. |
+| Commitment | A verbal response versus an action beyond agreement. | **The Recommendation Chain** now ends with a written or saved recommendation. |
+
+Change one lever at a time. To make **The Echo** harder, test reuse after a topic
+change; do not simultaneously require two people and forbid all prompting.
+To ease **The Recommendation Chain**, test the second player expressing interest
+instead of saving the recommendation.
+
+**Setup cost is separate from difficulty.** A table map can be awkward during
+dinner even if getting someone to mark it is easy. **Open to Offers** now starts
+with a spoken price, not a handmade tag. Missing props or an unsuitable setting
+are reasons to exchange a card, not evidence that it is a good hard mission.
+
+**Belief needs an observable payoff.** **Voice Control** asks someone to try an
+invented command; **Invisible Ink** asks them to hold a napkin up to the light.
+Neither requires deciding whether someone secretly believed a claim.
+
+### Working bands
+
+These are hypotheses for choosing test hands, **not playtested ratings**. Card
+families are not difficulty tiers, and difficulty labels are not printed.
+
+| Band | Intended experience | Initial candidates |
+|---|---|---|
+| Starter | A clear cue and one immediate response. | Close Enough; Inside Voice; Made You Look; Origin Story; Tomorrow's Lunch |
+| Standard | A deliberate setup, a well-chosen question, or a reaction to a convincing premise. | Forecast; Counting On It; Invisible Ink; Voice Control; Pass It On |
+| Stretch | Delayed uptake, coordinated contributions, or getting another person to act on a recommendation. | Return Ticket; Your Example, Their Point; The Joint Story; The Recommendation Chain |
+
+For a first mission playtest, pair a starter candidate with a standard candidate
+alongside the running bit. Offer stretch missions later rather than giving
+someone two slow missions at the start. The named cards are examples, not fixed
+packs.
+
+### Playtest and revise
+
+At the reveal, record the card ID and wording revision, whether a usable
+opportunity arose, what prompt was tried, roughly how many attempts it took,
+whether it succeeded, and whether the attempt was worth revealing.
+
+Keep **success**, **attempted but failed**, **no usable opportunity**, and
+**not attempted despite an opportunity** separate. Also note early suspicion,
+but do not turn it into a new failure rule.
+
+Look for patterns across several tables before assigning firmer bands. If a
+card stalls despite available opportunities, remove one dependency or give it a
+clearer entry point. If it is trivial and has little comic payoff, strengthen the
+outcome or remove it. If people cannot find opportunities, reconsider the setup
+rather than labeling it difficult.
+
+Try the revised wording with another group and keep the version identifiable.
+Early sessions should find broken or dull cards, not produce precise win-rate
+claims.
 
 ## Formats
 
@@ -123,9 +204,12 @@ disruptive. For a longer session, running bits can stay in play for the evening.
 
 Players may discreetly exchange a card.
 
-Paper, a pen, and napkins cover most prop missions. Exchange a mission
-if its props aren't available. Retrieve any hidden card after it's found, or when
-the game ends.
+Use the [prompting baseline](#prompting-baseline): the player must find a
+conversational pretext, not simply request the listed action.
+
+Paper, a pen, and napkins cover most prop missions. Exchange a mission if its
+props aren't available. Retrieve any hidden card after it's found, or when the
+game ends.
 
 ## Example running-bit cards
 
@@ -140,6 +224,7 @@ constant performance.
 | **Tiny Triumphs** | Find tiny reasons for a toast or celebration. |
 | **The Unappointed Critic** | Give detailed reviews of things nobody reviews: a spoon, the lighting, the bread arrangement. |
 | **Future Tradition** | Suggest making ordinary things that happen tonight into annual traditions. |
+| **Fuck, Marry, Kill** | Keep proposing rounds of "fuck, marry, kill" using things mentioned in conversation. |
 
 ## Example mission cards
 
@@ -149,19 +234,17 @@ require public proof or an interruption.
 | Card | Secret instruction |
 |---|---|
 | **Forecast** | Get another player to say "umbrella" without saying it yourself, asking for the word, or starting a guessing game. |
-| **The Echo** | Introduce an expression that another player later uses in a different context, without asking them to repeat it. |
-| **Resident Expert** | Get the person on your right to explain a niche interest, then get someone else to ask them a follow-up question. |
-| **Holiday Committee** | Get two other people to suggest details for an imaginary group holiday, without proposing the destination yourself. |
-| **Human Diagram** | Get someone to explain something using an object on the table, without suggesting props. |
-| **A Matter of Principle** | Get two other people to discuss a trivial choice, like bowls versus plates or window versus aisle. Both must give a reason. |
+| **The Echo** | Introduce an unusual expression and get another player to use it in their own sentence. |
+| **Resident Expert** | Get another player to give you a step-by-step explanation of a skill they have. |
+| **Holiday Committee** | Get two other people to suggest details for an imaginary group holiday. |
+| **Human Diagram** | Get someone to explain something using an object on the table. |
+| **Pass It On** | Whisper a message to another player. Get them to pass it on to a third player. |
 | **Close Enough** | Misquote a familiar saying and get another player to correct it. |
 | **Inside Voice** | Whisper a question and get another player to whisper their answer. |
 | **Under Wraps** | Hide this card inside a folded napkin. Get another player to unfold it and find the card. |
 | **Stop and Smell** | Fold a paper flower and get another player to smell it. |
-
-For an easier deck, allow direct conversational questions. For a harder deck, add
-restrictions selectively. "Get someone talking about holidays" is approachable;
-"without mentioning travel yourself" changes the challenge substantially.
+| **Voice Control** | Invent a voice command for an object on the table. Get another player to try it. |
+| **Invisible Ink** | Claim a blank napkin has a hidden message. Get another player to hold it up to the light. |
 
 ## Discovery and reveal
 

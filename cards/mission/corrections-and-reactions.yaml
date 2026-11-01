@@ -1,5 +1,5 @@
 type: mission
-theme: Prompting corrections, imitation, and curious questions
+theme: Prompting corrections, imitation, and reactions
 cards:
   - id: mission-wrong-proverb
     title: Close Enough
@@ -26,17 +26,18 @@ cards:
     text: >-
       Get a handshake and a fist bump from the same player, in separate conversations.
 
-  - id: mission-made-up-proverb
-    title: Who Said That?
+  - id: mission-made-up-word
+    title: New Vocabulary
     text: >-
-      Quote a made-up proverb and get another player to ask where it comes from.
+      Use a made-up word and get another player to ask what it means.
 
   - id: mission-mirror-face
     title: Mirror Image
     text: >-
       Get another player to copy a facial expression you make, without asking them to.
 
-  - id: mission-imaginary-gadget
-    title: Not in Shops
+  - id: mission-voice-control
+    title: Voice Control
     text: >-
-      Describe an imaginary gadget and get another player to ask where they can buy one.
+      Invent a voice command for an object on the table. Get another player to
+      try it.
