@@ -2,29 +2,31 @@ type: running
 theme: Looking at ordinary things through a particular lens
 cards:
   - id: running-logistics
-    title: The Logistics Department
+    title: The Heist
     text: >-
-      When plans come up, focus intently on one small detail: seating, snacks,
-      luggage, opening hours.
+      Discuss ordinary plans as heists. Assign roles, identify the target,
+      and worry about the getaway.
 
   - id: running-critic
     title: The Unappointed Critic
     text: >-
-      Give detailed reviews of things nobody reviews: a spoon, the
-      lighting, the bread arrangement.
+      Rate ordinary things using units you invent. Defend your scale as if
+      everyone should already understand it.
 
-  - id: running-museum
-    title: Future Museum
+  - id: running-human-manual
+    title: Definitely Human
     text: >-
-      Wonder aloud what people decades from now will make of an object or custom
-      mentioned tonight.
+      Ask practical questions about ordinary human habits, as if you learned
+      about people from an unreliable manual.
 
-  - id: running-soundtrack
-    title: Soundtrack Consultant
+  - id: running-sound-effects
+    title: Low-Budget Foley
     text: >-
-      Suggest a soundtrack for situations people describe.
+      Supply sound effects for ordinary actions at the table. Give recurring
+      actions their own signature sound.
 
   - id: running-design
-    title: Everything Is a Design Choice
+    title: Hidden Features
     text: >-
-      Guess why everyday objects or habits are the way they are.
+      Give product demonstrations of ordinary objects, inventing features nobody
+      needs.

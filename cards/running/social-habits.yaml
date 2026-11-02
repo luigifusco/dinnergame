@@ -1,31 +1,35 @@
 type: running
 theme: Conversation habits and recurring rituals
 cards:
-  - id: running-triumphs
-    title: Tiny Triumphs
+  - id: running-eulogies
+    title: Gone Too Soon
     text: >-
-      Find tiny reasons for a toast or celebration.
+      Deliver eulogies for finished dishes, empty glasses, and topics the
+      conversation has abandoned.
 
   - id: running-tradition
-    title: Future Tradition
+    title: Ancient Tradition
     text: >-
-      Suggest making ordinary things that happen tonight into annual traditions.
+      Invent a ritual around something that happens tonight. Later, insist it's
+      a tradition you've all followed for years.
 
   - id: running-compliments
-    title: The Specific Compliment
+    title: Suspiciously Specific
     text: >-
-      Give people oddly specific compliments.
+      Compliment people on talents you've inferred from almost no evidence,
+      then ask them for advice as the expert.
 
-  - id: running-fan-club
-    title: Quiet Fan Club
+  - id: running-rival
+    title: Old Enemy
     text: >-
-      Show oddly specific enthusiasm for a preference someone mentions.
+      Hold a grudge against an object on the table. Blame it for setbacks and
+      object whenever someone praises it.
 
-  - id: running-bridge
-    title: Bridge Maker
+  - id: running-middleman
+    title: The Middleman
     text: >-
-      Connect two different people's remarks as if their ideas obviously belong
-      together.
+      Route requests and messages through another player, even when the intended
+      recipient is sitting next to you.
 
   - id: running-fuck-marry-kill
     title: Fuck, Marry, Kill

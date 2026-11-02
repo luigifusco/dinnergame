@@ -1,8 +1,9 @@
 # Sideplot V2: Quirks and the Podium
 
-**Status: proposal for review.** The current rules, YAML cards, and printable
-deck have not changed. The podium direction is agreed; the rules below and the
-replacement quirk roster are the proposed implementation.
+**Status: implemented after approval.** This document records the V2 design and
+the transition from the previous quirk roster. Use [GAME_DESIGN.md](GAME_DESIGN.md)
+as the authority for play and the YAML files as the source of printable cards.
+The original proposal was committed before implementation.
 
 ## What V2 changes
 
@@ -23,7 +24,7 @@ three-success thresholds, resets for missed cues, or automatic quirk
 replacements after a fixed number of actions. A card can suggest a useful
 occasion without making every such occasion compulsory.
 
-## Proposed round
+## Round structure
 
 The voting format needs at least three players.
 
@@ -104,17 +105,17 @@ Players should have several ways into a quirk during an ordinary dinner or bar
 conversation. Avoid cards that depend on a rare accidental phrase, special
 preparation, or everyone agreeing to stop and play a separate game.
 
-## Draft quirk roster
+## Approved quirk roster
 
-Keep **22 quirks** in the existing four authoring files. These are proposed
-card texts, not extra rules. The current-to-V2 mapping makes replacements
-explicit; there is no requirement to preserve a weak premise.
+The deck keeps **22 quirks** in the existing four authoring files. The approved
+card texts below match the YAML: 21 cards were rewritten or replaced, and one
+was retained. The previous-to-V2 mapping makes the changes explicit.
 
 ### Callbacks and fiction
 
 File: `cards\running\callbacks-and-fiction.yaml`.
 
-| Current card | V2 title | Proposed instruction |
+| Previous card | V2 title | Instruction |
 |---|---|---|
 | Previously, at This Table | The Incident | Choose a trivial event from tonight. Refer back to it as "the incident" and imply that nobody is ready to talk about it. |
 | Tomorrow's Headline | Spoiler Alert | Treat other people's real-life stories as a TV series you've already seen. Drop hints about what happens next. |
@@ -126,7 +127,7 @@ File: `cards\running\callbacks-and-fiction.yaml`.
 
 File: `cards\running\language.yaml`.
 
-| Current card | V2 title | Proposed instruction |
+| Previous card | V2 title | Instruction |
 |---|---|---|
 | Borrowed Wisdom | The Prophet | Choose another player as your personal oracle. Quote their earlier remarks as predictions of whatever happens next. |
 | Infrastructure Enthusiast | More Roundabouts | Propose adding a roundabout as the solution to unrelated problems. |
@@ -139,7 +140,7 @@ File: `cards\running\language.yaml`.
 
 File: `cards\running\perspectives.yaml`.
 
-| Current card | V2 title | Proposed instruction |
+| Previous card | V2 title | Instruction |
 |---|---|---|
 | The Logistics Department | The Heist | Discuss ordinary plans as heists. Assign roles, identify the target, and worry about the getaway. |
 | The Unappointed Critic | The Unappointed Critic | Rate ordinary things using units you invent. Defend your scale as if everyone should already understand it. |
@@ -151,7 +152,7 @@ File: `cards\running\perspectives.yaml`.
 
 File: `cards\running\social-habits.yaml`.
 
-| Current card | V2 title | Proposed instruction |
+| Previous card | V2 title | Instruction |
 |---|---|---|
 | Tiny Triumphs | Gone Too Soon | Deliver eulogies for finished dishes, empty glasses, and topics the conversation has abandoned. |
 | Future Tradition | Ancient Tradition | Invent a ritual around something that happens tonight. Later, insist it's a tradition you've all followed for years. |
@@ -190,11 +191,13 @@ Do not deliberately build every hand around them.
 - The two wordless back designs and Balsamiq Sans typography.
 - The 88 x 31.5 mm cards, sixteen per A4 sheet, and long-edge duplex layout.
 
-The proposed library remains **68 cards: 22 quirks and 46 missions**. It should
-still produce five front pages, five back pages, ten duplex pages, and twelve
-unused positions on the last sheet.
+The library remains **68 cards: 22 quirks and 46 missions**. It produces five
+front pages, five back pages, ten duplex pages, and twelve unused positions on
+the last sheet.
 
 ## Implementation sequence
+
+The following sequence was approved before implementation:
 
 1. **Review this proposal.** Confirm the draft quirks and the voting details
    before replacing live cards.

@@ -19,11 +19,13 @@ through repetition, and is funny in retrospect.
 
 ## Card types
 
-**Quirks** describe recurring behaviors. Players keep them for a round or
-the whole evening, creating a pattern that others may gradually notice.
+**Quirks** give players a specific, absurd premise to develop through recurring
+behavior. Keep one through a round, creating a pattern that others may gradually
+notice. At the shared reveal, vote for **best use of a quirk**.
 
 **Missions** describe achievable objectives with identifiable completion
-conditions. Players can quietly replace them after succeeding.
+conditions. Players can quietly replace them after succeeding. Missions remain
+unscored.
 
 These two types benefit from different replacement rules.
 
@@ -38,10 +40,10 @@ theme labels never appear on their cards.
 
 | Type | Family | Main mechanism | Examples |
 |---|---|---|---|
-| Quirk | Language | Repeat a recognizable way of speaking. | Quiet Footnotes, Careful Conclusions |
-| Quirk | Perspectives | Look at ordinary things through a consistent, slightly unusual lens. | Future Museum, Soundtrack Consultant |
-| Quirk | Social habits | Use a recurring way of involving the group. | Bridge Maker, Quiet Fan Club |
-| Quirk | Callbacks and fiction | Let a tiny shared reference accumulate meaning over the evening. | A Useful Motto, Unofficial Mascot |
+| Quirk | Language | Apply a peculiar way of speaking or explaining things. | Contractually Obliged, Couples Therapy |
+| Quirk | Perspectives | Interpret ordinary things through a specific, absurd model. | The Heist, Definitely Human |
+| Quirk | Social habits | Change how requests, compliments, and rituals work. | The Middleman, Gone Too Soon |
+| Quirk | Callbacks and fiction | Give a recurring fiction or relationship a history over the evening. | The Incident, The Guest of Honor |
 | Mission | Say something | Lead someone toward a particular word or phrase without supplying it. | Forecast, The Scenic Detour |
 | Mission | Stories and know-how | Draw out an anecdote, useful detail, or connection between guests. | Origin Story, The Useful Tip |
 | Mission | Shared decisions | Get people to compare ideas, agree, or coordinate an action. | Holiday Committee, Musical Chairs |
@@ -80,9 +82,14 @@ Two-person missions may need more opportunity; some callbacks also require a
 topic change. These are pacing differences, not tested difficulty ratings.
 Do not force all missions to finish at the same speed.
 
-For quirks, aim for a recognizable behavior. For missions, pick an
-observable finish: a correction, a copied gesture, a question, or a discovered
-card. Give missions a concrete hook rather than a whole conversation to manage.
+For quirks, pair a strange premise with a specific, repeatable action. Give the
+player several ways into it and room for the joke to develop. Do not prescribe
+a theatrical voice, a full character, or a quota of repetitions. Useful cues
+are opportunities, not compulsory reactions with penalties for missing them.
+
+For missions, pick an observable finish: a correction, a copied gesture, a
+question, or a discovered card. Give missions a concrete hook rather than a
+whole conversation to manage.
 Leave room for different approaches, with at most a small anti-cheat restriction.
 State the task directly, without advice about keeping it brief, natural, or
 playful. Keep conditions that define the challenge; leave out general etiquette
@@ -173,22 +180,23 @@ claims.
 
 | Format | Hand | Replacement |
 |---|---|---|
-| **One-card starter** | One quirk | Keep it for 45-60 minutes, then reveal. |
-| **Three-card version** | One quirk and two missions | Keep the quirk; quietly replace completed missions. |
+| **One-card starter** | One quirk | Keep it for 45-60 minutes, then reveal and vote. |
+| **Three-card version** | One quirk and two missions | Keep the quirk through the reveal and vote; quietly replace completed missions. |
 | **Timed rounds** | One mission per person | Replace at a shared break, roughly every 20-30 minutes. |
 
 ### Recommended starting point
 
 Start with the one-card version. Introduce the hybrid three-card version if
-players want more activity.
+players want more activity. The quirk voting format needs at least three
+players. Choose a natural break for the reveal before beginning.
 
 Three simultaneous quirks could be difficult to remember and might turn
 everyone into an exaggerated character. In the hybrid version, the two missions
 are opportunities to choose between, not obligations to pursue simultaneously.
 
-Avoid mandatory ten-minute changes initially: a conversation might only just be
-creating the right opportunity. An optional exchange at a natural break is less
-disruptive. For a longer session, quirks can stay in play for the evening.
+Avoid mandatory ten-minute changes: a conversation might only just be creating
+the right opportunity. For a longer evening, repeat the round with fresh quirks
+after a reveal rather than replacing them mid-performance.
 
 ## Basic play
 
@@ -201,12 +209,14 @@ disruptive. For a longer session, quirks can stay in play for the evening.
    the reveal rather than announcing success.
 4. In the three-card version, quietly draw a replacement mission after completing
    one, maintaining one quirk and two active missions.
-5. At a natural break, pause for guessing and a reveal.
+5. At the agreed break, pause for guessing, a reveal, and the quirk podium.
 
-Players may discreetly exchange a card.
+Before play, players may exchange an unsuitable quirk. Keep the chosen quirk
+through the reveal so everyone develops one performance for the round.
+Missions may still be discreetly exchanged during play.
 
-Use the [prompting baseline](#prompting-baseline): the player must find a
-conversational pretext, not simply request the listed action.
+For missions, use the [prompting baseline](#prompting-baseline): the player must
+find a conversational pretext, not simply request the listed action.
 
 Paper, a pen, and napkins cover most prop missions. Exchange a mission if its
 props aren't available. Retrieve any hidden card after it's found, or when the
@@ -214,17 +224,17 @@ game ends.
 
 ## Example quirk cards
 
-Keep these for the round or evening. Aim for a few separated moments, not
-constant performance.
+Keep one for the round. Develop a recognizable pattern rather than performing
+continuously; there is no required number of repetitions.
 
 | Card | Secret instruction |
 |---|---|
-| **The Logistics Department** | When plans come up, focus intently on one small detail: seating, snacks, luggage, opening hours. |
-| **Borrowed Wisdom** | Treat someone's earlier throwaway remark as wise advice for a different situation. |
-| **Infrastructure Enthusiast** | Work the word "infrastructure" into unrelated conversations, no more than once per topic. |
-| **Tiny Triumphs** | Find tiny reasons for a toast or celebration. |
-| **The Unappointed Critic** | Give detailed reviews of things nobody reviews: a spoon, the lighting, the bread arrangement. |
-| **Future Tradition** | Suggest making ordinary things that happen tonight into annual traditions. |
+| **The Incident** | Choose a trivial event from tonight. Refer back to it as "the incident" and imply that nobody is ready to talk about it. |
+| **The Guest of Honor** | Treat an object on the table as an important guest. Consult it, defend its tastes, and include it in decisions. |
+| **Contractually Obliged** | Add spoken fine print to your own offers, promises, and compliments, as if someone might sue you. |
+| **Low-Budget Foley** | Supply sound effects for ordinary actions at the table. Give recurring actions their own signature sound. |
+| **The Middleman** | Route requests and messages through another player, even when the intended recipient is sitting next to you. |
+| **Gone Too Soon** | Deliver eulogies for finished dishes, empty glasses, and topics the conversation has abandoned. |
 | **Fuck, Marry, Kill** | Keep proposing rounds of "fuck, marry, kill" using things mentioned in conversation. |
 
 ## Example mission cards
@@ -252,33 +262,64 @@ require public proof or an interruption.
 Save formal guessing for a short reveal at a natural break, rather than allowing
 continuous accusations or interrogation.
 
-At the shared reveal, each player first predicts another player's still-hidden
-task. Then everyone shows their cards and shares a memorable attempt,
-success, or missed opportunity.
+Make guesses before anyone reveals a quirk; guessing earns no points. Then
+everyone shows their cards and can briefly recall one example of their quirk
+in action. Others can add moments they noticed. Share mission attempts and
+successes too, but do not use them to score the quirk performance.
+
+The reveal is a shared recollection, not a campaign speech. Judge what happened
+during the round, not a new performance after the cards have been shown.
 
 Being suspected does not mean immediate failure. The dawning realization is part
 of the fun, and recognition should be a payoff rather than a punishment.
 
-## Scoring
+## Scoring: the quirk podium
 
-Leave scoring out of the first prototype. Counting repetitions encourages
-players to grind through tasks instead of making the evening enjoyable.
+Vote for **best use of a quirk**, not simply the funniest person.
 
-Initially, assess whether the cards produce natural conversations, amusing
-patterns, and satisfying reveals. Competitive scoring can be considered later if
-the group wants it.
+> Who made the most of their quirk through a clever interpretation, funny
+> moments, or a satisfying reveal?
+
+Judge the performance relative to the assigned card. Following its premise
+matters; so do an inventive interpretation and a pattern that becomes funny
+in retrospect. Quiet performances can win. Frequency, volume, and unrelated
+jokes are not automatic reasons to award points.
+
+These are considerations for one ballot, not separate numerical categories.
+There is no minimum number of laughs or repetitions, and no scoring during
+conversation.
+
+1. After all quirks have been revealed, vote privately on paper.
+2. Award **2 points** to your favorite performance and **1 point** to your
+   second favorite. Name two different other players; no self-votes.
+3. Add the votes and announce the first, second, and third places.
+
+Equal totals share a place, with the next place skipped. For example, two joint
+firsts are followed by third place. Everyone whose rank is first, second, or
+third is on the podium, so ties can produce more than three names. There is no
+tiebreaker performance or extra vote.
+
+Scores apply only to quirks in this round. Mission completions, correct
+guesses, and previous rounds do not add to the total. The mission-only timed
+format has no quirk podium.
+
+The format needs at least three players. No app, voting cards, repetition
+counters, or referee is needed. Voting is subjective and may favor outgoing
+players or easier cards; the podium is a celebratory ending, not a precise
+measure of skill.
 
 ## Interactions between cards
 
 The most promising cards interact without depending on each other.
 
 For example, someone playing **Holiday Committee** starts planning an imaginary
-holiday. **The Logistics Department** becomes deeply concerned about luggage.
-**Tiny Triumphs** proposes a toast to the excellent planning.
+holiday. **The Heist** turns the trip into an operation with roles and a getaway.
+**The Committee** introduces an imaginary member who objects to the plan.
 
 Likewise, a nickname introduced for **It Has a Name** might become a recurring
-reference for **Unofficial Mascot**. The cards do not need to name or depend on
-one another for these interactions to emerge.
+reference for **The Guest of Honor**, while **Old Enemy** develops a grudge
+against that same object. The cards do not need to name or depend on one another
+for these interactions to emerge, and combinations do not earn bonus points.
 
 Each person thinks they are quietly recruiting the others into their joke, and
 they all are.

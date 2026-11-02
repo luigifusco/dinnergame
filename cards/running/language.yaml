@@ -2,35 +2,36 @@ type: running
 theme: Language and verbal habits
 cards:
   - id: running-wisdom
-    title: Borrowed Wisdom
+    title: The Prophet
     text: >-
-      Treat someone's earlier throwaway remark as wise advice for a different
-      situation.
+      Choose another player as your personal oracle. Quote their earlier remarks
+      as predictions of whatever happens next.
 
-  - id: running-infrastructure
-    title: Infrastructure Enthusiast
+  - id: running-roundabouts
+    title: More Roundabouts
     text: >-
-      Work the word "infrastructure" into unrelated conversations, no more than
-      once per topic.
+      Propose adding a roundabout as the solution to unrelated problems.
 
   - id: running-footnotes
-    title: Quiet Footnotes
+    title: Contractually Obliged
     text: >-
-      Add short, unnecessary clarifications to your own perfectly clear statements.
+      Add spoken fine print to your own offers, promises, and compliments,
+      as if someone might sue you.
 
-  - id: running-conclusions
-    title: Careful Conclusions
+  - id: running-known-issue
+    title: Known Issue
     text: >-
-      Present everyday opinions as cautious conclusions: "My current theory is..."
-      or "The early signs are promising."
+      Describe your own mistakes as known issues. Announce updates and
+      workarounds for your behavior.
 
   - id: running-overstatement
-    title: Easily Impressed
+    title: World-Class
     text: >-
-      Praise ordinary things as if they're extraordinary.
+      Praise routine actions as elite athletic performances, complete with
+      technique analysis and comparisons to past champions.
 
   - id: running-metaphors
-    title: Domestic Metaphors
+    title: Couples Therapy
     text: >-
-      Compare unrelated situations to household chores, using a different chore
-      each time.
+      Explain unrelated problems as relationship trouble between the things
+      involved.

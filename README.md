@@ -8,8 +8,8 @@ what the others are trying to do.
 
 See [GAME_DESIGN.md](GAME_DESIGN.md) for the rules and game formats.
 
-The [V2 proposal](V2_PLAN.md) describes end-of-round podium voting and a draft
-of stranger quirks. It has not yet been applied to the live deck or rules.
+The [V2 design plan](V2_PLAN.md) records the podium mechanic and the redesigned
+quirk roster.
 
 ## Print without installing anything
 
@@ -26,6 +26,11 @@ The library contains **68 cards: 22 quirks and 46 missions**, across eleven
 internal themes. The complete deck uses five A4 sheets, or 10 duplex PDF pages.
 For the three-card format, provide at least one quirk and two missions per
 player, plus spare missions for replacements.
+
+Quirk rounds finish with a reveal and a vote for **best use of a quirk**.
+With at least three players, privately award 2 points and 1 point to two
+different other players, then announce the podium; ties share a place.
+Missions remain unscored. See the [podium rules](GAME_DESIGN.md#scoring-the-quirk-podium).
 
 Some missions use paper, a pen, or napkins. Exchange a mission if its props
 aren't available.

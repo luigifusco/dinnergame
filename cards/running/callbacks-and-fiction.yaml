@@ -1,27 +1,32 @@
 type: running
 theme: Building small recurring references and shared fictions
 cards:
-  - id: running-previously
-    title: Previously, at This Table
+  - id: running-incident
+    title: The Incident
     text: >-
-      Recap small events from earlier as background to what's happening now.
+      Choose a trivial event from tonight. Refer back to it as "the incident"
+      and imply that nobody is ready to talk about it.
 
-  - id: running-headline
-    title: Tomorrow's Headline
+  - id: running-spoilers
+    title: Spoiler Alert
     text: >-
-      Give minor events short headlines.
+      Treat other people's real-life stories as a TV series you've already
+      seen. Drop hints about what happens next.
 
   - id: running-committee
     title: The Committee
     text: >-
-      Mention an imaginary committee's opinions on trivial decisions.
+      Refer decisions to an imaginary committee. Report its verdicts, including
+      objections from one member who keeps causing problems.
 
   - id: running-motto
-    title: A Useful Motto
+    title: Family Wisdom
     text: >-
-      Invent a short motto and reuse it in later conversations.
+      Invent a family saying that makes no sense. Quote it as advice and explain
+      it differently each time.
 
   - id: running-mascot
-    title: Unofficial Mascot
+    title: The Guest of Honor
     text: >-
-      Give an object on the table a recurring role in your comments.
+      Treat an object on the table as an important guest. Consult it, defend its
+      tastes, and include it in decisions.
