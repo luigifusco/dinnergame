@@ -8,6 +8,9 @@ what the others are trying to do.
 
 See [GAME_DESIGN.md](GAME_DESIGN.md) for the rules and game formats.
 
+The [V2 proposal](V2_PLAN.md) describes end-of-round podium voting and a draft
+of stranger quirks. It has not yet been applied to the live deck or rules.
+
 ## Print without installing anything
 
 The [print directory](print) contains ready-to-print PDFs generated from the
