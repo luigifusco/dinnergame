@@ -47,3 +47,8 @@ cards:
     title: Make a Wish
     text: >-
       Get another player to close their eyes and make a wish.
+
+  - id: mission-pulse
+    title: Proof of Life
+    text: >-
+      Get another player to take your pulse and tap the beat on the table.

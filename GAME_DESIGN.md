@@ -53,7 +53,7 @@ theme labels never appear on their cards.
 | Mission | Corrections and reactions | Set up a mistake, imitation, or curious question. | Close Enough, Inside Voice |
 | Mission | Props and surprises | Prepare an object for someone to discover, try, or play along with. | Under Wraps, Stop and Smell |
 
-The current library has **36 quirks and 60 missions** across five quirk
+The current library has **36 quirks and 67 missions** across five quirk
 families and seven mission families. Families need not contain equal numbers of
 cards. Quirk definitions retain the `cards\running` storage folder; mission
 definitions live under `cards\mission`. A family can be divided into further
@@ -257,6 +257,18 @@ require public proof or an interruption.
 | **Stop and Smell** | Fold a paper flower and get another player to smell it. |
 | **Voice Control** | Invent a voice command for an object on the table. Get another player to try it. |
 | **Invisible Ink** | Claim a blank napkin has a hidden message. Get another player to hold it up to the light. |
+| **Edible Lyrics** | Sing a familiar lyric with one word replaced by a food. Get another player to sing the correct version. |
+| **Proof of Life** | Get another player to take your pulse and tap the beat on the table. |
+| **In Loving Memory** | Get another player to invent an epitaph for your gravestone. |
+
+The curiosity-focused additions use new tasks and wording inspired by public
+[Don't Get Got previews](https://bigpotato.co.uk/products/dont-get-got) and
+[hands-on reviews](https://rolltoreview.com/dont-get-got-susd-edition-review/).
+The useful mechanisms are planted irregularities, unusual favors, and
+corrections with an observable payoff. For example, **Proof of Life** turns a
+physical check into a tapped rhythm, while **Edible Lyrics** turns a correction
+into a sung response. Avoid tasks whose main challenge is stalling the evening
+or repeatedly asking for the same response.
 
 ## Discovery and reveal
 

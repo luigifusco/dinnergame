@@ -43,3 +43,9 @@ cards:
     title: Blind Tasting
     text: >-
       Get another player to taste something with their eyes closed.
+
+  - id: mission-portrait-repair
+    title: Artistic License
+    text: >-
+      Draw another player with an extra eye or ear. Get them to edit the
+      portrait to fix it.

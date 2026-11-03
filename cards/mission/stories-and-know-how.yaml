@@ -46,3 +46,13 @@ cards:
     title: Hot Take
     text: >-
       Get another player to defend an unpopular food opinion of their own.
+
+  - id: mission-laundry-symbol
+    title: Handle with Care
+    text: >-
+      Get another player to explain a laundry symbol on something you're wearing.
+
+  - id: mission-epitaph
+    title: In Loving Memory
+    text: >-
+      Get another player to invent an epitaph for your gravestone.

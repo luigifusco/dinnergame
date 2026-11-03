@@ -22,8 +22,9 @@ included deck:
 | `sideplot-fronts.pdf` | Front sheets only, for manual double-sided printing. |
 | `sideplot-backs.pdf` | Matching back sheets in the same sheet order as the fronts. |
 
-The library contains **96 cards: 36 quirks and 60 missions**, across twelve
-internal themes. The complete deck fills six A4 sheets, or 12 duplex PDF pages.
+The library contains **103 cards: 36 quirks and 67 missions**, across twelve
+internal themes. The complete deck uses seven A4 sheets, or 14 duplex PDF pages,
+with nine empty positions on the last sheet.
 For the three-card format, provide at least one quirk and two missions per
 player, plus spare missions for replacements.
 

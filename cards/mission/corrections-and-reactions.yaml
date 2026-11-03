@@ -51,3 +51,21 @@ cards:
     title: Hurt Feelings
     text: >-
       Get another player to apologize to an object.
+
+  - id: mission-wardrobe-fix
+    title: Wardrobe Malfunction
+    text: >-
+      Wear something askew. Get another player to straighten it without asking
+      them to.
+
+  - id: mission-edible-lyrics
+    title: Edible Lyrics
+    text: >-
+      Sing a familiar lyric with one word replaced by a food. Get another
+      player to sing the correct version.
+
+  - id: mission-second-take
+    title: Take Two
+    text: >-
+      Get another player to say the same sentence like a robot and then like
+      a soap-opera star.
