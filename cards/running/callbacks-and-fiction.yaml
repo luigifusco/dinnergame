@@ -30,3 +30,27 @@ cards:
     text: >-
       Treat an object on the table as an important guest. Consult it, defend its
       tastes, and include it in decisions.
+
+  - id: running-witness-protection
+    title: Witness Protection
+    text: >-
+      Hint that you used to live under another name. Occasionally slip up and
+      correct yourself.
+
+  - id: running-rival-dinner
+    title: The Rival Dinner
+    text: >-
+      Claim that a rival group is having the same evening somewhere else. Keep
+      reporting how you're beating them.
+
+  - id: running-sponsor
+    title: A Word from Our Sponsor
+    text: >-
+      Act as if tonight is sponsored by a brand you made up. Work in product
+      placements.
+
+  - id: running-conspiracy
+    title: It's All Connected
+    text: >-
+      Link unrelated things from tonight into one conspiracy theory that keeps
+      growing.

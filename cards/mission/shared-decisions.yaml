@@ -28,3 +28,15 @@ cards:
     text: >-
       Get two other people to agree on a top pick in a trivial category, like
       pasta shapes. Both must give a reason.
+
+  - id: mission-wager
+    title: Friendly Wager
+    text: >-
+      Get another player to make a bet with you about something trivial, with
+      agreed stakes.
+
+  - id: mission-toast-nothing
+    title: A Toast to Nothing
+    text: >-
+      Get at least two other players to raise their glasses to something
+      trivial.

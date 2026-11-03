@@ -30,3 +30,15 @@ cards:
     text: >-
       Give product demonstrations of ordinary objects, inventing features nobody
       needs.
+
+  - id: running-wildlife
+    title: Wildlife Observer
+    text: >-
+      Describe what people at the table do as animal behavior: feeding,
+      grooming, territory, courtship.
+
+  - id: running-safety
+    title: Safety Briefing
+    text: >-
+      Give safety briefings before ordinary activities: pouring water, standing
+      up, opening a menu.

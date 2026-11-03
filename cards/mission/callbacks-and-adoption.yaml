@@ -36,3 +36,14 @@ cards:
     text: >-
       Whisper a message to another player. Get them to pass it on to a third
       player.
+
+  - id: mission-earworm
+    title: Earworm
+    text: >-
+      Hum a tune. Get another player to hum or sing it after you've stopped.
+
+  - id: mission-signature-move
+    title: Signature Move
+    text: >-
+      Invent a gesture to go with a phrase. Get another player to use both
+      together.

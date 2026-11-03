@@ -1,0 +1,20 @@
+type: running
+theme: Casting another player in your joke without telling them
+cards:
+  - id: running-secret
+    title: Our Little Secret
+    text: >-
+      Act as if you and another player share a secret. Exchange knowing looks
+      and refuse to explain.
+
+  - id: running-business-partners
+    title: Business Partners
+    text: >-
+      Insist that two other players should start a business together. Develop
+      their business plan throughout the evening.
+
+  - id: running-titles
+    title: By Royal Decree
+    text: >-
+      Knight other players for trivial achievements. Use their new titles for
+      the rest of the evening.

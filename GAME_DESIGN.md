@@ -44,6 +44,7 @@ theme labels never appear on their cards.
 | Quirk | Perspectives | Interpret ordinary things through a specific, absurd model. | The Heist, Definitely Human |
 | Quirk | Social habits | Change how requests, compliments, and rituals work. | The Middleman, Gone Too Soon |
 | Quirk | Callbacks and fiction | Give a recurring fiction or relationship a history over the evening. | The Incident, The Guest of Honor |
+| Quirk | Accomplices | Cast another player in your joke without telling them. | Our Little Secret, Business Partners |
 | Mission | Say something | Lead someone toward a particular word or phrase without supplying it. | Forecast, The Scenic Detour |
 | Mission | Stories and know-how | Draw out an anecdote, useful detail, or connection between guests. | Origin Story, The Useful Tip |
 | Mission | Shared decisions | Get people to compare ideas, agree, or coordinate an action. | Holiday Committee, Musical Chairs |
@@ -52,7 +53,7 @@ theme labels never appear on their cards.
 | Mission | Corrections and reactions | Set up a mistake, imitation, or curious question. | Close Enough, Inside Voice |
 | Mission | Props and surprises | Prepare an object for someone to discover, try, or play along with. | Under Wraps, Stop and Smell |
 
-The current library has **22 quirks and 46 missions** across four quirk
+The current library has **36 quirks and 60 missions** across five quirk
 families and seven mission families. Families need not contain equal numbers of
 cards. Quirk definitions retain the `cards\running` storage folder; mission
 definitions live under `cards\mission`. A family can be divided into further

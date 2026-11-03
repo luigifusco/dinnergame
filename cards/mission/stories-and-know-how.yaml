@@ -41,3 +41,8 @@ cards:
     text: >-
       Get one player to recommend a book, show, song, or recipe and another to
       write it down or save it to a list.
+
+  - id: mission-hot-take
+    title: Hot Take
+    text: >-
+      Get another player to defend an unpopular food opinion of their own.

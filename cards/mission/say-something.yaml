@@ -48,3 +48,15 @@ cards:
     text: >-
       Get another player to say "coincidence" without saying it yourself or
       asking for the word.
+
+  - id: mission-no-comment
+    title: No Comment
+    text: >-
+      Get another player to say "no comment" without saying it yourself or
+      asking for the phrase.
+
+  - id: mission-big-number
+    title: Astronomical
+    text: >-
+      Get another player to say a number bigger than a million, without saying
+      one first.

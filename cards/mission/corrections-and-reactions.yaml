@@ -41,3 +41,13 @@ cards:
     text: >-
       Invent a voice command for an object on the table. Get another player to
       try it.
+
+  - id: mission-finish-sentence
+    title: Fill in the Blank
+    text: >-
+      Trail off in the middle of a sentence and get another player to finish it.
+
+  - id: mission-apology
+    title: Hurt Feelings
+    text: >-
+      Get another player to apologize to an object.

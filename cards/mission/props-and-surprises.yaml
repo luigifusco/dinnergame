@@ -33,3 +33,13 @@ cards:
     text: >-
       Name a price for an object on the table. Get another player to offer you
       less.
+
+  - id: mission-autograph
+    title: Autograph, Please
+    text: >-
+      Get another player to sign their autograph on a napkin for you.
+
+  - id: mission-blind-tasting
+    title: Blind Tasting
+    text: >-
+      Get another player to taste something with their eyes closed.

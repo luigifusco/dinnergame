@@ -22,8 +22,8 @@ included deck:
 | `sideplot-fronts.pdf` | Front sheets only, for manual double-sided printing. |
 | `sideplot-backs.pdf` | Matching back sheets in the same sheet order as the fronts. |
 
-The library contains **68 cards: 22 quirks and 46 missions**, across eleven
-internal themes. The complete deck uses five A4 sheets, or 10 duplex PDF pages.
+The library contains **96 cards: 36 quirks and 60 missions**, across twelve
+internal themes. The complete deck fills six A4 sheets, or 12 duplex PDF pages.
 For the three-card format, provide at least one quirk and two missions per
 player, plus spare missions for replacements.
 
@@ -117,6 +117,7 @@ names, card IDs, and `--kind running` commands are unchanged.
 cards\
   deck.yaml
   running\
+    accomplices.yaml
     callbacks-and-fiction.yaml
     language.yaml
     perspectives.yaml

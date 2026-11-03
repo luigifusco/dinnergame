@@ -36,3 +36,15 @@ cards:
     text: >-
       Keep proposing rounds of "fuck, marry, kill" using things mentioned in
       conversation.
+
+  - id: running-negotiator
+    title: The Negotiator
+    text: >-
+      Treat simple requests as hostage negotiations. Make offers, set
+      conditions, and ask for proof of goodwill.
+
+  - id: running-dibs
+    title: Dibs
+    text: >-
+      Call dibs on things that can't be claimed: the next silence, the last
+      word, the moon.

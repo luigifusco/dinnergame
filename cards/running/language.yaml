@@ -35,3 +35,21 @@ cards:
     text: >-
       Explain unrelated problems as relationship trouble between the things
       involved.
+
+  - id: running-corporate
+    title: Per My Last Email
+    text: >-
+      Restate what others have just said in corporate jargon, as if summarizing
+      it for management.
+
+  - id: running-tasting-notes
+    title: Notes of Oak
+    text: >-
+      Describe anything you taste, smell, or touch with pretentious wine-tasting
+      notes.
+
+  - id: running-astrology
+    title: Mercury in Retrograde
+    text: >-
+      Explain everyone's behavior with astrology. Assign people star signs with
+      total confidence, without asking.

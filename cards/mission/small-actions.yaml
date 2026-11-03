@@ -32,3 +32,18 @@ cards:
     text: >-
       Get one player to start telling a story and another to add a detail before
       you speak again.
+
+  - id: mission-pinky-promise
+    title: Pinky Promise
+    text: >-
+      Get another player to make a pinky promise with you.
+
+  - id: mission-thumb-war
+    title: Thumb War
+    text: >-
+      Get another player to thumb-wrestle you.
+
+  - id: mission-wish
+    title: Make a Wish
+    text: >-
+      Get another player to close their eyes and make a wish.
