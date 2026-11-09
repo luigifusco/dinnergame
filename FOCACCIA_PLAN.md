@@ -2,9 +2,10 @@
 
 **The dough rises. So do the stakes.**
 
-**Status: concept draft for discussion.** Nothing here is printed or implemented
-yet, and Sideplot is unaffected. "Rising Stakes" is a working title; *Proof of
-Stake* and *Bread & Circuses* are alternatives.
+**Status: concept draft.** Nothing here is printed or implemented yet, and
+Sideplot is unaffected. The [first-game decisions](#decisions-for-the-first-game)
+are recorded below. "Rising Stakes" is a working title; *Proof of Stake* and
+*Bread & Circuses* are alternatives.
 
 ## Pitch
 
@@ -198,6 +199,8 @@ acclamation. The prize is a burnt breadstick.
 
 ## Optional modules
 
+Not part of the first game. Add one at a time once the core has been played.
+
 ### Imprevisti
 
 One-use chaos cards, named after the Chance pile in Italian Monopoly. Draw one
@@ -249,8 +252,9 @@ third place earn 6, 4, and 2 beans for the last auction.
   since vegetarians can trade them away. Leave out anything someone is seriously
   allergic to: the tasting board makes cross-contact hard to avoid. Pesto,
   walnuts, and pistachio all contain nuts.
-- **Roles.** The host can play, but a co-host makes a good banker and
-  auctioneer.
+- **Roles.** The host plays. A co-host runs the bank, the pantry, the
+  auctions, and Tre Carte. If the co-host also plays, the host takes over
+  whenever the co-host is bidding or betting.
 - **Group size.** The draft deck suits eight; scale it at about ten cards per
   player. With four or five players, run three events. With more than ten,
   play in pairs sharing a pan and a hand.
@@ -270,13 +274,16 @@ need:
 - Optionally, structured portion quantities, so the generator could also print a
   shopping list.
 
-## Decisions needed
+## Decisions for the first game
 
-1. **Group size and oven.** How many players, and how many pans fit at once?
-2. **Currency.** Beans, or pure barter with no money?
-3. **Modules.** Which of Imprevisti, secret orders, and the Sideplot crossover
-   belong in the first game?
-4. **Host role.** Does the host play, or only run the bank and pantry?
+| Question | Decision |
+|---|---|
+| Group size | Eight players, using the draft deck. |
+| Currency | Dried beans. |
+| Modules | None. The core already has gambling and trading; keep the modules for later games. |
+| Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and Tre Carte. |
+
+Still open: how many pans fit in the oven at once.
 
 ## What a first playtest should tell us
 
