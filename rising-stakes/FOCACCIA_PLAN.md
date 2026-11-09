@@ -65,25 +65,11 @@ Six halves, cut side up.
 - **Capacity:** at most **6 OVEN** and **3 FINISH** cards per focaccia. Extra
   cards are for trading.
 
-### Draft deck for eight players
+### The deck
 
-An autumn pantry of 80 cards: five A4 sheets in the existing card format. Swap
-ingredients for the season and the guests.
-
-| Tier | Copies | OVEN | FINISH |
-|---|---|---|---|
-| Common (48) | 4 of each | Cherry tomatoes, black olives, red onion, rosemary, garlic, potato, capers, oregano, chili flakes | Arugula, basil, balsamic glaze |
-| Fine (24) | 2 of each | Mozzarella, gorgonzola, anchovies, pumpkin, mushrooms, sausage, grapes, pear | Pesto, honey, parmigiano shavings, walnuts |
-| Luxury (8) | 1 of each | 'Nduja, guanciale | Burrata, stracciatella, mortadella, prosciutto crudo, pistachio, truffle cream |
-
-Eight focaccias hold 48 OVEN and 24 FINISH cards; the deck has 54 and 26, so
-there is always something left to trade.
-
-The deck supports classic combinations without making them rules: tomatoes,
-olives, and oregano; potato, rosemary, and onion; pear, gorgonzola, walnuts,
-and honey; grapes and rosemary; pumpkin and sausage; 'nduja and honey. The
-dream is mortadella, stracciatella, and pistachio: three Luxury cards that
-each exist only once.
+The [ingredient list](INGREDIENTS.md) is an autumn deck of 80 cards for eight
+players: four copies of each Common, two of each Fine, and one of each Luxury.
+It gives every card's portion, a shopping list, and allergen notes.
 
 ## The evening
 
@@ -247,18 +233,21 @@ third place earn 6, 4, and 2 beans for the last auction.
   market. Do a test run, because kitchen temperature changes everything.
 - **Oven.** Count how many pans fit at once, and preheat during the last event.
 - **Pantry.** Prepare one bowl per ingredient with exactly one portion per card
-  in the deck, labeled with the portion. Keep FINISH ingredients in the fridge.
-  Leftover portions become antipasti or tomorrow's lunch.
+  in the deck, labeled with the portion; the
+  [shopping list](INGREDIENTS.md#shopping-list) covers the whole deck. Keep
+  FINISH ingredients in the fridge. Leftover portions become antipasti or
+  tomorrow's lunch.
 - **Diets.** Ask about diets and allergies beforehand. Meat and fish can stay,
   since vegetarians can trade them away. Leave out anything someone is seriously
-  allergic to: the tasting board makes cross-contact hard to avoid. Pesto,
-  walnuts, and pistachio all contain nuts.
+  allergic to: the tasting board makes cross-contact hard to avoid. The
+  [ingredient list](INGREDIENTS.md#diets-and-allergens) flags nuts, fish, pork,
+  and milk.
 - **Roles.** The host plays. A co-host runs the bank, the pantry, the
   auctions, and Tre Carte. If the co-host also plays, the host takes over
   whenever the co-host is bidding or betting.
-- **Group size.** The draft deck suits eight; scale it at about ten cards per
-  player. With four or five players, run three events. With more than ten,
-  play in pairs sharing a pan and a hand.
+- **Group size.** The [deck](INGREDIENTS.md) suits eight; scale it at about ten
+  cards per player. With four or five players, run three events. With more than
+  ten, play in pairs sharing a pan and a hand.
 
 ## Printing later
 
@@ -280,7 +269,7 @@ can carry the deck: 88 x 31.5 mm cards, 16 per A4 sheet, duplex backs, and the
 
 | Question | Decision |
 |---|---|
-| Group size | Eight players, using the draft deck. |
+| Group size | Eight players, using the [autumn deck](INGREDIENTS.md). |
 | Currency | Dried beans. |
 | Modules | None. The core already has gambling and trading; keep the modules for later games. |
 | Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and Tre Carte. |
