@@ -11,9 +11,6 @@ See [GAME_DESIGN.md](GAME_DESIGN.md) for the rules and game formats.
 The [V2 design plan](V2_PLAN.md) records the podium mechanic and the redesigned
 quirk roster.
 
-[Rising Stakes](FOCACCIA_PLAN.md) is a separate concept draft for a focaccia
-dinner game with ingredient cards; it doesn't change Sideplot.
-
 ## Print without installing anything
 
 The [print directory](print) contains ready-to-print PDFs generated from the

@@ -3,9 +3,10 @@
 **The dough rises. So do the stakes.**
 
 **Status: concept draft.** Nothing here is printed or implemented yet, and
-Sideplot is unaffected. The [first-game decisions](#decisions-for-the-first-game)
-are recorded below. "Rising Stakes" is a working title; *Proof of Stake* and
-*Bread & Circuses* are alternatives.
+[Sideplot](../sideplot/README.md) is unaffected. The
+[first-game decisions](#decisions-for-the-first-game) are recorded below.
+"Rising Stakes" is a working title; *Proof of Stake* and *Bread & Circuses* are
+alternatives.
 
 ## Pitch
 
@@ -261,16 +262,17 @@ third place earn 6, 4, and 2 beans for the last auction.
 
 ## Printing later
 
-The existing generator and card format can carry the deck: 88 x 31.5 mm cards,
-16 per A4 sheet, duplex backs, and the `copies` field for duplicates. It would
-need:
+[Sideplot's generator](../sideplot/README.md#generate-the-pdfs) and card format
+can carry the deck: 88 x 31.5 mm cards, 16 per A4 sheet, duplex backs, and the
+`copies` field for duplicates. It would need:
 
 - New card types with three tier backs, plus Imprevisti and orders if used. The
   generator currently accepts only quirks and missions (`CardKind` in
-  `scripts\generate_cards.py`).
+  `sideplot\scripts\generate_cards.py`).
 - An OVEN or FINISH label in the header, and the portion as the card text.
-- A separate card library such as `focaccia\cards\`, printed with the existing
-  `--cards` option.
+- A card library in `rising-stakes\cards\`, printed with the existing `--cards`
+  option. Once both games print cards, the generator could move out of
+  `sideplot\` into shared tooling.
 - Optionally, structured portion quantities, so the generator could also print a
   shopping list.
 
