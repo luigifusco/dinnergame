@@ -50,16 +50,15 @@ dried beans or lentils. They're cheap, tactile, and obviously not toppings.
 
 ## Ingredient cards
 
-Each card shows the ingredient, when it goes on, and the portion it buys:
+Cards are poker size, 63 x 88 mm. The front shows only a linocut-style
+illustration of the portion and the ingredient's name, as in the
+[mock-up](mockups/cherry-tomatoes.png). The OVEN or FINISH label and the portion
+are on the pantry bowls and in the [ingredient list](INGREDIENTS.md), printed as
+a chart for the table.
 
-```text
-CHERRY TOMATOES                                   OVEN
-Six halves, cut side up.
-```
-
-- **Tier** is shown by the card back: **Common**, **Fine**, or **Luxury**. Backs
-  are visible, so everyone can see who is hoarding Luxury cards, but not which
-  ones.
+- **Tier** is shown by the card back, a checked tablecloth: red for **Common**,
+  green for **Fine**, and blue for **Luxury**. Backs are visible, so everyone
+  can see who is hoarding Luxury cards, but not which ones.
 - **OVEN** cards go on before baking. **FINISH** cards go on afterwards, like
   burrata, mortadella, arugula, and honey.
 - **Capacity:** at most **6 OVEN** and **3 FINISH** cards per focaccia. Extra
@@ -233,7 +232,7 @@ third place earn 6, 4, and 2 beans for the last auction.
   market. Do a test run, because kitchen temperature changes everything.
 - **Oven.** Count how many pans fit at once, and preheat during the last event.
 - **Pantry.** Prepare one bowl per ingredient with exactly one portion per card
-  in the deck, labeled with the portion; the
+  in the deck, labeled with OVEN or FINISH and the portion; the
   [shopping list](INGREDIENTS.md#shopping-list) covers the whole deck. Keep
   FINISH ingredients in the fridge. Leftover portions become antipasti or
   tomorrow's lunch.
@@ -251,19 +250,26 @@ third place earn 6, 4, and 2 beans for the last auction.
 
 ## Printing later
 
-[Sideplot's generator](../sideplot/README.md#generate-the-pdfs) and card format
-can carry the deck: 88 x 31.5 mm cards, 16 per A4 sheet, duplex backs, and the
-`copies` field for duplicates. It would need:
+The [mock-up PDF](mockups/cherry-tomatoes.pdf) prints one card double-sided at
+actual size, with a 3 mm bleed so slightly off cuts and duplex drift don't show.
+At nine poker cards per A4 sheet, the 80-card deck takes nine duplex sheets.
 
-- New card types with three tier backs, plus Imprevisti and orders if used. The
-  generator currently accepts only quirks and missions (`CardKind` in
-  `sideplot\scripts\generate_cards.py`).
-- An OVEN or FINISH label in the header, and the portion as the card text.
+[Sideplot's generator](../sideplot/README.md#generate-the-pdfs) could carry the
+deck with its duplex backs and the `copies` field for duplicates. It would need:
+
+- Poker-size cards, nine per sheet. Sideplot's cards are 88 x 31.5 mm, 16 per
+  sheet, with backs inset from the cut; the tablecloth needs a bleed instead.
+  Gaps between cards must stay small, since three cards take 189 of A4's 210 mm.
+- New card types with an illustration and a name, and the three tablecloth
+  backs, plus Imprevisti and orders if used. The generator currently accepts
+  only quirks and missions (`CardKind` in `sideplot\scripts\generate_cards.py`).
+- One illustration per ingredient in `rising-stakes\art\`, in the style of
+  [the cherry tomatoes](art/cherry-tomatoes.png).
 - A card library in `rising-stakes\cards\`, printed with the existing `--cards`
   option. Once both games print cards, the generator could move out of
   `sideplot\` into shared tooling.
-- Optionally, structured portion quantities, so the generator could also print a
-  shopping list.
+- Optionally, structured portion quantities, so the generator could also print
+  the shopping list and the ingredient chart.
 
 ## Decisions for the first game
 
@@ -273,6 +279,7 @@ can carry the deck: 88 x 31.5 mm cards, 16 per A4 sheet, duplex backs, and the
 | Currency | Dried beans. |
 | Modules | None. The core already has gambling and trading; keep the modules for later games. |
 | Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and Tre Carte. |
+| Cards | Poker size. The front has only the illustration and the name; the tablecloth back is red, green, or blue by tier. |
 
 Still open: how many pans fit in the oven at once.
 
