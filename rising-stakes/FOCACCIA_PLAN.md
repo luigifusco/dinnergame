@@ -56,10 +56,10 @@ illustration of the portion and the ingredient's name, as in the
 are on the pantry bowls and in the [ingredient list](INGREDIENTS.md), printed as
 a chart for the table.
 
-- **Tier** is shown by the card back, a checked tablecloth: red for **Common**,
-  green for **Fine**, and blue for **Luxury**. Backs are visible, so everyone
-  can see who is hoarding Luxury cards, but not which ones. The
-  [back designs sheet](mockups/backs.png) has twelve candidate patterns.
+- **Tier** is shown by the card back, a tablecloth of wavy, translucent bands
+  that darken where they cross: red for **Common**, green for **Fine**, and
+  blue for **Luxury**. Backs are visible, so everyone can see who is hoarding
+  Luxury cards, but not which ones.
 - **OVEN** cards go on before baking. **FINISH** cards go on afterwards, like
   burrata, mortadella, arugula, and honey.
 - **Capacity:** at most **6 OVEN** and **3 FINISH** cards per focaccia. Extra
@@ -251,16 +251,32 @@ third place earn 6, 4, and 2 beans for the last auction.
 
 ## Printing later
 
-The [mock-up PDF](mockups/cherry-tomatoes.pdf) prints one card double-sided at
-actual size, with a 3 mm bleed so slightly off cuts and duplex drift don't show.
-At nine poker cards per A4 sheet, the 80-card deck takes nine duplex sheets.
+The [print test](mockups/cherry-tomatoes.pdf) is one duplex A4 sheet of nine
+cherry tomatoes, previewed in [sheet.png](mockups/sheet.png). Its layout is the
+guideline for the generator:
+
+- **Cards touch.** The nine cards sit edge to edge in a 3 x 3 grid of
+  189 x 264 mm, with no gaps, so one cut separates two neighbors. The front
+  background runs 1.5 mm past the outside of the grid.
+- **The back is one continuous tablecloth** covering the grid and 6 mm beyond,
+  so duplex drift never shows and nothing needs to line up. The pattern repeats
+  exactly three times across a card and four times down (21 x 22 mm), so every
+  back is the same, with a crossing at its center.
+- **Cut guides** are short lines in the front's margin, outside the cards, at
+  both ends of each of the eight cut lines. Cut straight from guide to guide.
+  The back has no guides, since it doesn't line up with the front.
+- **One tier per sheet**, since a sheet has a single cloth color. The 80-card
+  deck takes ten sheets: six Common, three Fine, and one Luxury, with ten spare
+  slots.
+- **Spread each ingredient's copies over different sheets.** Each sheet's cloth
+  lands at its own small offset, so a sheet of one ingredient could be spotted
+  from behind.
 
 [Sideplot's generator](../sideplot/README.md#generate-the-pdfs) could carry the
 deck with its duplex backs and the `copies` field for duplicates. It would need:
 
-- Poker-size cards, nine per sheet. Sideplot's cards are 88 x 31.5 mm, 16 per
-  sheet, with backs inset from the cut; the tablecloth needs a bleed instead.
-  Gaps between cards must stay small, since three cards take 189 of A4's 210 mm.
+- The layout above. Sideplot's cards are 88 x 31.5 mm, 16 per sheet, each with
+  its own crop marks and a back inset 2 mm from the cut.
 - New card types with an illustration and a name, and the three tablecloth
   backs, plus Imprevisti and orders if used. The generator currently accepts
   only quirks and missions (`CardKind` in `sideplot\scripts\generate_cards.py`).
@@ -280,10 +296,9 @@ deck with its duplex backs and the `copies` field for duplicates. It would need:
 | Currency | Dried beans. |
 | Modules | None. The core already has gambling and trading; keep the modules for later games. |
 | Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and Tre Carte. |
-| Cards | Poker size. The front has only the illustration and the name in a playful hand-drawn font; the tablecloth back is red, green, or blue by tier. |
+| Cards | Poker size, printed edge to edge with one continuous back per sheet. The front has only the illustration and the name in a playful hand-drawn font; the back is a wavy tablecloth, red, green, or blue by tier. |
 
-Still open: how many pans fit in the oven at once, and which tablecloth pattern
-the backs use.
+Still open: how many pans fit in the oven at once.
 
 ## What a first playtest should tell us
 
