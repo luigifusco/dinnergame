@@ -52,9 +52,9 @@ dried beans or lentils. They're cheap, tactile, and obviously not toppings.
 
 Cards are poker size, 63 x 88 mm. The front shows only a linocut-style
 illustration of the portion and the ingredient's name, as in the
-[mock-up](mockups/cherry-tomatoes.png). The OVEN or FINISH label and the portion
-are on the pantry bowls and in the [ingredient list](INGREDIENTS.md), printed as
-a chart for the table.
+[mock-up](mockups/cherry-tomatoes.png); [fronts.png](mockups/fronts.png) shows
+all 32. The OVEN or FINISH label and the portion are on the pantry bowls and in
+the [ingredient list](INGREDIENTS.md), printed as a chart for the table.
 
 - **Tier** is shown by the card back, a tablecloth of wavy, translucent bands
   that darken where they cross: red for **Common**, green for **Fine**, and
@@ -280,8 +280,11 @@ deck with its duplex backs and the `copies` field for duplicates. It would need:
 - New card types with an illustration and a name, and the three tablecloth
   backs, plus Imprevisti and orders if used. The generator currently accepts
   only quirks and missions (`CardKind` in `sideplot\scripts\generate_cards.py`).
-- One illustration per ingredient in `rising-stakes\art\`, in the style of
-  [the cherry tomatoes](art/cherry-tomatoes.png).
+- The illustrations in `rising-stakes\art\`, one 1254 px PNG per ingredient,
+  named by slug (`prosciutto-crudo.png`, `nduja.png`). Each was printed on a
+  slightly different cream, so the generator should crop each to its art,
+  remap its paper to the cherry tomatoes' cream (247, 237, 215), and fill the
+  card with that cream. Otherwise neighbors on a sheet meet in a visible seam.
 - A card library in `rising-stakes\cards\`, printed with the existing `--cards`
   option. Once both games print cards, the generator could move out of
   `sideplot\` into shared tooling.
