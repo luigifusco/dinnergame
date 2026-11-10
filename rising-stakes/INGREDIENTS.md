@@ -1,10 +1,11 @@
 # Rising Stakes ingredients
 
 The autumn pantry for eight players: **80 ingredient cards** for 32 ingredients,
-which print on ten A4 sheets, one tier per sheet. Each card is a voucher for one
-portion, and two copies of a card make a double portion. Swap ingredients for
-the season and the guests, but keep the tier and label counts. Olive oil, flaky
-salt, black pepper, and brine are free and aren't cards.
+which [print](README.md#print-the-cards) on ten A4 sheets, one tier per sheet.
+Each card is a voucher for one portion, and two copies of a card make a double
+portion. Swap ingredients for the season and the guests, but keep the tier and
+label counts. Olive oil, flaky salt, black pepper, and brine are free and aren't
+cards.
 
 The [concept draft](FOCACCIA_PLAN.md#ingredient-cards) explains tiers, the OVEN
 and FINISH labels, and pan capacity.
@@ -24,7 +25,9 @@ left to trade.
 Portions are sized for a 20 cm round pan and a 250 g dough ball. One card is
 noticeable on its own, and six OVEN cards make a generously topped focaccia.
 Cards show only the art and the name, so each label and portion goes on the
-pantry bowl and on a printed copy of these tables.
+pantry bowl and on a printed copy of these tables. The cards print from
+`cards\ingredients.yaml`; keep its names, tiers, and copies in step with these
+tables.
 
 ### Common
 

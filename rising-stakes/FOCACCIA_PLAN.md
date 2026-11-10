@@ -2,7 +2,8 @@
 
 **The dough rises. So do the stakes.**
 
-**Status: concept draft.** Nothing here is printed or implemented yet, and
+**Status: concept draft.** The [ingredient cards](README.md#print-the-cards) are
+ready to print, but the rules are still a draft, and
 [Sideplot](../sideplot/README.md) is unaffected. The
 [first-game decisions](#decisions-for-the-first-game) are recorded below.
 "Rising Stakes" is a working title; *Proof of Stake* and *Bread & Circuses* are
@@ -249,11 +250,12 @@ third place earn 6, 4, and 2 beans for the last auction.
   cards per player. With four or five players, run three events. With more than
   ten, play in pairs sharing a pan and a hand.
 
-## Printing later
+## Printing
 
-The [print test](mockups/cherry-tomatoes.pdf) is one duplex A4 sheet of nine
-cherry tomatoes, previewed in [sheet.png](mockups/sheet.png). Its layout is the
-guideline for the generator:
+The ingredient cards are ready in the [print directory](print), and the
+[README](README.md#print-the-cards) explains how to print, cut, and regenerate
+them. Each duplex A4 sheet, previewed in [sheet.png](mockups/sheet.png), is laid
+out like this:
 
 - **Cards touch.** The nine cards sit edge to edge in a 3 x 3 grid of
   189 x 264 mm, with no gaps, so one cut separates two neighbors. The front
@@ -266,30 +268,20 @@ guideline for the generator:
   both ends of each of the eight cut lines. Cut straight from guide to guide.
   The back has no guides, since it doesn't line up with the front.
 - **One tier per sheet**, since a sheet has a single cloth color. The 80-card
-  deck takes ten sheets: six Common, three Fine, and one Luxury, with ten spare
-  slots.
-- **Spread each ingredient's copies over different sheets.** Each sheet's cloth
+  deck takes ten sheets of eight cards: six Common, three Fine, and one Luxury.
+  The ninth card of each sheet is a blank spare.
+- **Each ingredient's copies are on different sheets.** Each sheet's cloth
   lands at its own small offset, so a sheet of one ingredient could be spotted
   from behind.
+- **All the art sits on one cream.** Each illustration was printed on a
+  slightly different cream, so the generator crops each to its subject and
+  remaps its paper to the cherry tomatoes' cream. Otherwise neighbors on a
+  sheet would meet in a visible seam.
 
-[Sideplot's generator](../sideplot/README.md#generate-the-pdfs) could carry the
-deck with its duplex backs and the `copies` field for duplicates. It would need:
-
-- The layout above. Sideplot's cards are 88 x 31.5 mm, 16 per sheet, each with
-  its own crop marks and a back inset 2 mm from the cut.
-- New card types with an illustration and a name, and the three tablecloth
-  backs, plus Imprevisti and orders if used. The generator currently accepts
-  only quirks and missions (`CardKind` in `sideplot\scripts\generate_cards.py`).
-- The illustrations in `rising-stakes\art\`, one 1254 px PNG per ingredient,
-  named by slug (`prosciutto-crudo.png`, `nduja.png`). Each was printed on a
-  slightly different cream, so the generator should crop each to its art,
-  remap its paper to the cherry tomatoes' cream (247, 237, 215), and fill the
-  card with that cream. Otherwise neighbors on a sheet meet in a visible seam.
-- A card library in `rising-stakes\cards\`, printed with the existing `--cards`
-  option. Once both games print cards, the generator could move out of
-  `sideplot\` into shared tooling.
-- Optionally, structured portion quantities, so the generator could also print
-  the shopping list and the ingredient chart.
+Not printed yet: the Imprevisti and secret orders, if a game uses them, and the
+ingredient chart for the table. Rising Stakes has its own generator, separate
+from [Sideplot's](../sideplot/README.md#generate-the-pdfs), since the two share
+little beyond duplex sheets.
 
 ## Decisions for the first game
 

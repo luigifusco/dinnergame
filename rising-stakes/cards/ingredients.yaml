@@ -1,0 +1,44 @@
+# The autumn deck from INGREDIENTS.md. Each id names its illustration in art\.
+name: Rising Stakes
+tiers:
+  common:
+    copies: 4
+    ingredients:
+      cherry-tomatoes: Cherry tomatoes
+      black-olives: Black olives
+      red-onion: Red onion
+      rosemary: Rosemary
+      garlic: Garlic
+      potato: Potato
+      capers: Capers
+      oregano: Oregano
+      chili-flakes: Chili flakes
+      arugula: Arugula
+      basil: Basil
+      balsamic-glaze: Balsamic glaze
+  fine:
+    copies: 2
+    ingredients:
+      mozzarella: Mozzarella
+      gorgonzola: Gorgonzola
+      anchovies: Anchovies
+      pumpkin: Pumpkin
+      mushrooms: Mushrooms
+      sausage: Sausage
+      grapes: Grapes
+      pear: Pear
+      pesto: Pesto
+      honey: Honey
+      parmigiano: Parmigiano
+      walnuts: Walnuts
+  luxury:
+    copies: 1
+    ingredients:
+      nduja: "’Nduja"
+      guanciale: Guanciale
+      burrata: Burrata
+      stracciatella: Stracciatella
+      mortadella: Mortadella
+      prosciutto-crudo: Prosciutto crudo
+      pistachio: Pistachio
+      truffle-cream: Truffle cream
