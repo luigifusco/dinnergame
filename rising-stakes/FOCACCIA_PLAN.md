@@ -56,9 +56,10 @@ illustration of the portion and the ingredient's name, as in the
 are on the pantry bowls and in the [ingredient list](INGREDIENTS.md), printed as
 a chart for the table.
 
-- **Tier** is shown by the card back, a checked tablecloth: red for **Common**,
-  green for **Fine**, and blue for **Luxury**. Backs are visible, so everyone
-  can see who is hoarding Luxury cards, but not which ones.
+- **Tier** is shown by the card back, a checked tablecloth whose stripes are
+  rows of small dots: red for **Common**, green for **Fine**, and blue for
+  **Luxury**. Backs are visible, so everyone can see who is hoarding Luxury
+  cards, but not which ones.
 - **OVEN** cards go on before baking. **FINISH** cards go on afterwards, like
   burrata, mortadella, arugula, and honey.
 - **Capacity:** at most **6 OVEN** and **3 FINISH** cards per focaccia. Extra
@@ -279,7 +280,7 @@ deck with its duplex backs and the `copies` field for duplicates. It would need:
 | Currency | Dried beans. |
 | Modules | None. The core already has gambling and trading; keep the modules for later games. |
 | Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and Tre Carte. |
-| Cards | Poker size. The front has only the illustration and the name; the tablecloth back is red, green, or blue by tier. |
+| Cards | Poker size. The front has only the illustration and the name in a playful hand-drawn font; the dotted tablecloth back is red, green, or blue by tier. |
 
 Still open: how many pans fit in the oven at once.
 
