@@ -270,13 +270,9 @@ out like this:
 - **Cut guides** are short lines in the front's margin, outside the cards, at
   both ends of each of the eight cut lines. Cut straight from guide to guide.
   The back has no guides, since it doesn't line up with the front.
-- **One back color per sheet**, since a sheet has a single cloth. The 92-card
-  deck takes eleven sheets: seven red, with the 48 Commons followed by the 12
-  Wild cards, three green Fine, and one blue Luxury. Sheets hold eight or nine
-  cards, and an empty slot is a blank spare.
-- **Each ingredient's copies are on different sheets.** Each sheet's cloth
-  lands at its own small offset, so a sheet of one ingredient could be spotted
-  from behind.
+- **One card per ingredient, all with the red back.** The 44 cards fill five
+  sheets in tier order, eight or nine to a sheet; an empty slot is a blank
+  spare. Print extra copies of the sheets the game needs more of.
 - **All the art sits on one cream.** Each illustration was printed on a
   slightly different cream, so the generator crops each to its subject and
   remaps its paper to the cherry tomatoes' cream. Otherwise neighbors on a

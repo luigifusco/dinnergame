@@ -1,8 +1,7 @@
 # Rising Stakes ingredients
 
-The autumn pantry for eight players: **92 ingredient cards** for 44 ingredients,
-which [print](README.md#print-the-cards) on eleven A4 sheets, one back color per
-sheet.
+The autumn pantry for eight players: **92 ingredient cards** for 44 ingredients.
+One card of each [prints](README.md#print-the-cards) on five A4 sheets.
 Each card is a voucher for one portion, and two copies of a card make a double
 portion. Swap ingredients for the season and the guests, but keep the tier and
 label counts. Olive oil, flaky salt, black pepper, and brine are free and aren't

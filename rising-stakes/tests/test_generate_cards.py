@@ -61,16 +61,13 @@ def slot_text(document: pdfium.PdfDocument, page: int, slot: int) -> str:
 
 
 class LibraryTests(unittest.TestCase):
-    def test_library_prints_one_back_per_sheet_with_copies_on_different_sheets(self) -> None:
+    def test_library_prints_each_ingredient_once(self) -> None:
         deck = load_deck(ROOT / "cards" / "ingredients.yaml")
         sheets = layout_sheets(deck)
-        self.assertEqual([sheet.cloth for sheet in sheets], ["red"] * 7 + ["green"] * 3 + ["blue"])
-        # Wild cards share the Common back and are printed on the red sheets.
-        self.assertEqual(sheets[6].tiers, ("wild",))
-        for sheet in sheets:
-            identifiers = [card.id for card in sheet.cards]
-            self.assertEqual(len(identifiers), len(set(identifiers)))
-        self.assertEqual(check_deck(deck, ROOT / "art"), 92)
+        self.assertEqual([len(sheet.cards) for sheet in sheets], [9, 9, 9, 9, 8])
+        identifiers = [card.id for sheet in sheets for card in sheet.cards]
+        self.assertEqual(len(identifiers), len(set(identifiers)))
+        self.assertEqual(check_deck(deck, ROOT / "art"), 44)
 
     def test_rejects_cards_that_cannot_print(self) -> None:
         cases = {
@@ -105,15 +102,14 @@ class PdfTests(unittest.TestCase):
             self.assertEqual(first, [path.read_bytes() for path in paths])
 
             with closing(pdfium.PdfDocument(paths[-1])) as document:
-                self.assertEqual(len(document), 6)
+                self.assertEqual(len(document), 2)
                 self.assertEqual(slot_text(document, 0, 0), "Item 0")
-                self.assertEqual(slot_text(document, 2, 5), "Item 5")
-                self.assertEqual(slot_text(document, 4, 0), "Gold leaf")
-                self.assertEqual(slot_text(document, 4, 1), "")
-                for page in (1, 3, 5):
-                    with closing(document[page]) as pdf_page:
-                        with closing(pdf_page.get_textpage()) as text:
-                            self.assertEqual(text.get_text_range().strip(), "")
+                self.assertEqual(slot_text(document, 0, 5), "Item 5")
+                self.assertEqual(slot_text(document, 0, 6), "Gold leaf")
+                self.assertEqual(slot_text(document, 0, 7), "")
+                with closing(document[1]) as pdf_page:
+                    with closing(pdf_page.get_textpage()) as text:
+                        self.assertEqual(text.get_text_range().strip(), "")
 
                 with closing(document[0]) as pdf_page:
                     scale = 4 / mm
