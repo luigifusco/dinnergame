@@ -39,7 +39,7 @@ reveal.
 
 | Component | Purpose |
 |---|---|
-| Ingredient cards | Printed vouchers for one portion each, in three tiers. |
+| Ingredient cards | Printed vouchers for one portion each, in three tiers plus one-off wild cards. |
 | Dried beans | Currency for bets, bids, and the shop: about 15 per player plus a bank. |
 | The pantry | Labeled bowls holding exactly one prepared portion per card in play. |
 | Personal pans | One per player, such as a 20 cm round tin, with a name label. |
@@ -54,13 +54,15 @@ dried beans or lentils. They're cheap, tactile, and obviously not toppings.
 Cards are poker size, 63 x 88 mm. The front shows only a linocut-style
 illustration of the portion and the ingredient's name, as in the
 [mock-up](mockups/cherry-tomatoes.png); [fronts.png](mockups/fronts.png) shows
-all 32. The OVEN or FINISH label and the portion are on the pantry bowls and in
+all 44. The OVEN or FINISH label and the portion are on the pantry bowls and in
 the [ingredient list](INGREDIENTS.md), printed as a chart for the table.
 
 - **Tier** is shown by the card back, a tablecloth of wavy, translucent bands
   that darken where they cross: red for **Common**, green for **Fine**, and
   blue for **Luxury**. Backs are visible, so everyone can see who is hoarding
   Luxury cards, but not which ones.
+- **Wild** cards are one-offs, from Nutella and lemon to ketchup and gummy
+  bears. They have the red Common back, so they can hide among the Commons.
 - **OVEN** cards go on before baking. **FINISH** cards go on afterwards, like
   burrata, mortadella, arugula, and honey.
 - **Capacity:** at most **6 OVEN** and **3 FINISH** cards per focaccia. Extra
@@ -68,8 +70,9 @@ the [ingredient list](INGREDIENTS.md), printed as a chart for the table.
 
 ### The deck
 
-The [ingredient list](INGREDIENTS.md) is an autumn deck of 80 cards for eight
-players: four copies of each Common, two of each Fine, and one of each Luxury.
+The [ingredient list](INGREDIENTS.md) is an autumn deck of 92 cards for eight
+players: four copies of each Common, two of each Fine, and one of each Luxury
+and Wild.
 It gives every card's portion, a shopping list, and allergen notes.
 
 ## The evening
@@ -267,9 +270,10 @@ out like this:
 - **Cut guides** are short lines in the front's margin, outside the cards, at
   both ends of each of the eight cut lines. Cut straight from guide to guide.
   The back has no guides, since it doesn't line up with the front.
-- **One tier per sheet**, since a sheet has a single cloth color. The 80-card
-  deck takes ten sheets of eight cards: six Common, three Fine, and one Luxury.
-  The ninth card of each sheet is a blank spare.
+- **One back color per sheet**, since a sheet has a single cloth. The 92-card
+  deck takes eleven sheets: seven red, with the 48 Commons followed by the 12
+  Wild cards, three green Fine, and one blue Luxury. Sheets hold eight or nine
+  cards, and an empty slot is a blank spare.
 - **Each ingredient's copies are on different sheets.** Each sheet's cloth
   lands at its own small offset, so a sheet of one ingredient could be spotted
   from behind.
@@ -293,7 +297,8 @@ little beyond duplex sheets.
 | Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and Tre Carte. |
 | Cards | Poker size, printed edge to edge with one continuous back per sheet. The front has only the illustration and the name in a playful hand-drawn font; the back is a wavy tablecloth, red, green, or blue by tier. |
 
-Still open: how many pans fit in the oven at once.
+Still open: how many pans fit in the oven at once, and how wild cards come into
+play.
 
 ## What a first playtest should tell us
 

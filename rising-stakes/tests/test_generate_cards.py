@@ -61,16 +61,16 @@ def slot_text(document: pdfium.PdfDocument, page: int, slot: int) -> str:
 
 
 class LibraryTests(unittest.TestCase):
-    def test_library_prints_one_tier_per_sheet_with_copies_on_different_sheets(self) -> None:
+    def test_library_prints_one_back_per_sheet_with_copies_on_different_sheets(self) -> None:
         deck = load_deck(ROOT / "cards" / "ingredients.yaml")
         sheets = layout_sheets(deck)
-        self.assertEqual(
-            [sheet.tier for sheet in sheets], ["common"] * 6 + ["fine"] * 3 + ["luxury"]
-        )
+        self.assertEqual([sheet.cloth for sheet in sheets], ["red"] * 7 + ["green"] * 3 + ["blue"])
+        # Wild cards share the Common back and are printed on the red sheets.
+        self.assertEqual(sheets[6].tiers, ("wild",))
         for sheet in sheets:
             identifiers = [card.id for card in sheet.cards]
             self.assertEqual(len(identifiers), len(set(identifiers)))
-        self.assertEqual(check_deck(deck, ROOT / "art"), 80)
+        self.assertEqual(check_deck(deck, ROOT / "art"), 92)
 
     def test_rejects_cards_that_cannot_print(self) -> None:
         cases = {

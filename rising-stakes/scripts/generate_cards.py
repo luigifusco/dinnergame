@@ -56,13 +56,19 @@ class DeckError(ValueError):
 class TierStyle:
     title: str
     cloth: str
-    color: colors.Color
 
 
+CLOTHS = {
+    "red": colors.HexColor("#C42B2F"),
+    "green": colors.HexColor("#2E7A41"),
+    "blue": colors.HexColor("#2756A3"),
+}
 TIERS = {
-    "common": TierStyle("Common", "red", colors.HexColor("#C42B2F")),
-    "fine": TierStyle("Fine", "green", colors.HexColor("#2E7A41")),
-    "luxury": TierStyle("Luxury", "blue", colors.HexColor("#2756A3")),
+    "common": TierStyle("Common", "red"),
+    "fine": TierStyle("Fine", "green"),
+    "luxury": TierStyle("Luxury", "blue"),
+    # Wild cards share the Common back, so they hide among the Commons.
+    "wild": TierStyle("Wild", "red"),
 }
 
 
@@ -87,7 +93,8 @@ class Deck:
 
 @dataclass(frozen=True)
 class Sheet:
-    tier: str
+    cloth: str
+    tiers: tuple[str, ...]
     cards: tuple[Ingredient, ...]
 
 
@@ -162,16 +169,22 @@ def load_deck(path: Path) -> Deck:
 
 
 def layout_sheets(deck: Deck) -> tuple[Sheet, ...]:
-    """Fill one tier per sheet, spreading each ingredient's copies over different sheets."""
-    sheets = []
+    """Fill one back color per sheet, spreading each ingredient's copies over different sheets."""
+    groups: dict[str, list[tuple[str, Ingredient]]] = {}
     for tier in deck.tiers:
-        cards = [item for _ in range(tier.copies) for item in tier.ingredients]
+        groups.setdefault(TIERS[tier.key].cloth, []).extend(
+            (tier.key, item) for _ in range(tier.copies) for item in tier.ingredients
+        )
+    sheets = []
+    for cloth, cards in groups.items():
         count = math.ceil(len(cards) / CARDS_PER_SHEET)
         start = 0
         # Dealing the copy-by-copy sequence in even, consecutive runs keeps copies apart.
         for index in range(count):
             size = len(cards) // count + (index < len(cards) % count)
-            sheets.append(Sheet(tier.key, tuple(cards[start : start + size])))
+            run = cards[start : start + size]
+            tiers = tuple(dict.fromkeys(key for key, _ in run))
+            sheets.append(Sheet(cloth, tiers, tuple(item for _, item in run)))
             start += size
     return tuple(sheets)
 
@@ -294,13 +307,13 @@ def _draw_front(canvas: Canvas, sheet: Sheet, number: int, count: int, art: Path
         _draw_card(canvas, item, art)
         canvas.restoreState()
     _draw_cut_guides(canvas)
-    style = TIERS[sheet.tier]
+    titles = " and ".join(TIERS[tier].title for tier in sheet.tiers)
     canvas.setFillColor(INK)
     canvas.setFont(FONT, CAPTION_SIZE)
     canvas.drawCentredString(
         PAGE_WIDTH / 2,
         GRID_Y - 10 * mm,
-        f"Sheet {number} of {count}: {style.title}, {style.cloth} back. Print at 100%, "
+        f"Sheet {number} of {count}: {titles}, {sheet.cloth} back. Print at 100%, "
         "double-sided. Cut straight from guide to guide.",
     )
 
@@ -357,15 +370,15 @@ def draw_cloth(
 
 
 def _draw_back(canvas: Canvas, sheet: Sheet) -> None:
-    # Each tier's cloth is drawn once as a form and reused by every sheet of that tier.
-    form = f"cloth-{sheet.tier}"
+    # Each cloth is drawn once as a form and reused by every sheet with that back.
+    form = f"cloth-{sheet.cloth}"
     if not canvas.hasForm(form):
         canvas.beginForm(form)
         # The grid is centered, so after any flip the crossings still sit behind the card centers.
         canvas.translate(GRID_X, GRID_Y)
         draw_cloth(
             canvas,
-            TIERS[sheet.tier].color,
+            CLOTHS[sheet.cloth],
             -BACK_OVERFLOW,
             -BACK_OVERFLOW,
             GRID_WIDTH + BACK_OVERFLOW,

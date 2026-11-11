@@ -9,7 +9,7 @@ the shopping list.
 
 ## Print the cards
 
-The [print directory](print) contains the 80 ingredient cards of the autumn
+The [print directory](print) contains the 92 ingredient cards of the autumn
 deck, ready to print:
 
 | File | Purpose |
@@ -22,8 +22,8 @@ deck, ready to print:
 |---|---|
 | Paper | A4, portrait, opaque card stock |
 | Card size | Poker, 63 x 88 mm |
-| Layout | Three by three, edge to edge: eight cards and one blank spare per sheet |
-| Sheets | Ten: six Common (red back), three Fine (green), one Luxury (blue) |
+| Layout | Three by three, edge to edge: eight or nine cards per sheet; an empty slot is a blank spare |
+| Sheets | Eleven: seven red (Common, then Wild), three green (Fine), one blue (Luxury) |
 | Duplex setting | Either flip; the back doesn't need to line up |
 | Scaling | Actual size / 100%, not "fit to page" |
 
@@ -69,8 +69,9 @@ tiers:
       cherry-tomatoes: Cherry tomatoes
 ```
 
-- The tiers are `common`, `fine`, and `luxury`. They print in that order, each
-  on its own sheets with its own back.
+- The tiers are `common`, `fine`, `luxury`, and `wild`. Sheets print by back
+  color: red for Common and then Wild, which share a back so wild cards can
+  hide among the Commons, then green for Fine and blue for Luxury.
 - Each id uses lowercase letters, digits, and single hyphens, and names its
   illustration, `art\<id>.png`. The name is printed under the art.
 - Keep the [ingredient list](INGREDIENTS.md) in step: labels and portions live

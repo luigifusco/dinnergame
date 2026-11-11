@@ -1,7 +1,8 @@
 # Rising Stakes ingredients
 
-The autumn pantry for eight players: **80 ingredient cards** for 32 ingredients,
-which [print](README.md#print-the-cards) on ten A4 sheets, one tier per sheet.
+The autumn pantry for eight players: **92 ingredient cards** for 44 ingredients,
+which [print](README.md#print-the-cards) on eleven A4 sheets, one back color per
+sheet.
 Each card is a voucher for one portion, and two copies of a card make a double
 portion. Swap ingredients for the season and the guests, but keep the tier and
 label counts. Olive oil, flaky salt, black pepper, and brine are free and aren't
@@ -17,7 +18,8 @@ and FINISH labels, and pan capacity.
 | Common | 4 of each | 12 | 48 | 36 | 12 |
 | Fine | 2 of each | 12 | 24 | 16 | 8 |
 | Luxury | 1 of each | 8 | 8 | 2 | 6 |
-| **Total** | | **32** | **80** | **54** | **26** |
+| Wild | 1 of each | 12 | 12 | 6 | 6 |
+| **Total** | | **44** | **92** | **60** | **32** |
 
 Eight focaccias hold 48 OVEN and 24 FINISH cards, so there is always something
 left to trade.
@@ -75,6 +77,26 @@ tables.
 | Prosciutto crudo | FINISH | Three slices. |
 | Pistachio | FINISH | A heaped tablespoon, chopped. |
 | Truffle cream | FINISH | Two teaspoons, in dots. |
+
+### Wild
+
+Experimental, scandalous, or straight-up bad, and one of each. Wild cards share
+the red Common back, so they can hide among the Commons.
+
+| Ingredient | Label | Portion |
+|---|---|---|
+| Nutella | FINISH | A heaped teaspoon. |
+| Lemon | OVEN | Four paper-thin slices. |
+| Dark chocolate | FINISH | One square, grated. |
+| Kimchi | OVEN | A tablespoon, squeezed dry. |
+| Miso | OVEN | A teaspoon, in small dabs. |
+| Pineapple | OVEN | Three chunks. |
+| Ketchup | FINISH | One zigzag. |
+| Gummy bears | FINISH | Five bears. |
+| Wasabi | FINISH | Half a teaspoon, in dots. |
+| Pickles | FINISH | One gherkin, sliced into coins. |
+| Celery | OVEN | Half a stalk, thinly sliced. |
+| Chili pepper | OVEN | One fresh chili, in rings. |
 
 ### Combinations
 
@@ -138,6 +160,23 @@ The prep column describes each portion as it waits in the pantry.
 | Extra-virgin olive oil | 500 ml | Free | For the pans, the brine, and drizzling. |
 | Flaky salt and black pepper | 1 of each | Free | |
 
+### Wild cards
+
+| Item | Buy | Deck needs | Prep |
+|---|---|---|---|
+| Nutella | 1 small jar | 1 heaped teaspoon | |
+| Lemon | 1 | 4 slices | Slice paper-thin. |
+| Dark chocolate | 1 bar | 1 square | Grate. |
+| Kimchi | 1 small jar | 1 tablespoon | Squeeze dry. |
+| Miso paste | 1 small tub | 1 teaspoon | |
+| Pineapple chunks | 1 small can | 3 chunks | Drain. |
+| Ketchup | 1 bottle | 1 zigzag | |
+| Gummy bears | 1 bag | 5 bears | |
+| Wasabi | 1 tube | Half a teaspoon | |
+| Pickled gherkins | 1 jar | 1 gherkin | Slice into coins. |
+| Celery | 1 head | Half a stalk | Slice thinly. |
+| Fresh red chili | 1 | 1 chili | Slice into rings. |
+
 ## Diets and allergens
 
 Check these against your guests' diets and allergies before shopping. The
@@ -145,10 +184,12 @@ Check these against your guests' diets and allergies before shopping. The
 
 | Contains | Cards |
 |---|---|
-| Nuts | Pesto, walnuts, and pistachio. Mortadella may contain pistachios too. |
-| Fish | Anchovies. |
-| Pork | Sausage, guanciale, 'nduja, mortadella, and prosciutto crudo. |
-| Milk | Mozzarella, gorgonzola, parmigiano, burrata, stracciatella, and most pesto. |
+| Nuts | Pesto, walnuts, pistachio, and Nutella. Mortadella may contain pistachios too. |
+| Fish | Anchovies. Most kimchi contains fish sauce or shrimp. |
+| Pork | Sausage, guanciale, 'nduja, mortadella, and prosciutto crudo. Most gummy bears contain pork gelatin. |
+| Milk | Mozzarella, gorgonzola, parmigiano, burrata, stracciatella, Nutella, and most pesto. Dark chocolate may contain milk. |
+| Soy | Miso. |
+| Celery | Celery. |
 
 Parmigiano and gorgonzola are traditionally made with animal rennet, and so is
 the cheese in most pesto, so strict vegetarians may trade those away too.

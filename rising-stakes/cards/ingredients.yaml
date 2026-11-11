@@ -42,3 +42,18 @@ tiers:
       prosciutto-crudo: Prosciutto crudo
       pistachio: Pistachio
       truffle-cream: Truffle cream
+  wild:
+    copies: 1
+    ingredients:
+      nutella: Nutella
+      lemon: Lemon
+      dark-chocolate: Dark chocolate
+      kimchi: Kimchi
+      miso: Miso
+      pineapple: Pineapple
+      ketchup: Ketchup
+      gummy-bears: Gummy bears
+      wasabi: Wasabi
+      pickles: Pickles
+      celery: Celery
+      chili-pepper: Chili pepper
