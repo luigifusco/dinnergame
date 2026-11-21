@@ -1,22 +1,53 @@
-La Patata Bollente (chance): pass a parcel to music; when it stops, unwrap a layer and obey its note (draw, steal, give). A Luxury waits in the core.
-Roulette Calabrese (chance): eight olives, one hiding a fiery chili; everyone eats one at once, and whoever gets the fire wins a Luxury.
-La Bottiglia (chance, steal): spin an empty wine bottle; whoever it points at hands you a blind card. Everyone spins once.
-Tombola (chance, in the draft): Italian bingo; ambo and terno win a Common, up to a Luxury for tombola.
-Il Forno (push your luck, in the draft): roll two dice for a bake total, and stop before a 1 burns it.
-Mezzogiorno di Fuoco (duel, steal): a grissino in your belt; draw on "Focaccia!" but not on "Formaggio!". The winner takes a blind card from the loser.
-Il Cucchiaio di Legno (free-for-all, steal): the card game Spoons; whoever is left without a spoon gives the first grabber a blind card.
-Morra (duel, in the draft): the finger-guessing game, any time, for stakes both players agree on.
-Le Bocce (teams): two teams roll mandarins at a cherry tomato across the floor; the winners split a prize pot, if they can agree how.
-La Staffetta dei Taralli (teams): pass taralli along grissini held in your mouths, no hands; the fastest team splits a prize pot.
-Rischiatutto (teams): food trivia, buzzing in by banging a pan; each right answer adds a card to the team's pot.
-Caccia al Tesoro (pairs): the host hides cards around the house, each found by solving a riddle; finders keepers.
-Dividi o Rubi (betrayal, steal): pairs share a pot and talk for a minute, then each secretly picks split or steal. A lone thief takes it all; two get nothing.
-Il Ladro (hidden role, steal): a secret thief robs by winking, and robbed players drop a blind card in the loot jar; unmask the thief to win it.
-La Parola Proibita (all evening, steal): don't say "pizza"; whoever slips loses a blind card to the first player who catches them.
-Tre Carte (gambling, in the draft): stake beans and follow a Fine through the host's three-card shuffle.
-OK, il Prezzo è Giusto (estimation): guess what a pantry item cost; the closest without going over wins its card.
-Naso d'Oro (senses, in the draft): sniff six covered cups and guess the herbs and spices.
-Il Pugno (skill, in the draft): scoop 100 g of flour by eye; the closest wins.
-Mimo (social, in the draft): act out a Common without words; the first to guess keeps it.
-Mise en Place (race, in the draft): strip rosemary or peel garlic for the pantry; the fastest wins.
-L'Asta (auction, in the draft): bid beans on a few lots, such as a Luxury or a mystery card.
+WAYS TO WIN A CARD
+Random: the winner draws blind from the bank.
+Chosen card: a face-up card is picked during the game, and the pick changes the game, such as what gets acted out or how hard the shot is.
+Own cards: players stake cards from their hand, and the game reshuffles or hands them out.
+Ranking: the game ranks everyone, and the ranking is the picking order from a face-up prize pool.
+Steal: the winner draws blind from the loser's hand, or the loser picks what to give.
+
+TEAM GAMES
+Mimo a Squadre (chosen card): charades. The actor picks one of six face-up cards, an easy Common or a tough Wild, and their team has a minute to guess it. The guesser keeps it; on a miss, the other team gets one guess to steal it.
+Tre Giri (ranking): Time's Up! with a stack of ingredient cards: describe freely, then one word only, then mime only. The winning team picks first from the prize pool, alternating with the losing team.
+Nome in Codice (chosen card): Codenames on a 4 x 4 grid of ingredient cards. The guesser keeps every card of their team's color they find.
+Rischiatutto (chosen card): a Jeopardy board of face-up ingredient cards. Pick one and answer a question about it, harder for a Luxury; whoever answers right keeps it, and a wrong answer lets the other team steal it.
+Pentolaccia (random): upside-down pans on the floor, each hiding a blind card. A blindfolded player, steered only by their team's shouting, taps one with a wooden spoon and keeps what's underneath.
+Rubabandiera (steal): two teams in lines with secret numbers. The host calls a number, and those two race to snatch a tea towel and get home untagged; the winner takes a blind card from the loser.
+
+EVERYONE GAMES
+Il Critico (own cards): a rotating critic reads a prompt like "what your ex would put on a focaccia". Everyone else plays a card face down, and the critic's favorite takes them all.
+Piatto Ricco (own cards, gambling): "Piatto ricco, mi ci ficco." Whoever wants in puts a card face up in the pot for tickets: 1 for a Common, 2 for a Fine or Wild, 3 for a Luxury. Draw one ticket; it takes the whole pot.
+Dubito (own cards, bluff): in turn, play a card face down and claim a tier at least as high as the last one. Anyone may shout "Dubito!" and flip it, and whoever was right takes the whole pile.
+Venti Domande (chosen card): one player secretly picks a card from the bank, and the others share 20 yes-or-no questions. Whoever names it wins it; otherwise the picker keeps it.
+Il Lancio del Tappo (chosen card): glasses in a line, Commons in the near ones and a Luxury in the farthest. One cork toss each; win the card in the glass you land in.
+Il Pugno (chosen card): pick a face-up card, then scoop 100 g of flour by eye. You win it within 20 g for a Common, 10 g for a Fine, or 5 g for a Luxury.
+Sono Andato al Mercato (ranking): the memory chain "I went to the market and bought...", each player adding an ingredient. Slip and you're out; the last one standing picks first.
+Il Palato (ranking): taste six spoonfuls blindfolded and name them; the best score picks first.
+Il Mercante in Fiera (own cards, final): during the bake, the corner symbols on your cards are the tickets. Needs the symbols.
+
+DUELS FOR EVENTS
+Morra
+Pari o Dispari
+Sasso, Carta, Forbice
+Battaglia dei Pollici (thumb war)
+Gara di Sguardi (staring contest: blink or laugh and you lose)
+Braccio di Ferro (arm wrestling)
+
+EVENTS BETWEEN GAMES
+Lo Scambio: two players must swap a card, each choosing what to give.
+Al Buio: two players swap a blind card from each other's hand.
+La Sfida: two players fight a duel; the winner draws blind from the loser's hand.
+Il Cambio: one player trades a card of their choice for a blind one from the bank.
+Giro Tavola: everyone passes a card of their choice to the left.
+Dividi e Scegli: two players get three cards from the bank. One splits them into two piles, and the other picks a pile.
+Robin Hood: whoever holds the most cards gives a blind one to whoever holds the fewest.
+Il Ladro: one player draws a blind card from anyone they like.
+La Spia: one player secretly looks at another's whole hand.
+Il Patto: two players have one minute to agree on a trade; if they don't, each gives a card to the bank.
+Manna: everyone draws a Common.
+Doppio: the next game pays two cards instead of one.
+Rivoluzione: everyone passes their whole hand to the left.
+
+WHO AND WHEN
+Draw an event card after each game.
+Spin a bottle to pick the players.
+Corner symbols: draw a card from the bank, and the event hits whoever holds its symbol.
