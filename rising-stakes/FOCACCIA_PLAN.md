@@ -60,7 +60,11 @@ the [ingredient list](INGREDIENTS.md), printed as a chart for the table.
 - **Every card is equal.** There are no tiers or rarities: each of the 44
   ingredients has exactly one card, from cherry tomatoes and burrata to ketchup
   and gummy bears. All share one back, a red tablecloth of wavy, translucent
-  bands that darken where they cross, so a hand gives nothing away.
+  bands that darken where they cross, so the bank's face-down pile gives
+  nothing away.
+- **Hands are public.** Keep your cards face up next to your pan, so everyone
+  can always see who holds what. When a rule says to draw blind from a player,
+  they shuffle their cards face down and you draw one.
 - **OVEN** cards go on before baking. **FINISH** cards go on afterwards, like
   burrata, mortadella, arugula, and honey.
 - **Capacity:** at most **6 OVEN** and **3 FINISH** cards per focaccia. Extra
@@ -76,7 +80,7 @@ list, and allergen notes.
 
 | Phase | Length | What happens |
 |---|---|---|
-| **Kickoff** | 10 min | Explain the basics. Everyone stretches a dough ball into their own pan and names it. Deal 2 random cards and 10 beans to each player. |
+| **Kickoff** | 10 min | Explain the basics. Everyone stretches a dough ball into their own pan and names it. Deal 2 random cards to each player, face up, and 10 beans. |
 | **The Market** | ~90 min | Hosted events, side bets, and private trading over drinks, while the pans rise where everyone can see them. |
 | **Last Call** | 10 min | The host warns that the dough is nearly ready. The jar is revealed; final deals. |
 | **Assembly** | 15 min | Spend OVEN cards at the pantry. Dimple, top, brine, bake. |
@@ -144,8 +148,9 @@ Standing on two cards at 25, pushing on for three is close to a coin flip (44%).
 
 - Trade anything, any time, with anyone: cards, beans, favors, and promised
   slices of your future focaccia.
-- Trade privately. Whisper, take it to the kitchen, or step onto the balcony.
-  You may lie about what you hold.
+- Negotiate privately. Whisper, take it to the kitchen, or step onto the
+  balcony. Everyone can see what you hold, but not what you want or what you're
+  planning, and you may lie about those.
 - A hand-to-hand swap is final. Spoken promises aren't enforced.
 - **Napkin contracts** are. A deal written on a napkin and signed by both
   players is binding, and the host enforces it, including slices owed at dinner.
@@ -198,10 +203,10 @@ in Bake or Burn, or buy one at the Shop for 3 beans.
 
 | Card | Effect |
 |---|---|
-| **Tax Audit** | Audit a player: they show you their hand and pay you one card of their choice. |
+| **Tax Audit** | Audit a player: they pay you one card of their choice. |
 | **Evil Eye** | When another player wins a prize, take it instead. |
 | **Lucky Charm** | Cancel a Chance card played against you. |
-| **The Switch** | Swap one of your cards, face down, for a random card from another player's hand. |
+| **The Switch** | Swap one of your cards for one drawn blind from another player. |
 | **I Know a Guy** | Exchange one of your cards for your pick of the bank's top three. |
 | **Second Rise** | Ignore one burnt roll in Bake or Burn, or have a second attempt at a skill event. |
 | **Strike** | Choose a player. They can't trade until the next event ends. |
@@ -289,6 +294,7 @@ two share little beyond duplex sheets.
 |---|---|
 | Group size | Eight players, using the 44-card [autumn deck](INGREDIENTS.md): one card per ingredient, with no tiers. |
 | Currency | Dried beans. |
+| Hands | Public: every player's cards stay face up next to their pan. |
 | Modules | None. The core already has gambling and trading; keep the modules for later games. |
 | Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and the Three-Card Trick. |
 | Cards | Poker size, printed edge to edge with one continuous back per sheet. The front has only the illustration and the name in a playful hand-drawn font; the back is the same wavy red tablecloth on every card. |
