@@ -9,11 +9,8 @@ the shopping list.
 
 ## Print the cards
 
-The [print directory](print) contains one card for each of the 44 ingredients
-in the autumn deck, all with the same red tablecloth back. The game uses
-several copies of some cards, as listed in the
-[ingredient list](INGREDIENTS.md#the-deck), so print the sheets with those
-cards again as needed.
+The [print directory](print) contains the whole autumn deck: one card for each
+of the 44 ingredients, all with the same red tablecloth back. Print it once.
 
 | File | Purpose |
 |---|---|
@@ -26,7 +23,7 @@ cards again as needed.
 | Paper | A4, portrait, opaque card stock |
 | Card size | Poker, 63 x 88 mm |
 | Layout | Three by three, edge to edge: eight or nine cards per sheet; an empty slot is a blank spare |
-| Sheets | Five, in tier order: Common, Fine, Luxury, then Wild |
+| Sheets | Five, in deck order |
 | Duplex setting | Either flip; the back doesn't need to line up |
 | Scaling | Actual size / 100%, not "fit to page" |
 
@@ -38,7 +35,7 @@ cards again as needed.
    every line in one direction first, keep the strips and the margin offcuts in
    place, or lay them back, and then cut across them.
 
-The caption under each front gives its sheet number and tiers. The
+The caption under each front gives its sheet number. The
 [layout notes](FOCACCIA_PLAN.md#printing) explain the design, and
 [sheet.png](mockups/sheet.png) previews the first sheet.
 
@@ -59,21 +56,16 @@ art without writing anything.
 
 ## Edit the cards
 
-`cards\ingredients.yaml` lists the ingredients by tier, with the number of
-copies of each:
+`cards\ingredients.yaml` lists every ingredient once, by id and name:
 
 ```yaml
 name: Rising Stakes
-tiers:
-  common:
-    copies: 4
-    ingredients:
-      cherry-tomatoes: Cherry tomatoes
+ingredients:
+  cherry-tomatoes: Cherry tomatoes
 ```
 
-- The tiers are `common`, `fine`, `luxury`, and `wild`, and they print in that
-  order, one card per ingredient. `copies` records how many the game uses; it
-  doesn't change the PDFs.
+- Cards print in the order listed, one per ingredient. All cards are equal:
+  there are no tiers or copy counts.
 - Each id uses lowercase letters, digits, and single hyphens, and names its
   illustration, `art\<id>.png`. The name is printed under the art.
 - Keep the [ingredient list](INGREDIENTS.md) in step: labels and portions live

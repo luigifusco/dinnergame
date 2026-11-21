@@ -25,15 +25,9 @@ from scripts.generate_cards import (
 
 SMALL_DECK = """\
 name: Test
-tiers:
-  common:
-    copies: 2
-    ingredients:
-{common}
-  luxury:
-    copies: 1
-    ingredients:
-      gold: Gold leaf
+ingredients:
+{items}
+  gold: Gold leaf
 """
 
 
@@ -64,21 +58,17 @@ class LibraryTests(unittest.TestCase):
     def test_library_prints_each_ingredient_once(self) -> None:
         deck = load_deck(ROOT / "cards" / "ingredients.yaml")
         sheets = layout_sheets(deck)
-        self.assertEqual([len(sheet.cards) for sheet in sheets], [9, 9, 9, 9, 8])
-        identifiers = [card.id for sheet in sheets for card in sheet.cards]
+        self.assertEqual([len(sheet) for sheet in sheets], [9, 9, 9, 9, 8])
+        identifiers = [card.id for sheet in sheets for card in sheet]
         self.assertEqual(len(identifiers), len(set(identifiers)))
         self.assertEqual(check_deck(deck, ROOT / "art"), 44)
 
     def test_rejects_cards_that_cannot_print(self) -> None:
         cases = {
-            "duplicate id": "name: T\ntiers:\n  common: {copies: 1, ingredients: {basil: Basil}}\n"
-            "  fine: {copies: 1, ingredients: {basil: Basil}}\n",
-            "duplicate YAML key": "name: T\ntiers:\n  common:\n    copies: 1\n    ingredients:\n"
-            "      basil: Basil\n      basil: Basil\n",
-            "unknown field": "name: T\ntiers:\n  rare: {copies: 1, ingredients: {basil: Basil}}\n",
-            "does not fit": "name: T\ntiers:\n  common:\n    copies: 1\n    ingredients:\n"
-            "      basil: Basil from the far end of the garden\n",
-            "No illustration": "name: T\ntiers:\n  common: {copies: 1, ingredients: {mint: Mint}}",
+            "duplicate YAML key": "name: T\ningredients:\n  basil: Basil\n  basil: Basil\n",
+            "unknown field": "name: T\ntiers:\n  common: {basil: Basil}\n",
+            "does not fit": "name: T\ningredients:\n  basil: Basil from the far end of the garden",
+            "No illustration": "name: T\ningredients: {mint: Mint}\n",
         }
         with tempfile.TemporaryDirectory() as temporary:
             folder = Path(temporary)
@@ -91,10 +81,10 @@ class LibraryTests(unittest.TestCase):
 class PdfTests(unittest.TestCase):
     def test_duplex_pdf_pairs_each_front_with_its_back_reproducibly(self) -> None:
         identifiers = [f"item-{number}" for number in range(6)]
-        common = "\n".join(f"      {item}: Item {item[-1]}" for item in identifiers)
+        items = "\n".join(f"  {item}: Item {item[-1]}" for item in identifiers)
         with tempfile.TemporaryDirectory() as temporary:
             folder = Path(temporary)
-            deck = load_deck(make_deck(folder, SMALL_DECK.format(common=common)))
+            deck = load_deck(make_deck(folder, SMALL_DECK.format(items=items)))
             art = make_art(folder, *identifiers, "gold")
             paths = write_pdfs(deck, art, folder / "print")
             first = [path.read_bytes() for path in paths]

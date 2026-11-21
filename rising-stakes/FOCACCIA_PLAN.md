@@ -21,8 +21,8 @@ reveal.
 
 ## Design pillars
 
-1. **A card is a portion.** You can only use what you hold at assembly; two
-   copies make a double portion.
+1. **A card is a portion.** You can only use what you hold at assembly, and
+   every ingredient exists exactly once.
 2. **Nobody eats badly.** Dough, olive oil, flaky salt, and brine are free. A
    plain Genovese is still a good dinner, and it can still win.
 3. **Toppings are never forced.** Cards can be lost, stolen, or traded, but
@@ -39,7 +39,7 @@ reveal.
 
 | Component | Purpose |
 |---|---|
-| Ingredient cards | Printed vouchers for one portion each, in three tiers plus one-off wild cards. |
+| Ingredient cards | Printed vouchers for one portion each, one card per ingredient. |
 | Dried beans | Currency for bets, bids, and the shop: about 15 per player plus a bank. |
 | The pantry | Labeled bowls holding exactly one prepared portion per card in play. |
 | Personal pans | One per player, such as a 20 cm round tin, with a name label. |
@@ -57,12 +57,10 @@ illustration of the portion and the ingredient's name, as in the
 all 44. The OVEN or FINISH label and the portion are on the pantry bowls and in
 the [ingredient list](INGREDIENTS.md), printed as a chart for the table.
 
-- **Tier** is shown by the card back, a tablecloth of wavy, translucent bands
-  that darken where they cross: red for **Common**, green for **Fine**, and
-  blue for **Luxury**. Backs are visible, so everyone can see who is hoarding
-  Luxury cards, but not which ones.
-- **Wild** cards are one-offs, from Nutella and lemon to ketchup and gummy
-  bears. They have the red Common back, so they can hide among the Commons.
+- **Every card is equal.** There are no tiers or rarities: each of the 44
+  ingredients has exactly one card, from cherry tomatoes and burrata to ketchup
+  and gummy bears. All share one back, a red tablecloth of wavy, translucent
+  bands that darken where they cross, so a hand gives nothing away.
 - **OVEN** cards go on before baking. **FINISH** cards go on afterwards, like
   burrata, mortadella, arugula, and honey.
 - **Capacity:** at most **6 OVEN** and **3 FINISH** cards per focaccia. Extra
@@ -70,16 +68,15 @@ the [ingredient list](INGREDIENTS.md), printed as a chart for the table.
 
 ### The deck
 
-The [ingredient list](INGREDIENTS.md) is an autumn deck of 92 cards for eight
-players: four copies of each Common, two of each Fine, and one of each Luxury
-and Wild.
-It gives every card's portion, a shopping list, and allergen notes.
+The [ingredient list](INGREDIENTS.md) is an autumn deck of 44 cards for eight
+players, one of each ingredient. It gives every card's portion, a shopping
+list, and allergen notes.
 
 ## The evening
 
 | Phase | Length | What happens |
 |---|---|---|
-| **Il Battesimo** | 10 min | Explain the basics. Everyone stretches a dough ball into their own pan and names it. Deal 3 random Commons and 10 beans to each player. |
+| **Il Battesimo** | 10 min | Explain the basics. Everyone stretches a dough ball into their own pan and names it. Deal 2 random cards and 10 beans to each player. |
 | **The Market** | ~90 min | Hosted events, side bets, and private trading over aperitivo, while the pans rise where everyone can see them. |
 | **Last Call** | 10 min | The host warns that the dough is nearly ready. The jar is revealed; final deals. |
 | **Assembly** | 15 min | Spend OVEN cards at the pantry. Dimple, top, brine, bake. |
@@ -91,23 +88,26 @@ exactly when the market will close.
 
 ## Earning cards
 
-The bank keeps one face-down pile per tier. Events pay from those piles or in
-beans; if a pile runs out, pay from the tier below. Run four to six hosted
-events during the market, alternating kinds, and explain each one when it starts
-rather than front-loading the rules.
+The bank keeps every card not yet won in one face-down pile. Events pay from it
+or in beans; once it runs out, pay 3 beans per card instead. With 44 cards and
+eight players the budget is tight: 16 are dealt at Il Battesimo and 10 go to
+the bake reserve, which leaves 18 for the market.
+
+Run four to six hosted events during the market, alternating kinds, and explain
+each one when it starts rather than front-loading the rules.
 
 ### Hosted events
 
 | Event | Kind | What players do | Prizes |
 |---|---|---|---|
-| **Naso d'Oro** | Senses | Smell six covered cups of herbs and spices and write down guesses. | 1 bean per correct answer; the best score draws a Fine. |
-| **Il Forno** | Push your luck | Roll for a bake total; see below. | Common, Fine, or Luxury. |
-| **Mimo** | Social | Act out a card from the Common pile without words. | The first correct guesser keeps the card; the actor gets 2 beans. |
-| **Il Pugno** | Skill | Scoop exactly 100 g of flour by eye, then weigh it. | Closest draws a Fine, second closest a Common. |
-| **Tre Carte** | Gambling | Stake 3 beans and follow a Fine card through the host's three-card shuffle. | Find it to keep it and your stake; miss and the bank keeps the stake. |
-| **Mise en Place** | Race | Strip rosemary, peel garlic, or pluck grapes for the pantry. No knives. | The fastest draws a Fine; every helper gets 2 beans. |
-| **Tombola** | Luck | Italian bingo. Everyone gets one ticket; extras cost 2 beans. | Ambo and terno: Common. Quaterna and cinquina: Fine. Tombola: Luxury, plus every bean paid for extra tickets. |
-| **L'Asta** | Economy | Open auction of three or four lots, paid in beans to the bank. | For example, one Luxury, a mortadella and pistachio bundle, and one face-down lot. |
+| **Naso d'Oro** | Senses | Smell six covered cups of herbs and spices and write down guesses. | 1 bean per correct answer; the best score draws a card. |
+| **Il Forno** | Push your luck | Roll for a bake total; see below. | One, two, or three cards. |
+| **Mimo** | Social | Act out a card from the bank without words. | The first correct guesser keeps the card; the actor gets 2 beans. |
+| **Il Pugno** | Skill | Scoop exactly 100 g of flour by eye, then weigh it. | Closest draws two cards, second closest one. |
+| **Tre Carte** | Gambling | Stake 3 beans and follow a face-up card from the bank through the host's three-card shuffle. | Find it to keep it and your stake; miss and the bank keeps the stake. |
+| **Mise en Place** | Race | Strip rosemary, peel garlic, or pluck grapes for the pantry. No knives. | The fastest draws a card; every helper gets 2 beans. |
+| **Tombola** | Luck | Italian bingo. Everyone gets one ticket; extras cost 2 beans. | Ambo, terno, quaterna, and cinquina: one card each. Tombola: two cards, plus every bean paid for extra tickets. |
+| **L'Asta** | Economy | Open auction of three or four lots, paid in beans to the bank. | For example, one face-up card, a mortadella and pistachio bundle, and one face-down lot. |
 
 A recommended first program: Naso d'Oro, Il Forno, Mimo, L'Asta, then Tombola
 as the market winds down. More ideas: food trivia (*Vero o Falso*), pick-up
@@ -122,11 +122,11 @@ collect one prize for the highest threshold you've reached.
 
 | Total | Prize | Chance of reaching it if you keep rolling |
 |---|---|---|
-| 12+ | Common | 48% |
-| 25+ | Fine | 28% |
-| 40+ | Luxury | 14% |
+| 12+ | 1 card | 48% |
+| 25+ | 2 cards | 28% |
+| 40+ | 3 cards | 14% |
 
-Standing on a Fine at 25, pushing on for Luxury is close to a coin flip (44%).
+Standing on two cards at 25, pushing on for three is close to a coin flip (44%).
 
 ### Always on
 
@@ -135,12 +135,12 @@ Standing on a Fine at 25, pushing on for Luxury is close to a coin flip (44%).
   total; a correct guess wins a point, and the first to three points takes the
   stakes. You can always decline.
 - **The jar.** Guess how many pieces of pasta are in a jar before Last Call. The
-  closest guess draws a Fine; an exact guess draws a Luxury.
+  closest guess draws a card; an exact guess draws two.
 - **Kitchen bounties.** The host pays beans for help: refilling glasses,
   clearing plates, washing a bowl.
-- **The Bottega.** A self-service bank: put beans in the bowl and draw a random
-  Common for 3 or a random Fine for 6. Sell any card back for 1 bean. Luxury is
-  never for sale, and the Bottega closes when a pile runs out.
+- **The Bottega.** A self-service bank: put 4 beans in the bowl and draw a
+  random card. Sell any card back for 1 bean. The Bottega closes when the bank
+  runs out.
 
 ## Trading
 
@@ -163,15 +163,16 @@ Standing on a Fine at 25, pushing on for Luxury is close to a coin flip (44%).
    can't take every pan, bake in two waves in the order players finish
    assembling.
 
-Before dealing, the host sets aside a **bake reserve** of FINISH cards, which
-pays out while the focaccias are in the oven:
+Before dealing, the host sets aside a **bake reserve** of 10 FINISH cards,
+which pays out while the focaccias are in the oven:
 
-- **I Pacchi.** Wrap one napkin per player: one holds a Luxury, one is empty,
-  and the rest hold Common or Fine cards. Each player may buy one for 3 beans.
-  Before it's opened, the host, as *il Dottore*, offers a face-up card from the
-  bank instead. Accept, or open?
-- **L'Ultima Asta.** Auction the remaining reserved Luxury cards. Beans are
-  worthless after this, so this is where everyone goes all in.
+- **I Pacchi.** Wrap one napkin per player: one holds two cards, one is empty,
+  and the rest hold one card each. Each player may buy one for 3 beans. Before
+  it's opened, the host, as *il Dottore*, offers a face-up card from the rest
+  of the reserve instead. Accept, or open?
+- **L'Ultima Asta.** Auction whatever is left of the reserve, unsold napkins
+  included. Beans are worthless after this, so this is where everyone goes all
+  in.
 
 ## The feast
 
@@ -203,7 +204,7 @@ when your focaccia burns in Il Forno, or buy one at the Bottega for 3 beans.
 | **Malocchio** | When another player wins a prize, take it instead. |
 | **Cornetto** | Cancel an Imprevisto played against you. |
 | **Il Pacco** | Swap one of your cards, face down, for a random card from another player's hand. |
-| **Ho un Cugino** | Exchange one of your cards for any card of the same tier in the bank. |
+| **Ho un Cugino** | Exchange one of your cards for your pick of the bank's top three. |
 | **Seconda Lievitazione** | Ignore one burnt roll in Il Forno, or have a second attempt at a skill event. |
 | **Sciopero** | Choose a player. They can't trade until the next event ends. |
 | **Condono** | After losing a bet, take your stake back. |
@@ -219,14 +220,14 @@ different reason to want the same cards, and a reason to bluff.
 | **Barese** | Cherry tomatoes, olives, and oregano. |
 | **Tricolore** | Something red, something white, and something green. |
 | **Il Minimalista** | Exactly one card. Sell everything else. |
-| **Doppio Doppio** | Three copies of the same ingredient. |
+| **Il Contadino** | Four cards, and no meat, fish, or cheese. |
 | **Autunno** | Any two of pumpkin, pear, mushrooms, sausage, and gorgonzola. |
 | **La Faccia** | Toppings arranged as a face. The table decides. |
 
 ### Sideplot crossover
 
 Deal Sideplot hands as well. Show a completed mission privately to the host to
-draw a Common, then draw a replacement mission as usual. Hold the Sideplot
+draw a card, then draw a replacement mission as usual. Hold the Sideplot
 reveal and quirk podium during the bake instead of I Pacchi; first, second, and
 third place earn 6, 4, and 2 beans for the last auction.
 
@@ -249,9 +250,10 @@ third place earn 6, 4, and 2 beans for the last auction.
 - **Roles.** The host plays. A co-host runs the bank, the pantry, the
   auctions, and Tre Carte. If the co-host also plays, the host takes over
   whenever the co-host is bidding or betting.
-- **Group size.** The [deck](INGREDIENTS.md) suits eight; scale it at about ten
-  cards per player. With four or five players, run three events. With more than
-  ten, play in pairs sharing a pan and a hand.
+- **Group size.** The 44-card [deck](INGREDIENTS.md) suits eight, at about five
+  cards each; for a bigger group, add ingredients rather than copies. With four
+  or five players, run three events. With more than ten, play in pairs sharing
+  a pan and a hand.
 
 ## Printing
 
@@ -271,8 +273,8 @@ out like this:
   both ends of each of the eight cut lines. Cut straight from guide to guide.
   The back has no guides, since it doesn't line up with the front.
 - **One card per ingredient, all with the red back.** The 44 cards fill five
-  sheets in tier order, eight or nine to a sheet; an empty slot is a blank
-  spare. Print extra copies of the sheets the game needs more of.
+  sheets in deck order, eight or nine to a sheet, and the deck prints once; an
+  empty slot is a blank spare.
 - **All the art sits on one cream.** Each illustration was printed on a
   slightly different cream, so the generator crops each to its subject and
   remaps its paper to the cherry tomatoes' cream. Otherwise neighbors on a
@@ -287,14 +289,13 @@ little beyond duplex sheets.
 
 | Question | Decision |
 |---|---|
-| Group size | Eight players, using the [autumn deck](INGREDIENTS.md). |
+| Group size | Eight players, using the 44-card [autumn deck](INGREDIENTS.md): one card per ingredient, with no tiers. |
 | Currency | Dried beans. |
 | Modules | None. The core already has gambling and trading; keep the modules for later games. |
 | Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and Tre Carte. |
-| Cards | Poker size, printed edge to edge with one continuous back per sheet. The front has only the illustration and the name in a playful hand-drawn font; the back is a wavy tablecloth, red, green, or blue by tier. |
+| Cards | Poker size, printed edge to edge with one continuous back per sheet. The front has only the illustration and the name in a playful hand-drawn font; the back is the same wavy red tablecloth on every card. |
 
-Still open: how many pans fit in the oven at once, and how wild cards come into
-play.
+Still open: how many pans fit in the oven at once.
 
 ## What a first playtest should tell us
 

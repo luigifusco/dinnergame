@@ -52,8 +52,7 @@ class DeckError(ValueError):
     """A card definition cannot be printed safely."""
 
 
-# Tier titles, in print order. Every card prints with the same red tablecloth back.
-TIERS = {"common": "Common", "fine": "Fine", "luxury": "Luxury", "wild": "Wild"}
+# Every card prints with the same red tablecloth back.
 CLOTH = colors.HexColor("#C42B2F")
 
 
@@ -64,22 +63,9 @@ class Ingredient:
 
 
 @dataclass(frozen=True)
-class Tier:
-    key: str
-    copies: int
-    ingredients: tuple[Ingredient, ...]
-
-
-@dataclass(frozen=True)
 class Deck:
     name: str
-    tiers: tuple[Tier, ...]
-
-
-@dataclass(frozen=True)
-class Sheet:
-    tiers: tuple[str, ...]
-    cards: tuple[Ingredient, ...]
+    ingredients: tuple[Ingredient, ...]
 
 
 class UniqueKeyLoader(yaml.SafeLoader):
@@ -121,51 +107,31 @@ def load_deck(path: Path) -> Deck:
         data = yaml.load(path.read_text(encoding="utf-8-sig"), Loader=UniqueKeyLoader)
     except (OSError, UnicodeError, yaml.YAMLError) as exc:
         raise DeckError(f"Cannot read {path}: {exc}") from exc
-    data = _mapping(data, str(path), {"name", "tiers"})
-    tiers_data = _mapping(data.get("tiers"), f"{path}: tiers", set(TIERS))
-    seen: set[str] = set()
-    tiers = []
-    for key in TIERS:
-        if key not in tiers_data:
-            continue
-        context = f"{path}: tier '{key}'"
-        tier = _mapping(tiers_data[key], context, {"copies", "ingredients"})
-        copies = tier.get("copies")
-        if type(copies) is not int or copies < 1:
-            raise DeckError(f"{context}: 'copies' must be a positive integer")
-        ingredients = []
-        for identifier, name in _mapping(
-            tier.get("ingredients"), f"{context}: ingredients"
-        ).items():
-            if not isinstance(identifier, str) or not re.fullmatch(
-                r"[a-z0-9]+(?:-[a-z0-9]+)*", identifier
-            ):
-                raise DeckError(
-                    f"{context}: id '{identifier}' must use lowercase letters, digits and "
-                    "single hyphens"
-                )
-            if identifier in seen:
-                raise DeckError(f"{context}: duplicate id '{identifier}'")
-            seen.add(identifier)
-            ingredients.append(Ingredient(identifier, _line(name, f"{context}: '{identifier}'")))
-        tiers.append(Tier(key, copies, tuple(ingredients)))
-    return Deck(_line(data.get("name"), f"{path}: name"), tuple(tiers))
+    data = _mapping(data, str(path), {"name", "ingredients"})
+    context = f"{path}: ingredients"
+    ingredients = []
+    # The loader rejects duplicate keys, so every id is unique.
+    for identifier, name in _mapping(data.get("ingredients"), context).items():
+        if not isinstance(identifier, str) or not re.fullmatch(
+            r"[a-z0-9]+(?:-[a-z0-9]+)*", identifier
+        ):
+            raise DeckError(
+                f"{context}: id '{identifier}' must use lowercase letters, digits and "
+                "single hyphens"
+            )
+        ingredients.append(Ingredient(identifier, _line(name, f"{context}: '{identifier}'")))
+    return Deck(_line(data.get("name"), f"{path}: name"), tuple(ingredients))
 
 
-def layout_sheets(deck: Deck) -> tuple[Sheet, ...]:
-    """Print one card per ingredient, in tier order, spread evenly over the sheets.
-
-    `copies` says how many the game uses; the host prints the extra copies.
-    """
-    cards = [(tier.key, item) for tier in deck.tiers for item in tier.ingredients]
+def layout_sheets(deck: Deck) -> tuple[tuple[Ingredient, ...], ...]:
+    """Print one card per ingredient, in deck order, spread evenly over the sheets."""
+    cards = deck.ingredients
     count = math.ceil(len(cards) / CARDS_PER_SHEET)
     sheets = []
     start = 0
     for index in range(count):
         size = len(cards) // count + (index < len(cards) % count)
-        run = cards[start : start + size]
-        tiers = tuple(dict.fromkeys(key for key, _ in run))
-        sheets.append(Sheet(tiers, tuple(item for _, item in run)))
+        sheets.append(cards[start : start + size])
         start += size
     return tuple(sheets)
 
@@ -234,14 +200,13 @@ def art_jpeg(path: Path) -> bytes:
 def check_deck(deck: Deck, art: Path) -> int:
     """Validate every name and illustration before anything is written."""
     _register_font()
-    for tier in deck.tiers:
-        for item in tier.ingredients:
-            name_size(item.name)
-            path = art / f"{item.id}.png"
-            if not path.is_file():
-                raise DeckError(f"No illustration for '{item.id}': expected {path}")
-            art_jpeg(path)
-    return sum(len(tier.ingredients) for tier in deck.tiers)
+    for item in deck.ingredients:
+        name_size(item.name)
+        path = art / f"{item.id}.png"
+        if not path.is_file():
+            raise DeckError(f"No illustration for '{item.id}': expected {path}")
+        art_jpeg(path)
+    return len(deck.ingredients)
 
 
 def slot_origin(slot: int) -> tuple[float, float]:
@@ -272,7 +237,9 @@ def _draw_cut_guides(canvas: Canvas) -> None:
         canvas.line(GRID_X + GRID_WIDTH + GUIDE_NEAR, y, GRID_X + GRID_WIDTH + GUIDE_FAR, y)
 
 
-def _draw_front(canvas: Canvas, sheet: Sheet, number: int, count: int, art: Path) -> None:
+def _draw_front(
+    canvas: Canvas, sheet: tuple[Ingredient, ...], number: int, count: int, art: Path
+) -> None:
     canvas.setFillColorRGB(*(value / 255 for value in CREAM))
     canvas.rect(
         GRID_X - FRONT_BLEED,
@@ -282,20 +249,19 @@ def _draw_front(canvas: Canvas, sheet: Sheet, number: int, count: int, art: Path
         stroke=0,
         fill=1,
     )
-    for slot, item in enumerate(sheet.cards):
+    for slot, item in enumerate(sheet):
         canvas.saveState()
         canvas.translate(*slot_origin(slot))
         _draw_card(canvas, item, art)
         canvas.restoreState()
     _draw_cut_guides(canvas)
-    titles = " and ".join(TIERS[tier] for tier in sheet.tiers)
     canvas.setFillColor(INK)
     canvas.setFont(FONT, CAPTION_SIZE)
     canvas.drawCentredString(
         PAGE_WIDTH / 2,
         GRID_Y - 10 * mm,
-        f"Sheet {number} of {count}: {titles}. Print at 100%, "
-        "double-sided. Cut straight from guide to guide.",
+        f"Sheet {number} of {count}. Print at 100%, double-sided. "
+        "Cut straight from guide to guide.",
     )
 
 
