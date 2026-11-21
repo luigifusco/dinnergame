@@ -12,7 +12,7 @@ alternatives.
 ## Pitch
 
 Everyone bakes their own focaccia, but every topping must be won, gambled for,
-bought, or traded. Each ingredient card is a voucher for a real portion in the
+stolen, or traded. Each ingredient card is a voucher for a real portion in the
 pantry. When the dough has finished rising, the market closes and you top your
 focaccia with whatever you're holding.
 
@@ -40,14 +40,12 @@ reveal.
 | Component | Purpose |
 |---|---|
 | Ingredient cards | Printed vouchers for one portion each, one card per ingredient. |
-| Dried beans | Currency for bets, bids, and the shop: about 15 per player plus a bank. |
 | The pantry | Labeled bowls holding exactly one prepared portion per card in play. |
 | Personal pans | One per player, such as a 20 cm round tin, with a name label. |
 | Props | Two dice, a bingo set, small cups, a jar of dried pasta, a kitchen scale. |
 | Golden rolling pin | The trophy: any rolling pin and gold spray paint. |
 
-Beans are a nod to the Italian family habit of playing bingo and cards for
-dried beans or lentils. They're cheap, tactile, and obviously not toppings.
+There's no money. Cards are the only thing to win, bet, bid, and trade.
 
 ## Ingredient cards
 
@@ -80,7 +78,7 @@ list, and allergen notes.
 
 | Phase | Length | What happens |
 |---|---|---|
-| **Kickoff** | 10 min | Explain the basics. Everyone stretches a dough ball into their own pan and names it. Deal 2 random cards to each player, face up, and 10 beans. |
+| **Kickoff** | 10 min | Explain the basics. Everyone stretches a dough ball into their own pan and names it. Deal 2 random cards to each player, face up. |
 | **The Market** | ~90 min | Hosted events, side bets, and private trading over drinks, while the pans rise where everyone can see them. |
 | **Last Call** | 10 min | The host warns that the dough is nearly ready. The jar is revealed; final deals. |
 | **Assembly** | 15 min | Spend OVEN cards at the pantry. Dimple, top, brine, bake. |
@@ -92,10 +90,10 @@ exactly when the market will close.
 
 ## Earning cards
 
-The bank keeps every card not yet won in one face-down pile. Events pay from it
-or in beans; once it runs out, pay 3 beans per card instead. With 44 cards and
-eight players the budget is tight: 16 are dealt at Kickoff and 10 go to the
-bake reserve, which leaves 18 for the market.
+The bank keeps every card not yet won in one face-down pile, and events pay
+from it; once it runs out, cards only move by stealing, betting, and trading.
+With 44 cards and eight players the budget is tight: 16 are dealt at Kickoff
+and 10 go to the bake reserve, which leaves 18 for the market.
 
 Run four to six hosted events during the market, alternating kinds, and explain
 each one when it starts rather than front-loading the rules.
@@ -104,14 +102,14 @@ each one when it starts rather than front-loading the rules.
 
 | Event | Kind | What players do | Prizes |
 |---|---|---|---|
-| **Golden Nose** | Senses | Smell six covered cups of herbs and spices and write down guesses. | 1 bean per correct answer; the best score draws a card. |
+| **Golden Nose** | Senses | Smell six covered cups of herbs and spices and write down guesses. | The best score draws a card. |
 | **Bake or Burn** | Push your luck | Roll for a bake total; see below. | One, two, or three cards. |
-| **Charades** | Social | Act out a card from the bank without words. | The first correct guesser keeps the card; the actor gets 2 beans. |
+| **Charades** | Social | Act out a card from the bank without words. | The first correct guesser keeps the card. |
 | **The Handful** | Skill | Scoop exactly 100 g of flour by eye, then weigh it. | Closest draws two cards, second closest one. |
-| **Three-Card Trick** | Gambling | Stake 3 beans and follow a face-up card from the bank through the host's three-card shuffle. | Find it to keep it and your stake; miss and the bank keeps the stake. |
-| **Prep Race** | Race | Strip rosemary, peel garlic, or pluck grapes for the pantry. No knives. | The fastest draws a card; every helper gets 2 beans. |
-| **Bingo** | Luck | Everyone gets one ticket; extras cost 2 beans. | Two, three, four, or five numbers in a row: one card each. A full ticket: two cards, plus every bean paid for extra tickets. |
-| **The Auction** | Economy | Open auction of three or four lots, paid in beans to the bank. | For example, one face-up card, a mortadella and pistachio bundle, and one face-down lot. |
+| **Three-Card Trick** | Gambling | Stake one of your cards and follow a face-up card from the bank through the host's three-card shuffle. | Find it to keep it and your stake; miss and your stake goes to the bank. |
+| **Prep Race** | Race | Strip rosemary, peel garlic, or pluck grapes for the pantry. No knives. | The fastest draws a card. |
+| **Bingo** | Luck | Everyone gets one ticket. | Two, three, four, or five numbers in a row: one card each. A full ticket: two cards. |
+| **The Auction** | Bidding | Open auction of three or four lots. Bid with cards you hold; the winning bid goes to the bank. | For example, one face-up card, a mortadella and pistachio bundle, and one face-down lot. |
 
 A recommended first program: Golden Nose, Bake or Burn, Charades, The Auction,
 then Bingo as the market winds down. More ideas: food trivia (*True or False*),
@@ -133,29 +131,25 @@ Standing on two cards at 25, pushing on for three is close to a coin flip (44%).
 
 ### Always on
 
-- **Finger duels.** Any two players can duel for stakes they both put on the
-  table. Each shows zero to five fingers while shouting a guess at the total; a
-  correct guess wins a point, and the first to three points takes the stakes.
+- **Finger duels.** Any two players can duel, each staking a card they agree
+  on. Each shows zero to five fingers while shouting a guess at the total; a
+  correct guess wins a point, and the first to three points takes both cards.
   You can always decline.
 - **The jar.** Guess how many pieces of pasta are in a jar before Last Call. The
   closest guess draws a card; an exact guess draws two.
-- **Kitchen bounties.** The host pays beans for help: refilling glasses,
-  clearing plates, washing a bowl.
-- **The Shop.** A self-service bank: put 4 beans in the bowl and draw a random
-  card. Sell any card back for 1 bean. The Shop closes when the bank runs out.
 
 ## Trading
 
-- Trade anything, any time, with anyone: cards, beans, favors, and promised
-  slices of your future focaccia.
+- Trade anything, any time, with anyone: cards, favors, and promised slices of
+  your future focaccia.
 - Negotiate privately. Whisper, take it to the kitchen, or step onto the
   balcony. Everyone can see what you hold, but not what you want or what you're
   planning, and you may lie about those.
 - A hand-to-hand swap is final. Spoken promises aren't enforced.
 - **Napkin contracts** are. A deal written on a napkin and signed by both
   players is binding, and the host enforces it, including slices owed at dinner.
-- OVEN cards stop mattering when your pan goes in. FINISH cards, beans, and
-  promises keep trading until the feast.
+- OVEN cards stop mattering when your pan goes in, except as stakes and bids.
+  FINISH cards and promises keep trading until the feast.
 
 ## Assembly and the bake
 
@@ -170,12 +164,13 @@ Before dealing, the host sets aside a **bake reserve** of 10 FINISH cards,
 which pays out while the focaccias are in the oven:
 
 - **Mystery Parcels.** Wrap one napkin per player: one holds two cards, one is
-  empty, and the rest hold one card each. Each player may buy one for 3 beans.
-  Before it's opened, the host, as the Banker from *Deal or No Deal*, offers a
-  face-up card from the rest of the reserve instead. Accept, or open?
+  empty, and the rest hold one card each. Each player may take one by paying
+  any card to the bank. Before it's opened, the host, as the Banker from *Deal
+  or No Deal*, offers a face-up card from the rest of the reserve instead.
+  Accept, or open?
 - **The Last Auction.** Auction whatever is left of the reserve, unsold napkins
-  included. Beans are worthless after this, so this is where everyone goes all
-  in.
+  included, bidding with cards. Leftover OVEN cards are worthless after this,
+  so this is where everyone goes all in.
 
 ## The feast
 
@@ -199,7 +194,7 @@ Not part of the first game. Add one at a time once the core has been played.
 ### Chance cards
 
 One-use chaos cards, like Chance in Monopoly. Draw one when your focaccia burns
-in Bake or Burn, or buy one at the Shop for 3 beans.
+in Bake or Burn.
 
 | Card | Effect |
 |---|---|
@@ -215,14 +210,14 @@ in Bake or Burn, or buy one at the Shop for 3 beans.
 ### Secret orders
 
 Deal two orders per player; each keeps one secret. At assembly, show it: if your
-OVEN cards fulfill it, take 5 beans for the bake round. Orders give players a
+OVEN cards fulfill it, draw a card from the bake reserve. Orders give players a
 different reason to want the same cards, and a reason to bluff.
 
 | Order | Requirement for your OVEN cards |
 |---|---|
 | **The Classic** | Cherry tomatoes, olives, and oregano. |
 | **The Flag** | Something red, something white, and something green. |
-| **The Minimalist** | Exactly one card. Sell everything else. |
+| **The Minimalist** | Exactly one card. Trade everything else away. |
 | **The Farmer** | Four cards, and no meat, fish, or cheese. |
 | **Autumn** | Any two of pumpkin, pear, mushrooms, sausage, and gorgonzola. |
 | **The Face** | Toppings arranged as a face. The table decides. |
@@ -232,7 +227,7 @@ different reason to want the same cards, and a reason to bluff.
 Deal Sideplot hands as well. Show a completed mission privately to the host to
 draw a card, then draw a replacement mission as usual. Hold the Sideplot
 reveal and quirk podium during the bake instead of Mystery Parcels; first,
-second, and third place earn 6, 4, and 2 beans for the last auction.
+second, and third place each pick a card from the bake reserve, in that order.
 
 ## Host notes
 
@@ -293,7 +288,7 @@ two share little beyond duplex sheets.
 | Question | Decision |
 |---|---|
 | Group size | Eight players, using the 44-card [autumn deck](INGREDIENTS.md): one card per ingredient, with no tiers. |
-| Currency | Dried beans. |
+| Currency | None. Cards are the only thing to win, bet, bid, and trade. |
 | Hands | Public: every player's cards stay face up next to their pan. |
 | Modules | None. The core already has gambling and trading; keep the modules for later games. |
 | Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and the Three-Card Trick. |
@@ -305,6 +300,6 @@ Still open: how many pans fit in the oven at once.
 
 - Whether everyone ended with enough cards for a focaccia they were happy with.
 - Whether private trading happened without prompting, or needed a nudge.
-- Which events dragged, and whether beans were saved, spent, or ignored.
+- Which events dragged, and whether the bank ran dry too early or too late.
 - How long the dough actually took, and whether the market closing felt
   dramatic or rushed.
