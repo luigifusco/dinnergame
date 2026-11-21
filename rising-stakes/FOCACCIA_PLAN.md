@@ -24,7 +24,7 @@ reveal.
 1. **A card is a portion.** You can only use what you hold at assembly, and
    every ingredient exists exactly once.
 2. **Nobody eats badly.** Dough, olive oil, flaky salt, and brine are free. A
-   plain Genovese is still a good dinner, and it can still win.
+   plain focaccia is still a good dinner, and it can still win.
 3. **Toppings are never forced.** Cards can be lost, stolen, or traded, but
    nothing goes on a focaccia without its owner's consent.
 4. **The dough is the clock.** The host closes the market when the dough is
@@ -43,10 +43,10 @@ reveal.
 | Dried beans | Currency for bets, bids, and the shop: about 15 per player plus a bank. |
 | The pantry | Labeled bowls holding exactly one prepared portion per card in play. |
 | Personal pans | One per player, such as a 20 cm round tin, with a name label. |
-| Props | Two dice, a tombola set, small cups, a jar of dried pasta, a kitchen scale. |
+| Props | Two dice, a bingo set, small cups, a jar of dried pasta, a kitchen scale. |
 | Golden rolling pin | The trophy: any rolling pin and gold spray paint. |
 
-Beans are a nod to the Italian family habit of playing tombola and cards for
+Beans are a nod to the Italian family habit of playing bingo and cards for
 dried beans or lentils. They're cheap, tactile, and obviously not toppings.
 
 ## Ingredient cards
@@ -76,8 +76,8 @@ list, and allergen notes.
 
 | Phase | Length | What happens |
 |---|---|---|
-| **Il Battesimo** | 10 min | Explain the basics. Everyone stretches a dough ball into their own pan and names it. Deal 2 random cards and 10 beans to each player. |
-| **The Market** | ~90 min | Hosted events, side bets, and private trading over aperitivo, while the pans rise where everyone can see them. |
+| **Kickoff** | 10 min | Explain the basics. Everyone stretches a dough ball into their own pan and names it. Deal 2 random cards and 10 beans to each player. |
+| **The Market** | ~90 min | Hosted events, side bets, and private trading over drinks, while the pans rise where everyone can see them. |
 | **Last Call** | 10 min | The host warns that the dough is nearly ready. The jar is revealed; final deals. |
 | **Assembly** | 15 min | Spend OVEN cards at the pantry. Dimple, top, brine, bake. |
 | **The Bake** | 20-25 min | The final round, for FINISH cards only. |
@@ -90,8 +90,8 @@ exactly when the market will close.
 
 The bank keeps every card not yet won in one face-down pile. Events pay from it
 or in beans; once it runs out, pay 3 beans per card instead. With 44 cards and
-eight players the budget is tight: 16 are dealt at Il Battesimo and 10 go to
-the bake reserve, which leaves 18 for the market.
+eight players the budget is tight: 16 are dealt at Kickoff and 10 go to the
+bake reserve, which leaves 18 for the market.
 
 Run four to six hosted events during the market, alternating kinds, and explain
 each one when it starts rather than front-loading the rules.
@@ -100,21 +100,20 @@ each one when it starts rather than front-loading the rules.
 
 | Event | Kind | What players do | Prizes |
 |---|---|---|---|
-| **Naso d'Oro** | Senses | Smell six covered cups of herbs and spices and write down guesses. | 1 bean per correct answer; the best score draws a card. |
-| **Il Forno** | Push your luck | Roll for a bake total; see below. | One, two, or three cards. |
-| **Mimo** | Social | Act out a card from the bank without words. | The first correct guesser keeps the card; the actor gets 2 beans. |
-| **Il Pugno** | Skill | Scoop exactly 100 g of flour by eye, then weigh it. | Closest draws two cards, second closest one. |
-| **Tre Carte** | Gambling | Stake 3 beans and follow a face-up card from the bank through the host's three-card shuffle. | Find it to keep it and your stake; miss and the bank keeps the stake. |
-| **Mise en Place** | Race | Strip rosemary, peel garlic, or pluck grapes for the pantry. No knives. | The fastest draws a card; every helper gets 2 beans. |
-| **Tombola** | Luck | Italian bingo. Everyone gets one ticket; extras cost 2 beans. | Ambo, terno, quaterna, and cinquina: one card each. Tombola: two cards, plus every bean paid for extra tickets. |
-| **L'Asta** | Economy | Open auction of three or four lots, paid in beans to the bank. | For example, one face-up card, a mortadella and pistachio bundle, and one face-down lot. |
+| **Golden Nose** | Senses | Smell six covered cups of herbs and spices and write down guesses. | 1 bean per correct answer; the best score draws a card. |
+| **Bake or Burn** | Push your luck | Roll for a bake total; see below. | One, two, or three cards. |
+| **Charades** | Social | Act out a card from the bank without words. | The first correct guesser keeps the card; the actor gets 2 beans. |
+| **The Handful** | Skill | Scoop exactly 100 g of flour by eye, then weigh it. | Closest draws two cards, second closest one. |
+| **Three-Card Trick** | Gambling | Stake 3 beans and follow a face-up card from the bank through the host's three-card shuffle. | Find it to keep it and your stake; miss and the bank keeps the stake. |
+| **Prep Race** | Race | Strip rosemary, peel garlic, or pluck grapes for the pantry. No knives. | The fastest draws a card; every helper gets 2 beans. |
+| **Bingo** | Luck | Everyone gets one ticket; extras cost 2 beans. | Two, three, four, or five numbers in a row: one card each. A full ticket: two cards, plus every bean paid for extra tickets. |
+| **The Auction** | Economy | Open auction of three or four lots, paid in beans to the bank. | For example, one face-up card, a mortadella and pistachio bundle, and one face-down lot. |
 
-A recommended first program: Naso d'Oro, Il Forno, Mimo, L'Asta, then Tombola
-as the market winds down. More ideas: food trivia (*Vero o Falso*), pick-up
-sticks with breadsticks (*Grissini Shanghai*), and tossing corks into an empty
-pan.
+A recommended first program: Golden Nose, Bake or Burn, Charades, The Auction,
+then Bingo as the market winds down. More ideas: food trivia (*True or False*),
+pick-up sticks with breadsticks, and tossing corks into an empty pan.
 
-### Il Forno
+### Bake or Burn
 
 Roll two dice and add them to your bake total. If either die shows a 1, the
 focaccia burns and your turn ends with nothing. Stop whenever you like and
@@ -130,17 +129,16 @@ Standing on two cards at 25, pushing on for three is close to a coin flip (44%).
 
 ### Always on
 
-- **Morra duels.** Any two players can play Morra for stakes they both put on
-  the table. Each shows zero to five fingers while shouting a guess at the
-  total; a correct guess wins a point, and the first to three points takes the
-  stakes. You can always decline.
+- **Finger duels.** Any two players can duel for stakes they both put on the
+  table. Each shows zero to five fingers while shouting a guess at the total; a
+  correct guess wins a point, and the first to three points takes the stakes.
+  You can always decline.
 - **The jar.** Guess how many pieces of pasta are in a jar before Last Call. The
   closest guess draws a card; an exact guess draws two.
 - **Kitchen bounties.** The host pays beans for help: refilling glasses,
   clearing plates, washing a bowl.
-- **The Bottega.** A self-service bank: put 4 beans in the bowl and draw a
-  random card. Sell any card back for 1 bean. The Bottega closes when the bank
-  runs out.
+- **The Shop.** A self-service bank: put 4 beans in the bowl and draw a random
+  card. Sell any card back for 1 bean. The Shop closes when the bank runs out.
 
 ## Trading
 
@@ -166,11 +164,11 @@ Standing on two cards at 25, pushing on for three is close to a coin flip (44%).
 Before dealing, the host sets aside a **bake reserve** of 10 FINISH cards,
 which pays out while the focaccias are in the oven:
 
-- **I Pacchi.** Wrap one napkin per player: one holds two cards, one is empty,
-  and the rest hold one card each. Each player may buy one for 3 beans. Before
-  it's opened, the host, as *il Dottore*, offers a face-up card from the rest
-  of the reserve instead. Accept, or open?
-- **L'Ultima Asta.** Auction whatever is left of the reserve, unsold napkins
+- **Mystery Parcels.** Wrap one napkin per player: one holds two cards, one is
+  empty, and the rest hold one card each. Each player may buy one for 3 beans.
+  Before it's opened, the host, as the Banker from *Deal or No Deal*, offers a
+  face-up card from the rest of the reserve instead. Accept, or open?
+- **The Last Auction.** Auction whatever is left of the reserve, unsold napkins
   included. Beans are worthless after this, so this is where everyone goes all
   in.
 
@@ -186,28 +184,28 @@ which pays out while the focaccias are in the oven:
 4. Ties share a place. The winner takes the golden rolling pin and keeps it
    until the next dinner.
 
-Optionally, the table can award *Il Disastro* to the most chaotic focaccia by
+Optionally, the table can award *the Disaster* to the most chaotic focaccia by
 acclamation. The prize is a burnt breadstick.
 
 ## Optional modules
 
 Not part of the first game. Add one at a time once the core has been played.
 
-### Imprevisti
+### Chance cards
 
-One-use chaos cards, named after the Chance pile in Italian Monopoly. Draw one
-when your focaccia burns in Il Forno, or buy one at the Bottega for 3 beans.
+One-use chaos cards, like Chance in Monopoly. Draw one when your focaccia burns
+in Bake or Burn, or buy one at the Shop for 3 beans.
 
 | Card | Effect |
 |---|---|
-| **Arriva la Finanza** | Audit a player: they show you their hand and pay you one card of their choice. |
-| **Malocchio** | When another player wins a prize, take it instead. |
-| **Cornetto** | Cancel an Imprevisto played against you. |
-| **Il Pacco** | Swap one of your cards, face down, for a random card from another player's hand. |
-| **Ho un Cugino** | Exchange one of your cards for your pick of the bank's top three. |
-| **Seconda Lievitazione** | Ignore one burnt roll in Il Forno, or have a second attempt at a skill event. |
-| **Sciopero** | Choose a player. They can't trade until the next event ends. |
-| **Condono** | After losing a bet, take your stake back. |
+| **Tax Audit** | Audit a player: they show you their hand and pay you one card of their choice. |
+| **Evil Eye** | When another player wins a prize, take it instead. |
+| **Lucky Charm** | Cancel a Chance card played against you. |
+| **The Switch** | Swap one of your cards, face down, for a random card from another player's hand. |
+| **I Know a Guy** | Exchange one of your cards for your pick of the bank's top three. |
+| **Second Rise** | Ignore one burnt roll in Bake or Burn, or have a second attempt at a skill event. |
+| **Strike** | Choose a player. They can't trade until the next event ends. |
+| **Amnesty** | After losing a bet, take your stake back. |
 
 ### Secret orders
 
@@ -217,19 +215,19 @@ different reason to want the same cards, and a reason to bluff.
 
 | Order | Requirement for your OVEN cards |
 |---|---|
-| **Barese** | Cherry tomatoes, olives, and oregano. |
-| **Tricolore** | Something red, something white, and something green. |
-| **Il Minimalista** | Exactly one card. Sell everything else. |
-| **Il Contadino** | Four cards, and no meat, fish, or cheese. |
-| **Autunno** | Any two of pumpkin, pear, mushrooms, sausage, and gorgonzola. |
-| **La Faccia** | Toppings arranged as a face. The table decides. |
+| **The Classic** | Cherry tomatoes, olives, and oregano. |
+| **The Flag** | Something red, something white, and something green. |
+| **The Minimalist** | Exactly one card. Sell everything else. |
+| **The Farmer** | Four cards, and no meat, fish, or cheese. |
+| **Autumn** | Any two of pumpkin, pear, mushrooms, sausage, and gorgonzola. |
+| **The Face** | Toppings arranged as a face. The table decides. |
 
 ### Sideplot crossover
 
 Deal Sideplot hands as well. Show a completed mission privately to the host to
 draw a card, then draw a replacement mission as usual. Hold the Sideplot
-reveal and quirk podium during the bake instead of I Pacchi; first, second, and
-third place earn 6, 4, and 2 beans for the last auction.
+reveal and quirk podium during the bake instead of Mystery Parcels; first,
+second, and third place earn 6, 4, and 2 beans for the last auction.
 
 ## Host notes
 
@@ -240,7 +238,7 @@ third place earn 6, 4, and 2 beans for the last auction.
 - **Pantry.** Prepare one bowl per ingredient with exactly one portion per card
   in the deck, labeled with OVEN or FINISH and the portion; the
   [shopping list](INGREDIENTS.md#shopping-list) covers the whole deck. Keep
-  FINISH ingredients in the fridge. Leftover portions become antipasti or
+  FINISH ingredients in the fridge. Leftover portions become snacks or
   tomorrow's lunch.
 - **Diets.** Ask about diets and allergies beforehand. Meat and fish can stay,
   since vegetarians can trade them away. Leave out anything someone is seriously
@@ -248,8 +246,8 @@ third place earn 6, 4, and 2 beans for the last auction.
   [ingredient list](INGREDIENTS.md#diets-and-allergens) flags nuts, fish, pork,
   and milk.
 - **Roles.** The host plays. A co-host runs the bank, the pantry, the
-  auctions, and Tre Carte. If the co-host also plays, the host takes over
-  whenever the co-host is bidding or betting.
+  auctions, and the Three-Card Trick. If the co-host also plays, the host takes
+  over whenever the co-host is bidding or betting.
 - **Group size.** The 44-card [deck](INGREDIENTS.md) suits eight, at about five
   cards each; for a bigger group, add ingredients rather than copies. With four
   or five players, run three events. With more than ten, play in pairs sharing
@@ -280,10 +278,10 @@ out like this:
   remaps its paper to the cherry tomatoes' cream. Otherwise neighbors on a
   sheet would meet in a visible seam.
 
-Not printed yet: the Imprevisti and secret orders, if a game uses them, and the
-ingredient chart for the table. Rising Stakes has its own generator, separate
-from [Sideplot's](../sideplot/README.md#generate-the-pdfs), since the two share
-little beyond duplex sheets.
+Not printed yet: the Chance cards and secret orders, if a game uses them, and
+the ingredient chart for the table. Rising Stakes has its own generator,
+separate from [Sideplot's](../sideplot/README.md#generate-the-pdfs), since the
+two share little beyond duplex sheets.
 
 ## Decisions for the first game
 
@@ -292,7 +290,7 @@ little beyond duplex sheets.
 | Group size | Eight players, using the 44-card [autumn deck](INGREDIENTS.md): one card per ingredient, with no tiers. |
 | Currency | Dried beans. |
 | Modules | None. The core already has gambling and trading; keep the modules for later games. |
-| Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and Tre Carte. |
+| Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and the Three-Card Trick. |
 | Cards | Poker size, printed edge to edge with one continuous back per sheet. The front has only the illustration and the name in a playful hand-drawn font; the back is the same wavy red tablecloth on every card. |
 
 Still open: how many pans fit in the oven at once.

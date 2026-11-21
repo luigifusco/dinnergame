@@ -41,9 +41,9 @@ INK = colors.HexColor("#2A211B")
 LINEN = colors.HexColor("#FFFCF6")
 FILENAMES = ("rising-stakes-fronts.pdf", "rising-stakes-backs.pdf", "rising-stakes-duplex.pdf")
 
-# Ondulato: wavy translucent bands whose washes compound where they cross. The repeat divides
-# the card exactly (3 across, 4 down), so one continuous cloth behind a sheet gives every card
-# the same back, with a crossing at its center.
+# The tablecloth: wavy translucent bands whose washes compound where they cross. The repeat
+# divides the card exactly (3 across, 4 down), so one continuous cloth behind a sheet gives every
+# card the same back, with a crossing at its center.
 REPEAT_X, REPEAT_Y = CARD_WIDTH / 3, CARD_HEIGHT / 4
 AMPLITUDE, STEP, WASH = 1.5 * mm, 1 * mm, 0.45
 

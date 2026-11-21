@@ -69,12 +69,12 @@ pantry bowl and on a printed copy of these tables. The cards print from
 | Balsamic glaze | One zigzag drizzle. |
 | Pesto | A tablespoon, in dollops. |
 | Honey | A teaspoon, drizzled. |
-| Parmigiano | A dozen shavings. |
+| Parmesan | A dozen shavings. |
 | Walnuts | Six halves, broken up. |
 | Burrata | A whole small burrata. |
 | Stracciatella | Three heaped tablespoons. |
 | Mortadella | Four thin slices. |
-| Prosciutto crudo | Three slices. |
+| Prosciutto | Three slices. |
 | Pistachio | A heaped tablespoon, chopped. |
 | Truffle cream | Two teaspoons, in dots. |
 | Nutella | A heaped teaspoon. |
@@ -121,15 +121,15 @@ The prep column describes each portion as it waits in the pantry.
 | Item | Buy | Deck needs | Prep |
 |---|---|---|---|
 | Mozzarella | 1 ball, 125 g | Half a ball | Tear and drain in a sieve. |
-| Gorgonzola dolce | 100 g | 40 g | Break into small pieces. |
-| Parmigiano | 1 small wedge | 12 shavings | Shave with a vegetable peeler. |
+| Mild gorgonzola | 100 g | 40 g | Break into small pieces. |
+| Parmesan | 1 small wedge | 12 shavings | Shave with a vegetable peeler. |
 | Burrata | 1 small, about 125 g | 1 burrata | |
 | Stracciatella | 1 tub, about 125 g | 3 heaped tablespoons | |
 | Italian sausage | 1, about 100 g | Half a sausage | Remove the casing and pinch into small pieces. |
 | Guanciale | 1 piece, about 100 g | 6 strips | Cut into thin strips. |
 | 'Nduja | 1 small jar | 1 heaped tablespoon | |
 | Mortadella | 100 g, thinly sliced | 4 slices | |
-| Prosciutto crudo | 1 pack, about 70 g | 3 slices | |
+| Prosciutto | 1 pack, about 70 g | 3 slices | |
 
 ### Jars and dry goods
 
@@ -167,10 +167,10 @@ Check these against your guests' diets and allergies before shopping. The
 |---|---|
 | Nuts | Pesto, walnuts, pistachio, and Nutella. Mortadella may contain pistachios too. |
 | Fish | Anchovies. Most kimchi contains fish sauce or shrimp. |
-| Pork | Sausage, guanciale, 'nduja, mortadella, and prosciutto crudo. Most gummy bears contain pork gelatin. |
-| Milk | Mozzarella, gorgonzola, parmigiano, burrata, stracciatella, Nutella, and most pesto. Dark chocolate may contain milk. |
+| Pork | Sausage, guanciale, 'nduja, mortadella, and prosciutto. Most gummy bears contain pork gelatin. |
+| Milk | Mozzarella, gorgonzola, parmesan, burrata, stracciatella, Nutella, and most pesto. Dark chocolate may contain milk. |
 | Soy | Miso. |
 | Celery | Celery. |
 
-Parmigiano and gorgonzola are traditionally made with animal rennet, and so is
+Parmesan and gorgonzola are traditionally made with animal rennet, and so is
 the cheese in most pesto, so strict vegetarians may trade those away too.
