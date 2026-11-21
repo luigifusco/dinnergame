@@ -1,4 +1,4 @@
-"""Generate Rising Stakes ingredient cards on duplex A4 sheets."""
+"""Generate Rising Stakes ingredient and event cards on duplex A4 sheets."""
 
 from __future__ import annotations
 
@@ -35,11 +35,14 @@ GUIDE_NEAR, GUIDE_FAR = 2.5 * mm, 6.5 * mm  # cut guides, measured outwards from
 ART_SIZE, ART_TOP, ART_PIXELS = 54 * mm, 6 * mm, 800
 NAME_SIZE, MIN_NAME_SIZE = 20.0, 14.0
 NAME_BASELINE, NAME_MARGIN = 14 * mm, 6 * mm
+# Event cards make room for their effect under a smaller illustration.
+EVENT_ART_SIZE, EVENT_NAME_BASELINE = 44 * mm, 29 * mm
+TEXT_SIZE, MIN_TEXT_SIZE, TEXT_LEADING = 10.0, 8.0, 1.2
+TEXT_MARGIN, TEXT_CENTER, MAX_TEXT_LINES = 7 * mm, 15 * mm, 3
 CAPTION_SIZE = 8.0
 CREAM = (247, 237, 215)  # every illustration's paper is remapped to this
 INK = colors.HexColor("#2A211B")
 LINEN = colors.HexColor("#FFFCF6")
-FILENAMES = ("rising-stakes-fronts.pdf", "rising-stakes-backs.pdf", "rising-stakes-duplex.pdf")
 
 # The tablecloth: wavy translucent bands whose washes compound where they cross. The repeat
 # divides the card exactly (3 across, 4 down), so one continuous cloth behind a sheet gives every
@@ -52,20 +55,36 @@ class DeckError(ValueError):
     """A card definition cannot be printed safely."""
 
 
-# Every card prints with the same red tablecloth back.
-CLOTH = colors.HexColor("#C42B2F")
+@dataclass(frozen=True)
+class Kind:
+    noun: str
+    cloth: colors.Color
+    wash: float  # how much ink one band lays down
+    prefix: str  # of the PDF filenames
+    art: str  # illustration subdirectory
+
+
+# Each deck file lists one kind of card, and each kind has its own tablecloth back. The black
+# cloth takes a heavier wash, so it reads as black gingham rather than gray.
+KINDS = {
+    "ingredients": Kind("ingredient", colors.HexColor("#C42B2F"), WASH, "rising-stakes", ""),
+    "events": Kind("event", colors.HexColor("#1F1B18"), 0.62, "rising-stakes-events", "events"),
+}
+FACES = (("fronts", ("front",)), ("backs", ("back",)), ("duplex", ("front", "back")))
 
 
 @dataclass(frozen=True)
-class Ingredient:
+class Card:
     id: str
     name: str
+    text: str = ""  # an event's effect; ingredients have none
 
 
 @dataclass(frozen=True)
 class Deck:
     name: str
-    ingredients: tuple[Ingredient, ...]
+    kind: str
+    cards: tuple[Card, ...]
 
 
 class UniqueKeyLoader(yaml.SafeLoader):
@@ -107,11 +126,15 @@ def load_deck(path: Path) -> Deck:
         data = yaml.load(path.read_text(encoding="utf-8-sig"), Loader=UniqueKeyLoader)
     except (OSError, UnicodeError, yaml.YAMLError) as exc:
         raise DeckError(f"Cannot read {path}: {exc}") from exc
-    data = _mapping(data, str(path), {"name", "ingredients"})
-    context = f"{path}: ingredients"
-    ingredients = []
+    data = _mapping(data, str(path), {"name", *KINDS})
+    kinds = [kind for kind in KINDS if kind in data]
+    if len(kinds) != 1:
+        raise DeckError(f"{path}: expected exactly one of {', '.join(KINDS)}")
+    kind = kinds[0]
+    context = f"{path}: {kind}"
+    cards = []
     # The loader rejects duplicate keys, so every id is unique.
-    for identifier, name in _mapping(data.get("ingredients"), context).items():
+    for identifier, value in _mapping(data[kind], context).items():
         if not isinstance(identifier, str) or not re.fullmatch(
             r"[a-z0-9]+(?:-[a-z0-9]+)*", identifier
         ):
@@ -119,13 +142,23 @@ def load_deck(path: Path) -> Deck:
                 f"{context}: id '{identifier}' must use lowercase letters, digits and "
                 "single hyphens"
             )
-        ingredients.append(Ingredient(identifier, _line(name, f"{context}: '{identifier}'")))
-    return Deck(_line(data.get("name"), f"{path}: name"), tuple(ingredients))
+        where = f"{context}: '{identifier}'"
+        if kind == "events":
+            fields = _mapping(value, where, {"name", "text"})
+            card = Card(
+                identifier,
+                _line(fields.get("name"), f"{where}: name"),
+                _line(fields.get("text"), f"{where}: text"),
+            )
+        else:
+            card = Card(identifier, _line(value, where))
+        cards.append(card)
+    return Deck(_line(data.get("name"), f"{path}: name"), kind, tuple(cards))
 
 
-def layout_sheets(deck: Deck) -> tuple[tuple[Ingredient, ...], ...]:
-    """Print one card per ingredient, in deck order, spread evenly over the sheets."""
-    cards = deck.ingredients
+def layout_sheets(deck: Deck) -> tuple[tuple[Card, ...], ...]:
+    """Print one card per entry, in deck order, spread evenly over the sheets."""
+    cards = deck.cards
     count = math.ceil(len(cards) / CARDS_PER_SHEET)
     sheets = []
     start = 0
@@ -145,16 +178,43 @@ def _register_font() -> None:
             raise DeckError(f"Cannot load bundled font {path}: {exc}") from exc
 
 
-def name_size(name: str) -> float:
-    missing = sorted({char for char in name if ord(char) not in getFont(FONT).face.charToGlyph})
+def _check_glyphs(text: str) -> None:
+    missing = sorted({char for char in text if ord(char) not in getFont(FONT).face.charToGlyph})
     if missing:
-        raise DeckError(f"'{name}': the card font has no glyph for {' '.join(missing)}")
+        raise DeckError(f"'{text}': the card font has no glyph for {' '.join(missing)}")
+
+
+def name_size(name: str) -> float:
+    _check_glyphs(name)
     size = NAME_SIZE
     while stringWidth(name, FONT, size) > CARD_WIDTH - 2 * NAME_MARGIN:
         size -= 0.25
         if size < MIN_NAME_SIZE:
             raise DeckError(f"'{name}' does not fit on a card at {MIN_NAME_SIZE:g} pt; shorten it")
     return size
+
+
+def text_lines(text: str) -> tuple[float, tuple[str, ...]]:
+    """Wrap an event's effect into at most three lines, shrinking it if needed."""
+    _check_glyphs(text)
+    width = CARD_WIDTH - 2 * TEXT_MARGIN
+    size = TEXT_SIZE
+    while size >= MIN_TEXT_SIZE:
+        lines: list[str] = []
+        for word in text.split():
+            if lines and stringWidth(f"{lines[-1]} {word}", FONT, size) <= width:
+                lines[-1] = f"{lines[-1]} {word}"
+            else:
+                lines.append(word)
+        if len(lines) <= MAX_TEXT_LINES and all(
+            stringWidth(line, FONT, size) <= width for line in lines
+        ):
+            return size, tuple(lines)
+        size -= 0.25
+    raise DeckError(
+        f"'{text}' does not fit on a card in {MAX_TEXT_LINES} lines at {MIN_TEXT_SIZE:g} pt; "
+        "shorten it"
+    )
 
 
 @cache
@@ -198,15 +258,17 @@ def art_jpeg(path: Path) -> bytes:
 
 
 def check_deck(deck: Deck, art: Path) -> int:
-    """Validate every name and illustration before anything is written."""
+    """Validate every name, effect, and illustration before anything is written."""
     _register_font()
-    for item in deck.ingredients:
-        name_size(item.name)
-        path = art / f"{item.id}.png"
+    for card in deck.cards:
+        name_size(card.name)
+        if card.text:
+            text_lines(card.text)
+        path = art / f"{card.id}.png"
         if not path.is_file():
-            raise DeckError(f"No illustration for '{item.id}': expected {path}")
+            raise DeckError(f"No illustration for '{card.id}': expected {path}")
         art_jpeg(path)
-    return len(deck.ingredients)
+    return len(deck.cards)
 
 
 def slot_origin(slot: int) -> tuple[float, float]:
@@ -214,14 +276,23 @@ def slot_origin(slot: int) -> tuple[float, float]:
     return GRID_X + column * CARD_WIDTH, GRID_Y + (ROWS - 1 - row) * CARD_HEIGHT
 
 
-def _draw_card(canvas: Canvas, item: Ingredient, art: Path) -> None:
-    image = ImageReader(BytesIO(art_jpeg(art / f"{item.id}.png")))
-    canvas.drawImage(
-        image, (CARD_WIDTH - ART_SIZE) / 2, CARD_HEIGHT - ART_TOP - ART_SIZE, ART_SIZE, ART_SIZE
+def _draw_card(canvas: Canvas, card: Card, art: Path) -> None:
+    side, baseline = (
+        (EVENT_ART_SIZE, EVENT_NAME_BASELINE) if card.text else (ART_SIZE, NAME_BASELINE)
     )
+    image = ImageReader(BytesIO(art_jpeg(art / f"{card.id}.png")))
+    canvas.drawImage(image, (CARD_WIDTH - side) / 2, CARD_HEIGHT - ART_TOP - side, side, side)
     canvas.setFillColor(INK)
-    canvas.setFont(FONT, name_size(item.name))
-    canvas.drawCentredString(CARD_WIDTH / 2, NAME_BASELINE, item.name)
+    canvas.setFont(FONT, name_size(card.name))
+    canvas.drawCentredString(CARD_WIDTH / 2, baseline, card.name)
+    if card.text:
+        size, lines = text_lines(card.text)
+        leading = size * TEXT_LEADING
+        # Center the block of lines, from cap height to the last baseline, on TEXT_CENTER.
+        first = TEXT_CENTER + ((len(lines) - 1) * leading - 0.7 * size) / 2
+        canvas.setFont(FONT, size)
+        for index, line in enumerate(lines):
+            canvas.drawCentredString(CARD_WIDTH / 2, first - index * leading, line)
 
 
 def _draw_cut_guides(canvas: Canvas) -> None:
@@ -238,7 +309,7 @@ def _draw_cut_guides(canvas: Canvas) -> None:
 
 
 def _draw_front(
-    canvas: Canvas, sheet: tuple[Ingredient, ...], number: int, count: int, art: Path
+    canvas: Canvas, deck: Deck, sheet: tuple[Card, ...], number: int, count: int, art: Path
 ) -> None:
     canvas.setFillColorRGB(*(value / 255 for value in CREAM))
     canvas.rect(
@@ -260,7 +331,7 @@ def _draw_front(
     canvas.drawCentredString(
         PAGE_WIDTH / 2,
         GRID_Y - 10 * mm,
-        f"Sheet {number} of {count}. Print at 100%, double-sided. "
+        f"{deck.name}, sheet {number} of {count}. Print at 100%, double-sided. "
         "Cut straight from guide to guide.",
     )
 
@@ -270,16 +341,22 @@ def _grid(lo: float, hi: float, pitch: float, phase: float) -> list[float]:
     return [phase + k * pitch for k in range(first, last + 1)]
 
 
-def _wash(color: colors.Color, layers: int) -> colors.Color:
+def _wash(color: colors.Color, layers: int, wash: float) -> colors.Color:
     """The opaque color of `layers` translucent washes over linen."""
-    cover = 1 - (1 - WASH) ** layers
+    cover = 1 - (1 - wash) ** layers
     return colors.Color(
         *(base + (ink - base) * cover for base, ink in zip(LINEN.rgb(), color.rgb()))
     )
 
 
 def draw_cloth(
-    canvas: Canvas, color: colors.Color, x0: float, y0: float, x1: float, y1: float
+    canvas: Canvas,
+    color: colors.Color,
+    x0: float,
+    y0: float,
+    x1: float,
+    y1: float,
+    wash: float = WASH,
 ) -> None:
     """Fill a rectangle given in card coordinates; the pattern stays anchored to the cards."""
     vertical, ys = canvas.beginPath(), _grid(y0, y1, STEP, 0.0)
@@ -307,43 +384,46 @@ def draw_cloth(
     canvas.setFillColor(LINEN)
     canvas.rect(x0, y0, x1 - x0, y1 - y0, stroke=0, fill=1)
     # Opaque colors instead of transparency: one wash on each band, two where they cross.
-    canvas.setFillColor(_wash(color, 1))
+    canvas.setFillColor(_wash(color, 1, wash))
     canvas.drawPath(vertical, stroke=0, fill=1)
     canvas.drawPath(horizontal, stroke=0, fill=1)
     canvas.clipPath(horizontal, stroke=0, fill=0)
-    canvas.setFillColor(_wash(color, 2))
+    canvas.setFillColor(_wash(color, 2, wash))
     canvas.drawPath(vertical, stroke=0, fill=1)
     canvas.restoreState()
 
 
-def _draw_back(canvas: Canvas) -> None:
+def _draw_back(canvas: Canvas, kind: str) -> None:
     # The cloth is drawn once as a form and reused by every sheet.
-    form = "cloth"
+    form = f"cloth-{kind}"
     if not canvas.hasForm(form):
         canvas.beginForm(form)
         # The grid is centered, so after any flip the crossings still sit behind the card centers.
         canvas.translate(GRID_X, GRID_Y)
         draw_cloth(
             canvas,
-            CLOTH,
+            KINDS[kind].cloth,
             -BACK_OVERFLOW,
             -BACK_OVERFLOW,
             GRID_WIDTH + BACK_OVERFLOW,
             GRID_HEIGHT + BACK_OVERFLOW,
+            KINDS[kind].wash,
         )
         canvas.endForm()
     canvas.doForm(form)
 
 
 def write_pdfs(deck: Deck, art: Path, output: Path) -> tuple[Path, ...]:
+    """Write the fronts, backs, and duplex PDFs for one deck."""
     sheets = layout_sheets(deck)
+    prefix = KINDS[deck.kind].prefix
     output.mkdir(parents=True, exist_ok=True)
-    destinations = tuple(output / filename for filename in FILENAMES)
+    destinations = tuple(output / f"{prefix}-{suffix}.pdf" for suffix, _ in FACES)
     # Render the whole set before replacing existing PDFs.
     with tempfile.TemporaryDirectory(prefix=".rising-stakes-", dir=output) as temporary:
         staged = []
-        for filename, faces in zip(FILENAMES, (("front",), ("back",), ("front", "back"))):
-            path = Path(temporary) / filename
+        for destination, (_, faces) in zip(destinations, FACES):
+            path = Path(temporary) / destination.name
             canvas = Canvas(str(path), pagesize=A4, pageCompression=1, invariant=1)
             canvas.setTitle(f"{deck.name} - {', '.join(faces)}")
             canvas.setAuthor(deck.name)
@@ -351,9 +431,9 @@ def write_pdfs(deck: Deck, art: Path, output: Path) -> tuple[Path, ...]:
             for number, sheet in enumerate(sheets, start=1):
                 for face in faces:
                     if face == "front":
-                        _draw_front(canvas, sheet, number, len(sheets), art)
+                        _draw_front(canvas, deck, sheet, number, len(sheets), art)
                     else:
-                        _draw_back(canvas)
+                        _draw_back(canvas, deck.kind)
                     canvas.showPage()
             canvas.save()
             staged.append(path)
@@ -365,31 +445,46 @@ def write_pdfs(deck: Deck, art: Path, output: Path) -> tuple[Path, ...]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "--cards", type=Path, default=ROOT / "cards" / "ingredients.yaml", help="Deck YAML file"
+        "--cards",
+        type=Path,
+        default=ROOT / "cards",
+        help="Directory of deck YAML files: ingredients.yaml and events.yaml",
     )
     parser.add_argument(
-        "--art", type=Path, default=ROOT / "art", help="Directory of <id>.png illustrations"
+        "--art",
+        type=Path,
+        default=ROOT / "art",
+        help="Directory of <id>.png illustrations; event art is in its events subdirectory",
     )
     parser.add_argument("--output", type=Path, default=ROOT / "print", help="PDF output directory")
     parser.add_argument(
-        "--check", action="store_true", help="Validate names and art without writing PDFs"
+        "--check", action="store_true", help="Validate names, effects, and art without writing"
     )
     args = parser.parse_args(argv)
     try:
-        deck = load_deck(args.cards)
-        cards = check_deck(deck, args.art)
+        decks = []
+        for kind, details in KINDS.items():
+            deck = load_deck(args.cards / f"{kind}.yaml")
+            if deck.kind != kind:
+                raise DeckError(f"{args.cards / f'{kind}.yaml'}: expected a list of {kind}")
+            decks.append((deck, args.art / details.art))
+        # Validate every deck before writing any PDF.
+        summary = " and ".join(
+            f"{check_deck(deck, art)} {KINDS[deck.kind].noun} cards on "
+            f"{len(layout_sheets(deck))} sheets"
+            for deck, art in decks
+        )
         if args.check:
-            print(f"Validated {cards} printable cards.")
+            print(f"Validated {summary}.")
             return 0
-        paths = write_pdfs(deck, args.art, args.output)
+        paths = [path for deck, art in decks for path in write_pdfs(deck, art, args.output)]
     except (DeckError, OSError) as exc:
         parser.error(str(exc))
     for path in paths:
         print(path)
-    sheets = len(layout_sheets(deck))
     print(
-        f"{cards} cards on {sheets} sheets. Print the duplex PDF on A4 at 100%, double-sided; "
-        "either flip works."
+        f"{summary[0].upper()}{summary[1:]}. Print the duplex PDFs on A4 at 100%, "
+        "double-sided; either flip works."
     )
     return 0
 

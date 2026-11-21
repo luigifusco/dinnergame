@@ -1,0 +1,49 @@
+# Event cards: twists between games, one card each, in print order. Each id names its
+# illustration in art\events\, and the text is the effect printed under the name.
+name: Rising Stakes events
+events:
+  the-swap:
+    name: The Swap
+    text: Two players swap a card, each choosing what to give.
+  blind-swap:
+    name: Blind Swap
+    text: Two players each draw a card blind from the other.
+  the-duel:
+    name: The Duel
+    text: Two players duel. The winner draws a card blind from the loser.
+  the-exchange:
+    name: The Exchange
+    text: One player swaps a card of their choice for one from the bank.
+  pass-left:
+    name: Pass Left
+    text: Everyone passes a card of their choice to the left.
+  i-cut-you-choose:
+    name: I Cut, You Choose
+    text: Two players get three cards from the bank. One splits them in two piles, the other picks one.
+  robin-hood:
+    name: Robin Hood
+    text: Whoever holds the most cards gives one, blind, to whoever holds the fewest.
+  the-thief:
+    name: The Thief
+    text: One player draws a card blind from anyone they like.
+  forced-trade:
+    name: Forced Trade
+    text: One player takes any card from anyone and gives one of theirs back. No refusing.
+  spotlight:
+    name: Spotlight
+    text: The host names an ingredient. Whoever holds it must auction it now, for cards.
+  the-deal:
+    name: The Deal
+    text: Two players have one minute to agree on a trade, or each gives a card to the bank.
+  windfall:
+    name: Windfall
+    text: Everyone draws a card from the bank.
+  double:
+    name: Double
+    text: The next game pays double.
+  revolution:
+    name: Revolution
+    text: Everyone passes all their cards to the left.
+  clean-slate:
+    name: Clean Slate
+    text: One player returns all their cards to the bank and draws as many new ones.

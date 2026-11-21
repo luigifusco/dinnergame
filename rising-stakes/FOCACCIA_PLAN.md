@@ -2,8 +2,8 @@
 
 **The dough rises. So do the stakes.**
 
-**Status: concept draft.** The [ingredient cards](README.md#print-the-cards) are
-ready to print, but the rules are still a draft, and
+**Status: concept draft.** The [ingredient and event cards](README.md#print-the-cards)
+are ready to print, but the rules are still a draft, and
 [Sideplot](../sideplot/README.md) is unaffected. The
 [first-game decisions](#decisions-for-the-first-game) are recorded below.
 "Rising Stakes" is a working title; *Proof of Stake* and *Bread & Circuses* are
@@ -40,6 +40,7 @@ reveal.
 | Component | Purpose |
 |---|---|
 | Ingredient cards | Printed vouchers for one portion each, one card per ingredient. |
+| Event cards | Fifteen twists between games, from swaps and steals to Clean Slate. |
 | The pantry | Labeled bowls holding exactly one prepared portion per card in play. |
 | Personal pans | One per player, such as a 20 cm round tin, with a name label. |
 | Props | Two dice, a bingo set, small cups, a jar of dried pasta, a kitchen scale. |
@@ -128,6 +129,14 @@ collect one prize for the highest threshold you've reached.
 | 40+ | 3 cards | 14% |
 
 Standing on two cards at 25, pushing on for three is close to a coin flip (44%).
+
+### Event cards
+
+Between games, event cards shake up who holds what: two players swap or duel,
+everyone passes a card to the left, or one player's whole hand goes back to the
+bank for as many new cards (*Clean Slate*). The 15 events, previewed in
+[events.png](mockups/events.png), have a black tablecloth back and print their
+effect under the name. They're listed in `cards\events.yaml`.
 
 ### Always on
 
@@ -273,6 +282,9 @@ out like this:
 - **One card per ingredient, all with the red back.** The 44 cards fill five
   sheets in deck order, eight or nine to a sheet, and the deck prints once; an
   empty slot is a blank spare.
+- **Event cards have a black back.** The same cloth, in black with a heavier
+  wash, so the two decks never mix. The 15 events fill two sheets, and each
+  front fits a smaller illustration, the name, and up to three lines of effect.
 - **All the art sits on one cream.** Each illustration was printed on a
   slightly different cream, so the generator crops each to its subject and
   remaps its paper to the cherry tomatoes' cream. Otherwise neighbors on a
@@ -292,9 +304,10 @@ two share little beyond duplex sheets.
 | Hands | Public: every player's cards stay face up next to their pan. |
 | Modules | None. The core already has gambling and trading; keep the modules for later games. |
 | Host role | The host plays. A co-host runs the bank, the pantry, the auctions, and the Three-Card Trick. |
-| Cards | Poker size, printed edge to edge with one continuous back per sheet. The front has only the illustration and the name in a playful hand-drawn font; the back is the same wavy red tablecloth on every card. |
+| Cards | Poker size, printed edge to edge with one continuous back per sheet. Ingredient fronts have only the illustration and the name in a playful hand-drawn font, on a wavy red tablecloth back. Event fronts add their effect, on a black back. |
 
-Still open: how many pans fit in the oven at once.
+Still open: how many pans fit in the oven at once, and when event cards are
+drawn and who they hit; [games.txt](games.txt) lists options.
 
 ## What a first playtest should tell us
 

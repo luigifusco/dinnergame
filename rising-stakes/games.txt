@@ -43,11 +43,10 @@ I Cut, You Choose: two players get three cards from the bank. One splits them in
 Robin Hood: whoever holds the most cards gives a blind one to whoever holds the fewest.
 The Thief: one player draws a blind card from anyone they like.
 Forced Trade: one player takes any card from anyone and gives them one of their own in return; the owner can't refuse.
-Spotlight: the host names an ingredient, and whoever holds it must auction it right away, for cards.
 The Deal: two players have one minute to agree on a trade; if they don't, each gives a card to the bank.
 Windfall: everyone draws a card.
-Double: the next game pays two cards instead of one.
 Revolution: everyone passes all their cards to the left.
+Clean Slate: one player returns all their cards to the bank and draws as many new ones.
 
 WHO AND WHEN
 Draw an event card after each game.

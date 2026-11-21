@@ -62,12 +62,19 @@ class LibraryTests(unittest.TestCase):
         identifiers = [card.id for sheet in sheets for card in sheet]
         self.assertEqual(len(identifiers), len(set(identifiers)))
         self.assertEqual(check_deck(deck, ROOT / "art"), 44)
+        events = load_deck(ROOT / "cards" / "events.yaml")
+        self.assertEqual([len(sheet) for sheet in layout_sheets(events)], [8, 7])
+        self.assertEqual(check_deck(events, ROOT / "art" / "events"), 15)
 
     def test_rejects_cards_that_cannot_print(self) -> None:
         cases = {
             "duplicate YAML key": "name: T\ningredients:\n  basil: Basil\n  basil: Basil\n",
             "unknown field": "name: T\ntiers:\n  common: {basil: Basil}\n",
+            "exactly one of": "name: T\n",
             "does not fit": "name: T\ningredients:\n  basil: Basil from the far end of the garden",
+            "in 3 lines": "name: T\nevents:\n  basil: {name: Basil, text: "
+            + "Everyone passes every card they hold to the left and right " * 3
+            + "}\n",
             "No illustration": "name: T\ningredients: {mint: Mint}\n",
         }
         with tempfile.TemporaryDirectory() as temporary:
@@ -114,6 +121,29 @@ class PdfTests(unittest.TestCase):
                 )
                 for channel, expected in zip(pixel, CREAM):
                     self.assertAlmostEqual(channel, expected, delta=3)
+
+    def test_event_cards_print_their_effect_on_a_dark_back(self) -> None:
+        text = "name: E\nevents:\n  swap: {name: The Swap, text: Two players swap a card.}\n"
+        with tempfile.TemporaryDirectory() as temporary:
+            folder = Path(temporary)
+            deck = load_deck(make_deck(folder, text))
+            paths = write_pdfs(deck, make_art(folder, "swap"), folder / "print")
+            self.assertEqual(paths[-1].name, "rising-stakes-events-duplex.pdf")
+            with closing(pdfium.PdfDocument(paths[-1])) as document:
+                self.assertEqual(slot_text(document, 0, 0), "The Swap Two players swap a card.")
+                with closing(document[1]) as pdf_page:
+                    scale = 2 / mm
+                    image = pdf_page.render(scale=scale).to_pil().convert("RGB")
+            x, y = slot_origin(0)
+            # Each card's back has a crossing of two dark washes at its center.
+            pixel = image.getpixel(
+                (
+                    round((x + CARD_WIDTH / 2) * scale),
+                    round((PAGE_HEIGHT - y - CARD_HEIGHT / 2) * scale),
+                )
+            )
+            self.assertLess(max(pixel), 120)
+            self.assertLess(max(pixel) - min(pixel), 15)
 
 
 if __name__ == "__main__":
