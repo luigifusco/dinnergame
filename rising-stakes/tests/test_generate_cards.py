@@ -58,10 +58,10 @@ class LibraryTests(unittest.TestCase):
     def test_library_prints_each_ingredient_once(self) -> None:
         deck = load_deck(ROOT / "cards" / "ingredients.yaml")
         sheets = layout_sheets(deck)
-        self.assertEqual([len(sheet) for sheet in sheets], [9, 9, 9, 9, 8])
+        self.assertEqual([len(sheet) for sheet in sheets], [9, 9, 9, 9, 9])
         identifiers = [card.id for sheet in sheets for card in sheet]
         self.assertEqual(len(identifiers), len(set(identifiers)))
-        self.assertEqual(check_deck(deck, ROOT / "art"), 44)
+        self.assertEqual(check_deck(deck, ROOT / "art"), 45)
         events = load_deck(ROOT / "cards" / "events.yaml")
         self.assertEqual([len(sheet) for sheet in layout_sheets(events)], [8, 7])
         self.assertEqual(check_deck(events, ROOT / "art" / "events"), 15)

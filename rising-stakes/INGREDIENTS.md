@@ -1,10 +1,11 @@
 # Rising Stakes ingredients
 
-The autumn pantry for eight players: **44 ingredient cards**, one per
-ingredient, which [print](README.md#print-the-cards) on five A4 sheets. Every
-card is equal and exists only once. The deck runs from classics like cherry
-tomatoes and burrata to the experimental, the scandalous, and the straight-up
-bad, like ketchup and gummy bears.
+The autumn pantry for eight players: **45 ingredient cards**, one per
+ingredient plus a Joker, which [print](README.md#print-the-cards) on five A4
+sheets. Every ingredient card is equal and exists only once, and the Joker can
+become any of them. The deck runs from classics like cherry tomatoes and
+burrata to the experimental, the scandalous, and the straight-up bad, like
+ketchup and gummy bears.
 
 Each card is a voucher for one portion. Swap ingredients for the season and the
 guests, but keep about the same OVEN and FINISH counts. Olive oil, flaky salt,
@@ -19,10 +20,13 @@ FINISH labels and pan capacity.
 |---|---|
 | OVEN | 25 |
 | FINISH | 19 |
-| **Total** | **44** |
+| Joker, either | 1 |
+| **Total** | **45** |
 
 Eight players get about five cards each, three OVEN and two FINISH, well short
-of a pan's capacity, so every card counts.
+of a pan's capacity, so every card counts. The Joker becomes any ingredient
+when it's played, even one another player holds, and takes that ingredient's
+label and portion.
 
 Portions are sized for a 20 cm round pan and a 250 g dough ball. One card is
 noticeable on its own, and six OVEN cards make a generously topped focaccia.
@@ -90,12 +94,14 @@ The deck supports classic combinations without making them rules: tomatoes,
 olives, and oregano; potato, rosemary, and onion; pear, gorgonzola, walnuts,
 and honey; grapes and rosemary; pumpkin and sausage; 'nduja and honey. The
 dream is mortadella, stracciatella, and pistachio, and since every card exists
-only once, only one focaccia can have it.
+only once, only one focaccia can have it, unless someone plays the Joker.
 
 ## Shopping list
 
-Quantities cover every card in the deck, rounded up to ordinary pack sizes.
-The prep column describes each portion as it waits in the pantry.
+Quantities cover every card in the deck plus a spare portion of each
+ingredient for the Joker, rounded up to ordinary pack sizes. The deck needs
+column gives one portion; the prep column describes it as it waits in the
+pantry. Keep the spares in their packs until the Joker is played.
 
 ### Produce
 
@@ -105,16 +111,16 @@ The prep column describes each portion as it waits in the pantry.
 | Red onion | 1 small | A quarter onion | Slice thinly. |
 | Rosemary | 1 bunch | 1 sprig | Strip the needles. |
 | Garlic | 1 head | 1 clove | Peel and slice thinly. |
-| Waxy potatoes | 1 small, about 100 g | 12 slices | Slice 2 mm thick; keep in cold water, then pat dry. |
+| Waxy potatoes | 2 small, about 200 g | 12 slices | Slice 2 mm thick; keep in cold water, then pat dry. |
 | Arugula | 1 small bag | 1 small handful | Wash and dry. |
 | Basil | 1 pot or bunch | 6 leaves | Pick the leaves just before the feast. |
-| Pumpkin, such as butternut | 1 small wedge, about 150 g | 6 thin slices | Peel and slice 3 mm thick. |
-| Chestnut mushrooms | 4 | 3 mushrooms | Slice thinly. |
+| Pumpkin, such as butternut | 1 wedge, about 300 g | 6 thin slices | Peel and slice 3 mm thick. |
+| Chestnut mushrooms | 6 | 3 mushrooms | Slice thinly. |
 | Seedless red grapes | 1 small bunch | 10 grapes | Halve. |
 | Pear | 1 firm, ripe pear | Half a pear | Slice just before assembly. |
 | Lemon | 1 | 4 slices | Slice paper-thin. |
 | Celery | 1 head | Half a stalk | Slice thinly. |
-| Fresh red chili | 1 | 1 chili | Slice into rings. |
+| Fresh red chili | 2 | 1 chili | Slice into rings. |
 
 ### Cheese and meat
 
@@ -123,8 +129,8 @@ The prep column describes each portion as it waits in the pantry.
 | Mozzarella | 1 ball, 125 g | Half a ball | Tear and drain in a sieve. |
 | Mild gorgonzola | 100 g | 40 g | Break into small pieces. |
 | Parmesan | 1 small wedge | 12 shavings | Shave with a vegetable peeler. |
-| Burrata | 1 small, about 125 g | 1 burrata | |
-| Stracciatella | 1 tub, about 125 g | 3 heaped tablespoons | |
+| Burrata | 2 small, about 125 g each | 1 burrata | |
+| Stracciatella | 2 tubs, about 125 g each | 3 heaped tablespoons | |
 | Italian sausage | 1, about 100 g | Half a sausage | Remove the casing and pinch into small pieces. |
 | Guanciale | 1 piece, about 100 g | 6 strips | Cut into thin strips. |
 | 'Nduja | 1 small jar | 1 heaped tablespoon | |

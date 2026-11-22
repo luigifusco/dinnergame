@@ -11,8 +11,8 @@ the shopping list.
 
 The [print directory](print) contains two decks. Print each once.
 
-- **Ingredients:** one card for each of the 44 ingredients, with a red
-  tablecloth back, on five sheets.
+- **Ingredients:** one card for each of the 44 ingredients, plus a Joker that
+  can become any of them, with a red tablecloth back, on five sheets.
 - **Events:** one card for each of the 15 events, with a black tablecloth back,
   on two sheets. Each shows an illustration, the event's name, and its effect,
   as previewed in [events.png](mockups/events.png).

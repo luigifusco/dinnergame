@@ -21,8 +21,8 @@ reveal.
 
 ## Design pillars
 
-1. **A card is a portion.** You can only use what you hold at assembly, and
-   every ingredient exists exactly once.
+1. **A card is a portion.** You can only use what you hold at assembly. Every
+   ingredient has exactly one card, plus a Joker that can be anything.
 2. **Nobody eats badly.** Dough, olive oil, flaky salt, and brine are free. A
    plain focaccia is still a good dinner, and it can still win.
 3. **Toppings are never forced.** Cards can be lost, stolen, or traded, but
@@ -39,9 +39,9 @@ reveal.
 
 | Component | Purpose |
 |---|---|
-| Ingredient cards | Printed vouchers for one portion each, one card per ingredient. |
+| Ingredient cards | Printed vouchers for one portion each: one card per ingredient, plus a Joker. |
 | Event cards | Fifteen twists between games, from swaps and steals to Clean Slate. |
-| The pantry | Labeled bowls holding exactly one prepared portion per card in play. |
+| The pantry | Labeled bowls holding one prepared portion per ingredient card, with a spare of each kept back for the Joker. |
 | Personal pans | One per player, such as a 20 cm round tin, with a name label. |
 | Props | Two dice, a bingo set, small cups, a jar of dried pasta, a kitchen scale. |
 | Golden rolling pin | The trophy: any rolling pin and gold spray paint. |
@@ -53,7 +53,7 @@ There's no money. Cards are the only thing to win, bet, bid, and trade.
 Cards are poker size, 63 x 88 mm. The front shows only a linocut-style
 illustration of the portion and the ingredient's name, as in the
 [mock-up](mockups/cherry-tomatoes.png); [fronts.png](mockups/fronts.png) shows
-all 44. The OVEN or FINISH label and the portion are on the pantry bowls and in
+all 45. The OVEN or FINISH label and the portion are on the pantry bowls and in
 the [ingredient list](INGREDIENTS.md), printed as a chart for the table.
 
 - **Every card is equal.** There are no tiers or rarities: each of the 44
@@ -61,6 +61,10 @@ the [ingredient list](INGREDIENTS.md), printed as a chart for the table.
   and gummy bears. All share one back, a red tablecloth of wavy, translucent
   bands that darken where they cross, so the bank's face-down pile gives
   nothing away.
+- **The Joker** becomes any ingredient you name when you play it, even one
+  another player holds. It takes that ingredient's OVEN or FINISH label and
+  counts toward your capacity like any other card, so play it at assembly or at
+  the feast.
 - **Hands are public.** Keep your cards face up next to your pan, so everyone
   can always see who holds what. When a rule says to draw blind from a player,
   they shuffle their cards face down and you draw one.
@@ -71,9 +75,9 @@ the [ingredient list](INGREDIENTS.md), printed as a chart for the table.
 
 ### The deck
 
-The [ingredient list](INGREDIENTS.md) is an autumn deck of 44 cards for eight
-players, one of each ingredient. It gives every card's portion, a shopping
-list, and allergen notes.
+The [ingredient list](INGREDIENTS.md) is an autumn deck of 45 cards for eight
+players: one of each ingredient, plus the Joker. It gives every card's portion,
+a shopping list, and allergen notes.
 
 ## The evening
 
@@ -93,8 +97,8 @@ exactly when the market will close.
 
 The bank keeps every card not yet won in one face-down pile, and events pay
 from it; once it runs out, cards only move by stealing, betting, and trading.
-With 44 cards and eight players the budget is tight: 16 are dealt at Kickoff
-and 10 go to the bake reserve, which leaves 18 for the market.
+With 45 cards and eight players the budget is tight: 16 are dealt at Kickoff
+and 10 go to the bake reserve, which leaves 19 for the market.
 
 Run four to six hosted events during the market, alternating kinds, and explain
 each one when it starts rather than front-loading the rules.
@@ -246,9 +250,10 @@ second, and third place each pick a card from the bake reserve, in that order.
 - **Oven.** Count how many pans fit at once, and preheat during the last event.
 - **Pantry.** Prepare one bowl per ingredient with exactly one portion per card
   in the deck, labeled with OVEN or FINISH and the portion; the
-  [shopping list](INGREDIENTS.md#shopping-list) covers the whole deck. Keep
-  FINISH ingredients in the fridge. Leftover portions become snacks or
-  tomorrow's lunch.
+  [shopping list](INGREDIENTS.md#shopping-list) covers the whole deck, plus a
+  spare portion of everything for the Joker. Keep the spares in their packs
+  until the Joker is played. Keep FINISH ingredients in the fridge. Leftover
+  portions become snacks or tomorrow's lunch.
 - **Diets.** Ask about diets and allergies beforehand. Meat and fish can stay,
   since vegetarians can trade them away. Leave out anything someone is seriously
   allergic to: the tasting board makes cross-contact hard to avoid. The
@@ -257,7 +262,7 @@ second, and third place each pick a card from the bake reserve, in that order.
 - **Roles.** The host plays. A co-host runs the bank, the pantry, the
   auctions, and the Three-Card Trick. If the co-host also plays, the host takes
   over whenever the co-host is bidding or betting.
-- **Group size.** The 44-card [deck](INGREDIENTS.md) suits eight, at about five
+- **Group size.** The 45-card [deck](INGREDIENTS.md) suits eight, at about five
   cards each; for a bigger group, add ingredients rather than copies. With four
   or five players, run three events. With more than ten, play in pairs sharing
   a pan and a hand.
@@ -279,9 +284,8 @@ out like this:
 - **Cut guides** are short lines in the front's margin, outside the cards, at
   both ends of each of the eight cut lines. Cut straight from guide to guide.
   The back has no guides, since it doesn't line up with the front.
-- **One card per ingredient, all with the red back.** The 44 cards fill five
-  sheets in deck order, eight or nine to a sheet, and the deck prints once; an
-  empty slot is a blank spare.
+- **One card per ingredient, all with the red back.** The 44 ingredients and
+  the Joker fill five sheets of nine in deck order, and the deck prints once.
 - **Event cards have a black back.** The same cloth, in black with a heavier
   wash, so the two decks never mix. The 15 events fill two sheets, and each
   front fits a smaller illustration, the name, and up to three lines of effect.
@@ -299,7 +303,7 @@ two share little beyond duplex sheets.
 
 | Question | Decision |
 |---|---|
-| Group size | Eight players, using the 44-card [autumn deck](INGREDIENTS.md): one card per ingredient, with no tiers. |
+| Group size | Eight players, using the 45-card [autumn deck](INGREDIENTS.md): one card per ingredient, plus a Joker, with no tiers. |
 | Currency | None. Cards are the only thing to win, bet, bid, and trade. |
 | Hands | Public: every player's cards stay face up next to their pan. |
 | Modules | None. The core already has gambling and trading; keep the modules for later games. |
